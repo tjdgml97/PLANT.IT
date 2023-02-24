@@ -1,4 +1,18 @@
-@import "./reset";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #777;
+}
 
 header {
   width: 100%;
@@ -8,6 +22,7 @@ header {
   border-bottom: 1px solid #c8c8c8;
   z-index: 1;
 }
+
 header > .inner {
   position: relative;
   width: 70%;
@@ -18,12 +33,11 @@ header > .inner {
   background-color: beige;
   left: 50%;
   transform: translateX(-50%);
-
-  .menu-bar {
-    width: 35%;
-    .menu-bar-menu {
-      display: flex;
-      justify-content: space-around;
-    }
-  }
 }
+header > .inner .menu-bar {
+  width: 35%;
+}
+header > .inner .menu-bar .menu-bar-menu {
+  display: flex;
+  justify-content: space-around;
+}/*# sourceMappingURL=home.css.map */
