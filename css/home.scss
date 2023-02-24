@@ -2,11 +2,7 @@
 @import "header";
 // MAIN
 section[class^="mainSection"] {
-  margin: 0 auto;
-  position: relative;
-
   .inner {
-    margin: auto;
     margin-top: 20px;
 
     .swiper {
