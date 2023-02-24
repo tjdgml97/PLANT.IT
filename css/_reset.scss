@@ -1,3 +1,5 @@
+// RESET
+
 * {
   margin: 0;
   padding: 0;
@@ -10,4 +12,21 @@ ol {
 a {
   text-decoration: none;
   color: #777;
+}
+.inner {
+  width: 90%;
+}
+/* Mobile */
+@media screen and (max-width: 767px) {
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+}
+
+/* PC */
+@media screen and (min-width: 1280px) {
+  .inner {
+    width: 1200px;
+  }
 }
