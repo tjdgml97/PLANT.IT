@@ -1,22 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #777;
+}
+
+.inner {
+  width: 90%;
+  margin: auto;
+  position: relative;
+}
+
+/* Mobile */
+/* Tablet */
+/* PC */
+@media screen and (min-width: 1280px) {
+  .inner {
+    width: 1200px;
+  }
+}
+header {
+  width: 100%;
+  top: 0;
+  background-color: #f6f5ef;
+  border-top: 2px solid black;
+  border-bottom: 1px solid #c8c8c8;
+  z-index: 1;
+}
+
+header > .inner {
+  position: relative;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-bar:active .menu-bar-menu {
+  position: absolute;
+  z-index: 1;
+  top: 100px;
+  right: 0;
+  display: block;
+}
+.menu-bar .menu-bar-menu {
+  display: none;
+  justify-content: space-around;
+}
+.menu-bar .menu-icon {
+  display: block;
+  font-size: 30px;
+  color: #000;
+}
+
+/* Mobile */
+/* Tablet */
+/* PC */
+@media screen and (min-width: 1280px) {
+  .menu-bar {
+    width: 35%;
+  }
+  .menu-bar:active .menu-bar-menu {
+    position: static;
+    display: flex;
+  }
+  .menu-bar .menu-bar-menu {
+    display: flex;
+  }
+  .menu-bar .menu-icon {
+    display: none;
+  }
+}
 .test .inner .category .gototest {
   position: absolute;
   top: 15%;
   left: 50%;
   transform: translateX(-50%);
+  text-align: center;
 }
 .test .inner .category .gototest > p {
   font-size: 60px;
 }
 .test .inner .category .gototest > .btn {
-  display: block;
-  margin: 0 auto;
   text-align: center;
   width: 150px;
   height: 40px;
   border-radius: 10px;
   border: 1px solid black;
+  background-color: tomato;
   margin-top: 50px;
-  cursor: pointer;
 }
 .test .inner .card-box {
   position: relative;
@@ -56,4 +137,41 @@
 .test .inner .question-box {
   position: relative;
   height: 1000px;
+}
+.test .inner .question-box .box {
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+.test .inner .question-box .question1 {
+  height: 25%;
+}
+.test .inner .question-box .question1 p.question {
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+.test .inner .question-box .question1 p.answer {
+  font-size: 20px;
+  line-height: 2;
+}
+.test .inner .question-box .question2 {
+  height: 25%;
+}
+.test .inner .question-box .question2 p.question {
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+.test .inner .question-box .question2 p.answer {
+  font-size: 20px;
+  line-height: 2;
+}
+.test .inner .question-box .question3 {
+  height: 25%;
+}
+.test .inner .question-box .question3 p.question {
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+.test .inner .question-box .question3 p.answer {
+  font-size: 20px;
+  line-height: 2;
 }/*# sourceMappingURL=test.css.map */
