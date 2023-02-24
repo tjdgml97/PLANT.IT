@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -80,53 +81,53 @@ header > .inner {
     display: none;
   }
 }
-section[class^=mainSection] .inner {
+section[class^="mainSection"] .inner {
   margin-top: 20px;
 }
-section[class^=mainSection] .inner .swiper {
+section[class^="mainSection"] .inner .swiper {
   width: 100%;
   height: 300px;
   background-color: orange;
 }
-section[class^=mainSection] .inner .swiper a {
+section[class^="mainSection"] .inner .swiper a {
   display: block;
   height: 100%;
   width: 100%;
 }
-section[class^=mainSection] .inner .plantIntro {
+section[class^="mainSection"] .inner .plantIntro {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
 }
-section[class^=mainSection] .inner .plantIntro a {
+section[class^="mainSection"] .inner .plantIntro a {
   display: block;
   height: 100%;
   width: 100%;
 }
-section[class^=mainSection] .inner .plantIntro > div {
+section[class^="mainSection"] .inner .plantIntro > div {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
   height: 350px;
 }
-section[class^=mainSection] .inner .plantIntro > div:last-child {
+section[class^="mainSection"] .inner .plantIntro > div:last-child {
   margin-top: 16px;
   height: 400px;
 }
-section[class^=mainSection] .inner .plantIntro > div .box2 {
+section[class^="mainSection"] .inner .plantIntro > div .box2 {
   height: 49%;
 }
-section[class^=mainSection] .inner .plantIntro > div .miniBox {
+section[class^="mainSection"] .inner .plantIntro > div .miniBox {
   display: flex;
   justify-content: space-between;
   height: 47%;
 }
-section[class^=mainSection] .inner .plantIntro > div .miniBox .box3,
-section[class^=mainSection] .inner .plantIntro > div .miniBox .box4 {
+section[class^="mainSection"] .inner .plantIntro > div .miniBox .box3,
+section[class^="mainSection"] .inner .plantIntro > div .miniBox .box4 {
   width: 49%;
 }
-section[class^=mainSection] .inner .plantIntro div[class^=box] {
+section[class^="mainSection"] .inner .plantIntro div[class^="box"] {
   border: 1px solid #000;
   border-radius: 20px;
 }
@@ -141,34 +142,34 @@ footer {
 /* Tablet */
 /* PC */
 @media screen and (min-width: 1280px) {
-  section[class^=mainSection] .inner .plantIntro {
+  section[class^="mainSection"] .inner .plantIntro {
     flex-direction: row;
   }
-  section[class^=mainSection] .inner .plantIntro > div {
+  section[class^="mainSection"] .inner .plantIntro > div {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 49.5%;
     height: 550px;
   }
-  section[class^=mainSection] .inner .plantIntro > div:last-child {
+  section[class^="mainSection"] .inner .plantIntro > div:last-child {
     margin-top: 0;
     height: inherit;
   }
-  section[class^=mainSection] .inner .plantIntro > div .box2 {
+  section[class^="mainSection"] .inner .plantIntro > div .box2 {
     height: 49%;
   }
-  section[class^=mainSection] .inner .plantIntro > div .miniBox {
+  section[class^="mainSection"] .inner .plantIntro > div .miniBox {
     display: flex;
     justify-content: space-between;
     height: 49%;
   }
-  section[class^=mainSection] .inner .plantIntro > div .miniBox .box3,
-  section[class^=mainSection] .inner .plantIntro > div .miniBox .box4 {
+  section[class^="mainSection"] .inner .plantIntro > div .miniBox .box3,
+  section[class^="mainSection"] .inner .plantIntro > div .miniBox .box4 {
     width: 49%;
   }
-  section[class^=mainSection] .inner .plantIntro div[class^=box] {
+  section[class^="mainSection"] .inner .plantIntro div[class^="box"] {
     border: 1px solid #000;
     border-radius: 20px;
   }
-}/*# sourceMappingURL=home.css.map */
+} /*# sourceMappingURL=home.css.map */

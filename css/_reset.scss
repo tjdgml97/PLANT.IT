@@ -13,6 +13,7 @@ a {
   text-decoration: none;
   color: #777;
 }
+<<<<<<< HEAD
 .inner {
   width: 90%;
   margin: auto;
@@ -31,4 +32,11 @@ a {
   .inner {
     width: 1200px;
   }
+=======
+
+.inner {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto; /*수평정렬 */
+>>>>>>> b2eab5f (teat[#11] : 테스트페이지 작성중)
 }
