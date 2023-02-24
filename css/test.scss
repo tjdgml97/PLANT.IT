@@ -1,0 +1,71 @@
+.test {
+  .inner {
+    .category {
+      .gototest {
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        > p {
+          font-size: 60px;
+        }
+        > .btn {
+          display: block;
+          margin: 0 auto;
+          text-align: center;
+          width: 150px;
+          height: 40px;
+          border-radius: 10px;
+          border: 1px solid black;
+          margin-top: 50px;
+          cursor: pointer;
+        }
+      }
+    }
+    .card-box {
+      position: relative;
+      height: calc(100vh - 120px);
+      border-bottom: 2px solid black;
+
+      p {
+        position: absolute;
+        font-size: 80px;
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .card {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 50%;
+      }
+
+      .card-1 {
+        top: 20%;
+      }
+      .card-2 {
+        top: 60%;
+        left: 20%;
+      }
+      .card-3 {
+        top: 55%;
+        right: 20%;
+      }
+      .card-4 {
+        top: 20%;
+        right: 0;
+      }
+    }
+
+    //질문
+    .question-box {
+      position: relative;
+      height: 1000px;
+    }
+  }
+}

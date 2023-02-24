@@ -16,23 +16,59 @@
       defer
       src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
     ></script>
+    <!-- FONTASSOME -->
+    <script
+      src="https://kit.fontawesome.com/bdd3c23416.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- STYLE -->
+    <link rel="stylesheet" href="./css/home.css" />
   </head>
   <body>
-    <section>
+    <header>
+      <div class="inner">
+        <div class="logo">
+          <a href="#">logo</a>
+        </div>
+        <div class="menu-bar">
+          <ul class="menu-bar-menu">
+            <li><a href="test.html">자가진단</a></li>
+            <li><a href="story.html">스토리</a></li>
+            <li><a href="search.html">식물도감</a></li>
+            <li><a FAQ href="#">FAQ</a></li>
+          </ul>
+          <a href="#" class="menu-icon">
+            <i class="fas fa-bars"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+    <section class="mainSection1">
       <div class="inner">
         <div class="swiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">story</div>
-            <div class="swiper-slide">selfTest</div>
+            <div class="swiper-slide"><a href="#">story</a></div>
+            <div class="swiper-slide"><a href="#">selfTest</a></div>
           </div>
         </div>
       </div>
     </section>
-    <section>
+    <section class="mainSection2">
       <div class="inner">
-        <div class="box1">1</div>
-        <div class="box2">2</div>
+        <div class="plantIntro">
+          <div class="box1"><a href="#">1</a></div>
+          <div>
+            <div class="box2"><a href="#">2</a></div>
+            <div class="miniBox">
+              <div class="box3"><a href="#">3</a></div>
+              <div class="box4"><a href="#">4</a></div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+    <footer>
+      <div class="inner"></div>
+    </footer>
   </body>
 </html>

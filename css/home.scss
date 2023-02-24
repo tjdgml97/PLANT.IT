@@ -1,0 +1,108 @@
+@import "reset";
+@import "header";
+// MAIN
+section[class^="mainSection"] {
+  .inner {
+    margin-top: 20px;
+
+    .swiper {
+      width: 100%;
+      height: 300px;
+      background-color: orange;
+      a {
+        display: block;
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .plantIntro {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+
+      a {
+        display: block;
+        height: 100%;
+        width: 100%;
+      }
+      & > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 350px;
+        &:last-child {
+          margin-top: 16px;
+          height: 400px;
+        }
+        .box2 {
+          height: 49%;
+        }
+        .miniBox {
+          display: flex;
+          justify-content: space-between;
+          height: 47%;
+          .box3,
+          .box4 {
+            width: 49%;
+          }
+        }
+      }
+      div[class^="box"] {
+        border: 1px solid #000;
+        border-radius: 20px;
+      }
+    }
+  }
+}
+footer {
+  margin-top: 20px;
+  height: 100px;
+  background-color: #000;
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+}
+
+/* PC */
+@media screen and (min-width: 1280px) {
+  section[class^="mainSection"] {
+    .inner {
+      .plantIntro {
+        flex-direction: row;
+        & > div {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          width: 49.5%;
+          height: 550px;
+          &:last-child {
+            margin-top: 0;
+            height: inherit;
+          }
+          .box2 {
+            height: 49%;
+          }
+          .miniBox {
+            display: flex;
+            justify-content: space-between;
+            height: 49%;
+            .box3,
+            .box4 {
+              width: 49%;
+            }
+          }
+        }
+        div[class^="box"] {
+          border: 1px solid #000;
+          border-radius: 20px;
+        }
+      }
+    }
+  }
+}
