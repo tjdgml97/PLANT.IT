@@ -1,25 +1,149 @@
 @import "reset";
 @import "header";
-// MAIN
-section[class^="mainSection"] {
-  .inner {
-    margin-top: 20px;
 
-    .swiper {
-      width: 100%;
-      height: 300px;
-      background-color: orange;
-      a {
+// FONT
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
+//font-family: 'Montserrat', sans-serif;
+@font-face {
+  font-family: "CWDangamAsac-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/CWDangamAsac-Bold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+// COLOR
+$main-green: #3ea548;
+$main-orange: #ff6652;
+$light-gray: #999;
+.font-color--white {
+  color: white;
+}
+// MAIN
+section[class^="main-section"] {
+  &.main-section-1 {
+    height: calc(100vh - 120px);
+    width: 100%;
+    background-color: #000;
+    margin-bottom: 100px;
+    .inner {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .text-box {
+        color: #fff;
+        text-align: center;
+        font-family: "CWDangamAsac-Bold";
+        font-size: 6rem;
+        .brand-intro {
+          font-size: 18px;
+          line-height: 2;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+      }
+      .arrow {
+        position: absolute;
+        bottom: 7%;
+
+        .arrow-bottom {
+          position: relative;
+          width: 32px;
+          height: 32px;
+          transform: rotate(225deg);
+          &::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            border: 2px solid #fff;
+            border-right: 0;
+            border-bottom: 0;
+          }
+          &::after {
+            position: absolute;
+            content: "";
+            width: 50px;
+            height: 1px;
+            background-color: #fff;
+            transform-origin: 0 100%;
+            transform: rotate(45deg);
+          }
+        }
+      }
+      .brand-story {
         display: block;
-        height: 100%;
-        width: 100%;
+        position: absolute;
+        right: -50px;
+        bottom: 250px;
+        transition: 2s;
+        animation: rotate_image 10s linear infinite;
+        transform-origin: 50% 50%;
+
+        @keyframes rotate_image {
+          100% {
+            transform: rotate(360deg);
+          }
+        }
       }
     }
-    .plantIntro {
+  }
+  &.main-section-3 {
+    height: 500px;
+    width: 100%;
+    background-color: #e0e0e0;
+    margin-top: 100px;
+    .inner {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .text-box--center {
+        p:first-child {
+          font-size: 2rem;
+        }
+        p:nth-child(2) {
+          font-family: "CWDangamAsac-Bold";
+          font-size: 4rem;
+          color: #ff6652;
+          margin: 7px 0 40px;
+        }
+        a {
+          padding: 10px 20px;
+          background-color: #000;
+          color: #fff;
+          font-weight: 600;
+          border-radius: 20px;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+  .inner {
+    height: inherit;
+    .title-second {
+      margin-bottom: 50px;
+      h3 {
+        font-size: 2.2rem;
+        line-height: 3.5rem;
+        color: $main-green;
+      }
+      & > div {
+        display: flex;
+        justify-content: space-between;
+        p {
+          font-size: 18px;
+          color: $light-gray;
+        }
+        a {
+          color: $main-green;
+        }
+      }
+    }
+    .plant-category {
       display: flex;
       justify-content: space-between;
       flex-direction: column;
-
       a {
         display: block;
         height: 100%;
@@ -31,34 +155,123 @@ section[class^="mainSection"] {
         justify-content: space-between;
         width: 100%;
         height: 350px;
+        &.box1 {
+          background-color: #e0e0e0;
+          position: relative;
+          overflow: hidden;
+          a {
+            color: #000;
+          }
+          img {
+            position: absolute;
+            right: -20px;
+            bottom: 15px;
+            width: 58%;
+            mix-blend-mode: multiply;
+          }
+        }
         &:last-child {
           margin-top: 16px;
-          height: 400px;
+          height: 500px;
         }
         .box2 {
           height: 49%;
+          background-color: $main-orange;
         }
-        .miniBox {
+        .mini-box {
           display: flex;
           justify-content: space-between;
-          height: 47%;
+          height: 48%;
           .box3,
           .box4 {
             width: 49%;
           }
+          .box3 {
+            background-color: $main-green;
+          }
+          .box4 {
+            background-image: url("../image/home_sect2_interior.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 0 -10px;
+            a {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+          }
         }
       }
       div[class^="box"] {
-        border: 1px solid #000;
+        position: relative;
         border-radius: 20px;
+        padding: 40px 30px;
+        font-family: "Montserrat";
+        a {
+          p {
+            font-size: 1.8rem;
+            font-weight: 600;
+            line-height: 2.2rem;
+          }
+          span {
+            display: block;
+            margin-top: 10px;
+            font-size: 1rem;
+            line-height: 1.5rem;
+          }
+          .arrow-move {
+            position: absolute;
+            right: 40px;
+            bottom: 25px;
+            .arrow-right {
+              position: relative;
+              width: 32px;
+              height: 32px;
+              transform: rotate(135deg);
+              &::before {
+                position: absolute;
+                content: "";
+                // width: 100%;
+                height: 100%;
+                border: 3px solid #fff;
+                border-right: 0;
+                border-bottom: 0;
+              }
+              &::after {
+                position: absolute;
+                content: "";
+                width: 120px;
+                height: 3px;
+                background-color: #fff;
+                transform-origin: 0 100%;
+                transform: rotate(45deg);
+              }
+            }
+          }
+        }
       }
     }
   }
 }
 footer {
-  margin-top: 20px;
-  height: 100px;
-  background-color: #000;
+  height: 150px;
+  background-color: $main-green;
+  display: flex;
+  align-items: center;
+  .inner {
+    display: flex;
+    justify-content: flex-start;
+    .footer-text-box {
+      p:first-child {
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: 600;
+      }
+      margin-left: 150px;
+      color: #fff;
+      line-height: 1.5;
+    }
+  }
 }
 
 /* Mobile */
@@ -67,13 +280,26 @@ footer {
 
 /* Tablet */
 @media screen and (min-width: 768px) {
+  section[class^="main-section"] {
+    .inner {
+      .plant-category {
+        & > div {
+          &.box1 {
+            img {
+              width: 38%;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 /* PC */
 @media screen and (min-width: 1280px) {
-  section[class^="mainSection"] {
+  section[class^="main-section"] {
     .inner {
-      .plantIntro {
+      .plant-category {
         flex-direction: row;
         & > div {
           display: flex;
@@ -81,6 +307,13 @@ footer {
           justify-content: space-between;
           width: 49.5%;
           height: 550px;
+          &.box1 {
+            img {
+              right: -20px;
+              bottom: 15px;
+              width: 78%;
+            }
+          }
           &:last-child {
             margin-top: 0;
             height: inherit;
@@ -88,19 +321,13 @@ footer {
           .box2 {
             height: 49%;
           }
-          .miniBox {
-            display: flex;
-            justify-content: space-between;
+          .mini-box {
             height: 49%;
             .box3,
             .box4 {
               width: 49%;
             }
           }
-        }
-        div[class^="box"] {
-          border: 1px solid #000;
-          border-radius: 20px;
         }
       }
     }
