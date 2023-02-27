@@ -1,0 +1,152 @@
+@import "reset";
+@import "header";
+
+// FONT
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
+//font-family: 'Montserrat', sans-serif;
+
+// COLOR
+$main-green: #3ea548;
+$main-orange: #ff6652;
+$light-gray: #999;
+// .font-color--white {
+//   color: white;
+// }
+
+// NAVIGATION
+header {
+  background-color: $main-green;
+}
+
+// 카테고리별 이미지 배너
+// swiper 사용 예정
+.categoryImgs {
+  img {
+    width: 100%;
+  }
+}
+
+// 카테고리 선택
+.selectSection {
+  .inner {
+    .selectTag {
+      // position: relative; // ::before 를 위한
+
+      display: flex;
+      justify-content: space-between;
+      height: 5vh;
+      margin-top: 10vh;
+      padding: 0 2vw;
+
+      // 수직 중앙정렬??
+      line-height: 5vh;
+      // align-items: center;
+
+      // 임시
+      // background-color: skyblue;
+      // border: 1px solid black;
+
+      // 버튼 디자인
+      li {
+        button {
+          // font-size: 16px;
+          font-size: 1rem;
+          font-weight: 700;
+          color: $main-green;
+          background-color: #fff;
+          border-radius: 20px;
+          border: 2px solid $main-green;
+          padding: 5px 10px;
+          cursor: pointer;
+        }
+      }
+
+      // 초기화 버튼만 색 다르게
+      li:first-child > button {
+        color: rgb(90, 90, 90);
+        border: 2px solid rgb(90, 90, 90);
+      }
+
+      // 카테고리 구분선 - 방법1
+      li.contour {
+        // font-size: 25px;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: $main-green;
+      }
+
+      // 카테고리 구분선 - 방법2 (.contour 없앤 상태에서)
+      // li:nth-child(2)::before,
+      // li:nth-child(4)::before,
+      // li:nth-child(8)::before {
+      //   position: absolute;
+      //   top: 0;
+      //   bottom: 0;
+      //   margin: auto -14px;
+
+      //   content: "";
+      //   display: block;
+      //   width: 2px;
+      //   height: 25px;
+      //   background-color: $main-green;
+      // }
+    }
+  }
+}
+
+// 식물 검색 결과
+.resultSection {
+  .inner {
+    // 임시
+    // background-color: orange;
+
+    margin-top: 8vh;
+    margin-bottom: 10vh;
+
+    p {
+      font-family: "Montserrat";
+      font-size: 1.8rem;
+      font-weight: 600;
+      line-height: 2.2rem;
+      color: $main-green;
+    }
+
+    .count {
+      font-size: 1rem;
+      margin-bottom: 5vh;
+    }
+
+    div {
+      // align-items: center;
+      // justify-content: space-between;
+      img {
+        // 그림 배치 다시 할 것! grid 사용???
+        width: calc(100vw / 4);
+        border: 1px solid $light-gray;
+        border-radius: 20px;
+      }
+    }
+  }
+}
+
+// FOOTER
+footer {
+  height: 150px;
+  background-color: $main-green;
+  display: flex;
+  align-items: center;
+  .inner {
+    display: flex;
+    justify-content: flex-start;
+    .footer-text-box {
+      p:first-child {
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: 600;
+      }
+      margin-left: 150px;
+      color: #fff;
+      line-height: 1.5;
+    }
+  }
+}

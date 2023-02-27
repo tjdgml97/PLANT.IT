@@ -48,33 +48,64 @@
         <div class="category">
           <div class="gototest">
             <p>나는 어떤 유형일까?</p>
-            <button class="btn">자가진단 시작!</button>
+            <a href="#" class="btn">자가진단 시작!</a>
           </div>
-          <div class="card-box">
-            <div class="card card-1">1</div>
-            <div class="card card-2">2</div>
-            <div class="card card-3">3</div>
-            <div class="card card-4">4</div>
+          <div class="card card-1"></div>
+          <div class="card card-2"></div>
+          <div class="card card-3"></div>
+          <div class="card card-4"></div>
+        </div>
+        <div class="question-box" id="question-box">
+          <div class="question1 box hide">
+            <p class="question">1. 당신의 키우기 실력은 어떠한가요?</p>
+            <div class="answer-box">
+              <input
+                type="radio"
+                name="level"
+                onclick="movetoQuestion2(this)"
+              />
+              <p class="answer">매번 식물을 죽이는 똥손이에요..</p>
+              <input
+                type="radio"
+                name="level"
+                onclick="movetoQuestion2(this)"
+              />
+              <p class="answer">죽은 식물도 살릴 수 있는 금손이에요.</p>
+            </div>
+          </div>
+          <div class="question2 box hide">
+            <p class="question">2. 어떤 식물을 가장 키워보고 싶나요?</p>
+            <div class="answer-box">
+              <input type="checkbox" onclick="movetoQuestion3(this)" />
+              <p class="answer">공기정화가 가능한 식물</p>
+              <input type="checkbox" onclick="movetoQuestion3(this)" />
+              <p class="answer">반려동물에게 안전한 식물</p>
+              <input type="checkbox" onclick="movetoQuestion3(this)" />
+              <p class="answer">공간을 가득 채울 대형 식물</p>
+              <input type="checkbox" onclick="movetoQuestion3(this)" />
+              <p class="answer">인테리어 포인트가 되어줄 예쁜 식물</p>
+            </div>
+          </div>
+          <div class="question3 box hide">
+            <p class="question">3. 가드닝 타입은 무엇인가요?</p>
+            <div class="answer-box">
+              <input
+                type="radio"
+                name="doingwater"
+                onclick="movetoResult(this)"
+              />
+              <p class="answer">난 바쁘니까 최소 1달에 한번씩 줄래요.</p>
+              <input
+                type="radio"
+                name="doingwater"
+                onclick="movetoResult(this)"
+              />
+              <p class="answer">최대 2두에 한번 씩은 줄 수 있어요</p>
+            </div>
           </div>
         </div>
-        <div class="question-box">
-          <div class="question1 box">
-            <p class="question">1. 당신의 키우기 실력은 어떠한가요?</p>
-            <p class="answer">매번 식물을 죽이는 똥손이에요..</p>
-            <p class="answer">죽은 식물도 살릴 수 있는 금손이에요.</p>
-          </div>
-          <div class="question2 box">
-            <p class="question">2. 어떤 식물을 가장 키워보고 싶나요?</p>
-            <p class="answer">공기정화가 가능한 식물</p>
-            <p class="answer">반려동물에게 안전한 식물</p>
-            <p class="answer">공간을 가득 채울 대형 식물</p>
-            <p class="answer">인테리어 포인트가 되어줄 예쁜 식물</p>
-          </div>
-          <div class="question3 box">
-            <p class="question">3. 가드닝 타입은 무엇인가요?</p>
-            <p class="answer">난 바쁘니까 최소 1달에 한번씩 줄래요.</p>
-            <p class="answer">최대 2두에 한번 씩은 줄 수 있어요</p>
-          </div>
+        <div class="btn-box">
+          <a href="./testResult.html" class="hide result-btn">검사결과 확인</a>
         </div>
       </div>
     </section>
