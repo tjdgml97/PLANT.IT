@@ -1,34 +1,64 @@
-section .inner {
-  position: absolute;
-  background-color: #808080;
-  width: 70%;
-  height: 90%;
-  border: 1px solid black;
-  border-radius: 15%;
-  height: 50%;
-  background-color: rgb(206, 232, 243);
-  margin: 10px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-section .inner .text-result {
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.inner {
+  width: 90%;
+  margin: auto;
+  position: relative;
+}
+
+/* Mobile */
+/* Tablet */
+/* PC */
+@media screen and (min-width: 1280px) {
+  .inner {
+    width: 1200px;
+  }
+}
+.testResult {
+  background-color: rgb(174, 221, 162);
+}
+.testResult .inner {
   display: flex;
-  justify-content: center;
+  position: relative;
 }
-section .inner .text-result .card-img {
-  border: 1px solid black;
-  margin-left: 50px;
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
+.testResult .inner .card_image {
+  width: 60%;
+  background-image: url("../image/lion.png");
+  background-size: 30%;
+  background-position-x: 10%;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.testResult .inner .instruct {
   background-color: white;
+  text-align: center;
+  width: 60%;
 }
-section .inner .image-result {
-  display: flex;
-  justify-content: center;
+.testResult .inner .instruct .text {
+  margin: 30px;
 }
-section .inner .image-result .image-result-el {
-  background-color: white;
-  width: 100px;
-  height: 100px;
-  border-radius: 20%;
-  border: 1px solid black;
+.testResult .inner .instruct .text h3 {
+  margin-top: 20px;
+}
+.testResult .inner .instruct .tree_all .swiper .swiper-wrapper .swiper-slide {
+  opacity: 0.5;
+  transform: 0.2;
+}
+.testResult .inner .instruct .tree_all .swiper .swiper-wrapper .swiper-slide.active {
+  opacity: 1;
 }/*# sourceMappingURL=testResult.css.map */
