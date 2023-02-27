@@ -85,6 +85,7 @@ header > .inner {
 }
 .hide {
   opacity: 0;
+  display: none;
 }
 
 .test .inner .category {

@@ -12,12 +12,11 @@ const btn = document.querySelector(".btn");
 const resultBtn = document.querySelector(".result-btn");
 
 function movetoScroll() {
+  questionBox.setAttribute();
   const location = questionBox.offsetTop;
-  console.log(location);
   window.scrollTo({ top: location, behavior: "smooth" });
   question1.classList.remove("hide");
   question1.style.transform = "translateX(0)";
-  console.log("hi");
 }
 
 function movetoQuestion2(check) {
