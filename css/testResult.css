@@ -36,7 +36,7 @@ a {
   position: relative;
 }
 .testResult .inner .card_image {
-  width: 40%;
+  width: 60%;
   background-image: url("../image/lion.png");
   background-size: 30%;
   background-position-x: 10%;
