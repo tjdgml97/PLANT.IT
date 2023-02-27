@@ -11,7 +11,7 @@ ol {
 
 a {
   text-decoration: none;
-  color: #777;
+  color: #fff;
 }
 
 .inner {
@@ -31,10 +31,10 @@ a {
 header {
   width: 100%;
   top: 0;
-  background-color: #f6f5ef;
+  background-color: #000;
   border-top: 2px solid black;
   border-bottom: 1px solid #c8c8c8;
-  z-index: 1;
+  z-index: 3;
 }
 
 header > .inner {
@@ -52,6 +52,9 @@ header > .inner {
   right: 0;
   display: block;
 }
+.menu-bar:active .menu-bar-menu li a {
+  color: #fff;
+}
 .menu-bar .menu-bar-menu {
   display: none;
   justify-content: space-around;
@@ -59,7 +62,7 @@ header > .inner {
 .menu-bar .menu-icon {
   display: block;
   font-size: 30px;
-  color: #000;
+  color: #fff;
 }
 
 /* Mobile */
