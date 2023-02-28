@@ -38,13 +38,8 @@ header {
       margin-top: 10vh;
       padding: 0 2vw;
 
-      // 수직 중앙정렬??
-      line-height: 5vh;
-      // align-items: center;
-
-      // 임시
-      // background-color: skyblue;
-      // border: 1px solid black;
+      // 수직 중앙정렬
+      line-height: 1.2;
 
       // 버튼 디자인
       li {
@@ -97,9 +92,6 @@ header {
 // 식물 검색 결과
 .resultSection {
   .inner {
-    // 임시
-    // background-color: orange;
-
     margin-top: 8vh;
     margin-bottom: 10vh;
 
@@ -119,8 +111,9 @@ header {
     div {
       // align-items: center;
       // justify-content: space-between;
+
       img {
-        // 그림 배치 다시 할 것! grid 사용???
+        // 그림 배치 다시 할 것! grid??
         width: calc(100vw / 4);
         border: 1px solid $light-gray;
         border-radius: 20px;
