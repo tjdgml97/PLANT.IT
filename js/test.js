@@ -12,7 +12,7 @@ const btn = document.querySelector(".btn");
 const resultBtn = document.querySelector(".result-btn");
 
 function movetoScroll() {
-  questionBox.setAttribute();
+  questionBox.setAttribute("type", "checkbox");
   const location = questionBox.offsetTop;
   window.scrollTo({ top: location, behavior: "smooth" });
   question1.classList.remove("hide");
