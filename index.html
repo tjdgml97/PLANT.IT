@@ -6,21 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Plant.it</title>
     <!-- JAVASCRIPT -->
-    <!-- SWIPER -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-    />
-
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
     ></script>
+
     <!-- FONTASSOME -->
     <script
       src="https://kit.fontawesome.com/bdd3c23416.js"
       crossorigin="anonymous"
     ></script>
+    <!-- MAIN -->
+    <script defer src="./js/home.js"></script>
     <!-- STYLE -->
     <link rel="stylesheet" href="./css/home.css" />
   </head>
@@ -50,13 +47,12 @@
             Plants are here to<br />
             Cheer you up
           </p>
-          <h1><img src="" alt="" /></h1>
           <p class="brand-intro">
             우리의 녹색 행성, 더 싱그러워지도록 Plant.it이 함께합니다<br />
             더 다양한 브랜드 스토리가 궁금하다면 옆의 원을 클릭해보세요
           </p>
         </div>
-        <div class="arrow">
+        <div id="titleSectBtn" class="arrow">
           <div class="arrow-bottom"></div>
         </div>
         <a href="" class="brand-story"
@@ -120,11 +116,29 @@
     </section>
     <section class="main-section-3">
       <div class="inner">
-        <div class="text-box--center">
-          <p>나는 어떤 유형일까?</p>
-          <p>반려식물인 테스트</p>
-          <a href="#">자가진단 바로가기</a>
+        <div class="title-second">
+          <div>
+            <div>
+              <h3>Plant.it Personality Test</h3>
+              <p>
+                식물을 기르기 전, 재미로 보는 자가진단 테스트!<br />
+                자신의 타입인지 검사해보고 추천 식물을 확인해보세요
+              </p>
+            </div>
+            <a href="test.html" class="btn btn--white">
+              <div class="circle circle-1"></div>
+              <div class="circle circle-2"></div>
+              <div class="circle circle-3"></div>
+              <div class="circle circle-4"></div>
+            </a>
+          </div>
         </div>
+        <ul class="character">
+          <li><img src="./image/지구.svg" alt="" /></li>
+          <li><img src="./image/로켓.svg" alt="" /></li>
+          <li><img src="./image/별똥별.svg" alt="" /></li>
+          <li><img src="./image/인공위성.svg" alt="" /></li>
+        </ul>
       </div>
     </section>
     <footer>
