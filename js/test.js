@@ -6,44 +6,38 @@ const questionBox = document.querySelector("#question-box");
 const question1 = document.querySelector(".question1");
 const question2 = document.querySelector(".question2");
 const question3 = document.querySelector(".question3");
-const question = questionBox.querySelector("p.question");
-const answer = question.querySelector("p.answer");
+const question = questionBox.querySelector("question");
 const btn = document.querySelector(".btn");
-const resultBtn = document.querySelector(".result-btn");
+const resultBtn = document.querySelector("#btn-box");
 
 function movetoScroll() {
-  questionBox.setAttribute("type", "checkbox");
   const location = questionBox.offsetTop;
   window.scrollTo({ top: location, behavior: "smooth" });
   question1.classList.remove("hide");
   question1.style.transform = "translateX(0)";
 }
 
-function movetoQuestion2(check) {
-  if (check.checked === true) {
-    question2.classList.remove("hide");
-    question2.style.transform = "translateX(0)";
-  }
-}
-
-function movetoQuestion3(check) {
-  if (check.checked === true) {
-    const location2 = document.body.scrollHeight;
-    window.scrollTo({ top: location2, behavior: "smooth" });
-    question3.classList.remove("hide");
-    question3.style.transform = "translateX(0)";
-  }
-}
-
-function movetoResult(check) {
-  if (check.checked === true) {
-    question3.classList.remove("hide");
-    question3.style.transform = "translateX(0)";
-    resultBtn.classList.remove("hide");
-  }
-}
-
 btn.addEventListener("click", movetoScroll);
+
+const answer1 = document.querySelector("first-answer");
+const answer2 = document.querySelector("second-answer");
+const answer3 = document.querySelector("third-answer");
+const answer4 = document.querySelector("forth-answer");
+
+function movetoQuestion2() {
+  question;
+  question2.classList.remove("hide");
+}
+
+function movetoQuestion3() {
+  question3.classList.remove("hide");
+}
+
+function movetoResult() {
+  const location1 = resultBtn.offsetTop;
+  window.scrollTo({ top: location1, behavior: "smooth" });
+  resultBtn.classList.remove("hide");
+}
 
 window.onload = function () {
   setTimeout(function () {
