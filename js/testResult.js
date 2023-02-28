@@ -2,7 +2,7 @@ const swiperTree = new Swiper(".swiper",{
   direction:"horizontal",
   slidesPerView:3,
   spaceBetween:3,
-  centeredSlidex:true,
+  centeredSlides:true,
   loop:true,
   autoplay:{
     delay: 1000,
