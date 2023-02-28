@@ -54,12 +54,23 @@ header {
           padding: 5px 10px;
           cursor: pointer;
         }
+
+        button:hover,
+        button.clicked {
+          color: #fff;
+          background-color: $main-green;
+        }
       }
 
       // 초기화 버튼만 색 다르게
       li:first-child > button {
         color: rgb(90, 90, 90);
         border: 2px solid rgb(90, 90, 90);
+      }
+
+      li:first-child > button:hover {
+        color: #fff;
+        background-color: rgb(90, 90, 90);
       }
 
       // 카테고리 구분선 - 방법1
@@ -108,15 +119,37 @@ header {
       margin-bottom: 5vh;
     }
 
-    div {
+    .results {
       // align-items: center;
       // justify-content: space-between;
+      // display: flex;
 
-      img {
-        // 그림 배치 다시 할 것! grid??
+      .plant {
+        // 그림 배치 다시 할 것! grid 사용???
         width: calc(100vw / 4);
-        border: 1px solid $light-gray;
-        border-radius: 20px;
+        text-align: center;
+        margin-bottom: 3vh;
+
+        img {
+          width: 100%;
+          border: 1px solid $light-gray;
+          border-radius: 20px;
+          overflow: hidden;
+        }
+
+        .kor {
+          font-size: 1.1rem;
+          font-weight: 700;
+          line-height: 1.1rem;
+          margin: 0;
+        }
+
+        .eng {
+          font-size: 0.6rem;
+          line-height: 0.6rem;
+          margin: 0;
+          color: black;
+        }
       }
     }
   }
