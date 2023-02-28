@@ -1,3 +1,5 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -28,37 +30,207 @@ a {
     width: 1200px;
   }
 }
-.testResult {
-  background-color: rgb(174, 221, 162);
+* {
+  font-family: "Montserrat";
+  line-height: 2.2rem;
 }
-.testResult .inner {
+
+div {
+  font-family: "Montserrat";
+  line-height: 2.2rem;
+}
+
+h1 {
+  font-family: "Montserrat";
+}
+
+section {
+  font-family: "Montserrat";
+}
+
+header {
+  width: 100%;
+  top: 0;
+  background-color: #3ea548;
+  border: none;
+  z-index: 3;
+}
+
+header > .inner {
+  position: relative;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-bar:active .menu-bar-menu {
+  position: absolute;
+  z-index: 1;
+  top: 100px;
+  right: 0;
+  display: block;
+}
+.menu-bar:active .menu-bar-menu li a {
+  color: #fff;
+}
+.menu-bar .menu-bar-menu {
+  display: none;
+  justify-content: space-around;
+}
+.menu-bar .menu-icon {
+  display: block;
+  font-size: 30px;
+  color: #fff;
+}
+
+/* Mobile */
+/* Tablet */
+/* PC */
+@media screen and (min-width: 1280px) {
+  .menu-bar {
+    width: 35%;
+  }
+  .menu-bar:active .menu-bar-menu {
+    position: static;
+    display: flex;
+  }
+  .menu-bar .menu-bar-menu {
+    display: flex;
+  }
+  .menu-bar .menu-icon {
+    display: none;
+  }
+}
+.testResult {
   display: flex;
   position: relative;
 }
-.testResult .inner .card_image {
-  width: 60%;
-  background-image: url("../image/lion.png");
+.testResult .card_image {
+  background-color: rgba(130, 187, 83, 0.25);
+  width: 30%;
+  background-image: url("../image/지구.svg");
   background-size: 30%;
-  background-position-x: 10%;
+  background-position-y: 50%;
   text-align: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-.testResult .inner .instruct {
-  background-color: white;
-  text-align: center;
-  width: 60%;
-}
-.testResult .inner .instruct .text {
+.testResult .card_image p {
   margin: 30px;
+  font-size: 30px;
+  font-weight: 700;
+  color: green;
 }
-.testResult .inner .instruct .text h3 {
+.testResult .instruct {
+  font-family: "Montserrat";
+  width: 70%;
+}
+.testResult .instruct .text {
+  margin: 30px;
+  color: green;
+}
+.testResult .instruct .text h1 {
+  font-size: 40px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-family: "Montserrat" "sans-serif";
+}
+.testResult .instruct .text button {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #3ea548;
+  background-color: #fff;
+  border-radius: 20px;
+  border: 2px solid #3ea548;
+  padding: 5px 10px;
+}
+.testResult .instruct .text p {
+  margin: 50px;
+  font-size: 20px;
+  font-family: "Montserrat" "sans-serif";
+}
+.testResult .instruct .text h3 {
+  color: #3ea548;
   margin-top: 20px;
+  font-family: "Montserrat";
 }
-.testResult .inner .instruct .tree_all .swiper .swiper-wrapper .swiper-slide {
-  opacity: 0.5;
-  transform: 0.2;
+
+.tree_all {
+  position: relative;
+  transition: height 0.4s;
 }
-.testResult .inner .instruct .tree_all .swiper .swiper-wrapper .swiper-slide.active {
+
+.swiper {
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 30px;
+}
+
+.swiper-slide {
   opacity: 1;
+  transform: 0.2;
+  height: 50%;
+}
+.swiper-slide img {
+  box-shadow: 5px 5px 10px rgba(205, 205, 205, 0.852);
+  height: 90%;
+  width: 100%;
+}
+
+.swiper-slide-active {
+  opacity: 1;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 190px;
+  cursor: pointer;
+  width: 55px;
+  height: 55px;
+  border: 2px solid #333;
+  color: #333;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.swiper-button-prev {
+  left: 50%;
+  transform: translateX(-500px);
+}
+
+.swiper-button-next {
+  right: 50%;
+  transform: translateX(500px);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 24px;
+}
+
+footer {
+  height: 150px;
+  background-color: #3ea548;
+  display: flex;
+  align-items: center;
+}
+footer .inner {
+  display: flex;
+  justify-content: flex-start;
+}
+footer .inner .footer-text-box {
+  margin-left: 150px;
+  color: #fff;
+  line-height: 1.5;
+}
+footer .inner .footer-text-box p:first-child {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
 }/*# sourceMappingURL=testResult.css.map */
