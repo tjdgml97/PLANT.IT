@@ -98,7 +98,7 @@ header {
   height: 5vh;
   margin-top: 10vh;
   padding: 0 2vw;
-  line-height: 5vh;
+  line-height: 1.2;
 }
 .selectSection .inner .selectTag li button {
   font-size: 1rem;
