@@ -25,7 +25,6 @@ section[class^="main-section"] {
     height: calc(100vh - 120px);
     width: 100%;
     background-color: #000;
-    margin-bottom: 100px;
     .inner {
       position: relative;
       display: flex;
@@ -35,18 +34,22 @@ section[class^="main-section"] {
         color: #fff;
         text-align: center;
         font-family: "CWDangamAsac-Bold";
-        font-size: 6rem;
+        font-size: 5rem;
+        margin-bottom: 100px;
         .brand-intro {
-          font-size: 18px;
-          line-height: 2;
+          font-size: 16px;
+          line-height: 1.6;
           font-family: Arial, Helvetica, sans-serif;
+          margin-top: 40px;
         }
       }
+
       .arrow {
         position: absolute;
         bottom: 7%;
 
         .arrow-bottom {
+          cursor: pointer;
           position: relative;
           width: 32px;
           height: 32px;
@@ -88,33 +91,50 @@ section[class^="main-section"] {
       }
     }
   }
+  &.main-section-2,
   &.main-section-3 {
-    height: 500px;
+    height: 100vh;
+  }
+  &.main-section-3 {
     width: 100%;
     background-color: #e0e0e0;
-    margin-top: 100px;
     .inner {
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      .text-box--center {
-        p:first-child {
-          font-size: 2rem;
-        }
-        p:nth-child(2) {
-          font-family: "CWDangamAsac-Bold";
-          font-size: 4rem;
-          color: #ff6652;
-          margin: 7px 0 40px;
-        }
-        a {
-          padding: 10px 20px;
-          background-color: #000;
-          color: #fff;
-          font-weight: 600;
-          border-radius: 20px;
-          font-size: 1.2rem;
+      height: 100vh;
+      .character {
+        height: 60%;
+        // border: 1px solid #000;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        li {
+          position: absolute;
+          &:nth-child(1) {
+            left: -200px;
+            bottom: 0px;
+            img {
+              width: 400px;
+            }
+          }
+          &:nth-child(2) {
+            left: 200px;
+            img {
+              width: 340px;
+            }
+          }
+          &:nth-child(3) {
+            right: 230px;
+            bottom: -50px;
+            img {
+              width: 480px;
+            }
+          }
+          &:nth-child(4) {
+            bottom: 70px;
+            right: -200px;
+            img {
+              width: 450px;
+            }
+          }
         }
       }
     }
@@ -122,9 +142,9 @@ section[class^="main-section"] {
   .inner {
     height: inherit;
     .title-second {
-      margin-bottom: 50px;
+      padding: 90px 0 50px;
       h3 {
-        font-size: 2.2rem;
+        font-size: 2rem;
         line-height: 3.5rem;
         color: $main-green;
       }
@@ -132,11 +152,48 @@ section[class^="main-section"] {
         display: flex;
         justify-content: space-between;
         p {
-          font-size: 18px;
+          font-size: 16px;
           color: $light-gray;
+          line-height: 26px;
         }
         a {
           color: $main-green;
+        }
+        .btn {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 260px;
+          &::before {
+            content: "테스트 바로가기 ▸";
+            z-index: 1;
+            font-family: "CWDangamAsac-Bold";
+            font-size: 28px;
+          }
+          .circle {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            position: absolute;
+            &.circle-1 {
+              right: 0px;
+            }
+            &.circle-2 {
+              right: 60px;
+            }
+            &.circle-3 {
+              right: 120px;
+            }
+            &.circle-4 {
+              right: 180px;
+            }
+          }
+          &.btn--white {
+            .circle {
+              background-color: #fff;
+            }
+          }
         }
       }
     }
@@ -209,9 +266,9 @@ section[class^="main-section"] {
         font-family: "Montserrat";
         a {
           p {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-weight: 600;
-            line-height: 2.2rem;
+            line-height: 2rem;
           }
           span {
             display: block;
@@ -258,13 +315,14 @@ footer {
   background-color: $main-green;
   display: flex;
   align-items: center;
+  font-size: 14px;
   .inner {
     display: flex;
     justify-content: flex-start;
     .footer-text-box {
       p:first-child {
         margin-bottom: 10px;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 600;
       }
       margin-left: 150px;
