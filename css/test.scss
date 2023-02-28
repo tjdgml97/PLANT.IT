@@ -90,7 +90,7 @@ header > .inner {
 
       .gototest {
         position: absolute;
-        top: 35%;
+        top: 20%;
         left: 50%;
         transform: translateX(-50%);
         width: 39%;
@@ -116,28 +116,44 @@ header > .inner {
       }
 
       .card {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        background-color: tomato;
+        // width: 200px;
+        // height: 200px;
+        // border-radius: 50%;
+        // background-color: tomato;
         position: absolute;
       }
 
       .card-1 {
-        top: 20%;
-        left: 5%;
+        top: 7%;
+        left: -13%;
+        img {
+          width: 400px;
+          height: 400px;
+        }
       }
       .card-2 {
-        top: 65%;
-        left: 15%;
+        top: 45%;
+        left: 10%;
+        img {
+          width: 380px;
+          height: 380px;
+        }
       }
       .card-3 {
-        top: 68%;
+        top: 45%;
         right: 15%;
+        img {
+          width: 380px;
+          height: 380px;
+        }
       }
       .card-4 {
-        top: 20%;
-        right: 5%;
+        top: 5%;
+        right: -10%;
+        img {
+          width: 400px;
+          height: 400px;
+        }
       }
     }
 
@@ -450,15 +466,43 @@ header > .inner {
       margin-top: 10%;
       text-align: center;
 
-      .result-btn {
-        text-align: center;
-        border: 2px solid #282a4e;
-        border-radius: 10px;
-        display: inline-block;
-        background-color: white;
-        width: 15%;
-        height: 25%;
-        color: #282a4e;
+      .btn {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 260px;
+        &::before {
+          content: "테스트 바로가기 ▸";
+          z-index: 1;
+          font-family: "CWDangamAsac-Bold";
+          font-size: 28px;
+        }
+        .circle {
+          width: 90px;
+          height: 90px;
+          border-radius: 50%;
+          position: absolute;
+          &.circle-1 {
+            right: 0px;
+          }
+          &.circle-2 {
+            right: 60px;
+          }
+          &.circle-3 {
+            right: 120px;
+          }
+          &.circle-4 {
+            right: 180px;
+          }
+        }
+        &.btn--white {
+          .circle {
+            background-color: #282a4e;
+          }
+        }
       }
     }
   }

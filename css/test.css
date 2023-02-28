@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -105,7 +106,7 @@ header > .inner {
 }
 .test .inner .category .gototest {
   position: absolute;
-  top: 35%;
+  top: 20%;
   left: 50%;
   transform: translateX(-50%);
   width: 39%;
@@ -129,27 +130,39 @@ header > .inner {
   background-color: green;
 }
 .test .inner .category .card {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background-color: tomato;
   position: absolute;
 }
 .test .inner .category .card-1 {
-  top: 20%;
-  left: 5%;
+  top: 7%;
+  left: -13%;
+}
+.test .inner .category .card-1 img {
+  width: 400px;
+  height: 400px;
 }
 .test .inner .category .card-2 {
-  top: 65%;
-  left: 15%;
+  top: 45%;
+  left: 10%;
+}
+.test .inner .category .card-2 img {
+  width: 380px;
+  height: 380px;
 }
 .test .inner .category .card-3 {
-  top: 68%;
+  top: 45%;
   right: 15%;
 }
+.test .inner .category .card-3 img {
+  width: 380px;
+  height: 380px;
+}
 .test .inner .category .card-4 {
-  top: 20%;
-  right: 5%;
+  top: 5%;
+  right: -10%;
+}
+.test .inner .category .card-4 img {
+  width: 400px;
+  height: 400px;
 }
 .test .inner .question-mainbox {
   position: relative;
@@ -415,13 +428,39 @@ header > .inner {
   margin-top: 10%;
   text-align: center;
 }
-.test .inner .btn-box .result-btn {
-  text-align: center;
-  border: 2px solid #282a4e;
-  border-radius: 10px;
-  display: inline-block;
-  background-color: white;
-  width: 15%;
-  height: 25%;
-  color: #282a4e;
+.test .inner .btn-box .btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 260px;
+}
+.test .inner .btn-box .btn::before {
+  content: "테스트 바로가기 ▸";
+  z-index: 1;
+  font-family: "CWDangamAsac-Bold";
+  font-size: 28px;
+}
+.test .inner .btn-box .btn .circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  position: absolute;
+}
+.test .inner .btn-box .btn .circle.circle-1 {
+  right: 0px;
+}
+.test .inner .btn-box .btn .circle.circle-2 {
+  right: 60px;
+}
+.test .inner .btn-box .btn .circle.circle-3 {
+  right: 120px;
+}
+.test .inner .btn-box .btn .circle.circle-4 {
+  right: 180px;
+}
+.test .inner .btn-box .btn.btn--white .circle {
+  background-color: #282a4e;
 }/*# sourceMappingURL=test.css.map */

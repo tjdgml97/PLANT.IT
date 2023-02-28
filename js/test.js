@@ -10,6 +10,7 @@ const question = questionBox.querySelector("question");
 const btn = document.querySelector(".btn");
 const resultBtn = document.querySelector("#btn-box");
 
+//자가진단 버튼 클릭시 스크롤 이동
 function movetoScroll() {
   const location = questionBox.offsetTop;
   window.scrollTo({ top: location, behavior: "smooth" });
@@ -19,13 +20,13 @@ function movetoScroll() {
 
 btn.addEventListener("click", movetoScroll);
 
+//답변 선택시 질문지 생성
 const answer1 = document.querySelector("first-answer");
 const answer2 = document.querySelector("second-answer");
 const answer3 = document.querySelector("third-answer");
 const answer4 = document.querySelector("forth-answer");
 
 function movetoQuestion2() {
-  question;
   question2.classList.remove("hide");
 }
 
@@ -44,3 +45,38 @@ window.onload = function () {
     scrollTo(0, 0);
   }, 100);
 };
+
+// 경우의 수마다 페이지 이동
+const nextpage = document.querySelector(".btn-box>btn");
+const hard = document.querySelector(".level-hard");
+const easy = document.querySelector(".level-easy");
+const short = document.querySelector(".water-short");
+const long = document.querySelector(".water-long");
+
+hard.addEventListener("click", function () {
+  hard.classList.add("hard-short");
+  hard.classList.add("hard-long");
+});
+
+easy.addEventListener("click", function () {
+  easy.classList.add("easy-short");
+  easy.classList.add("easy-long");
+});
+
+short.addEventListener("click", function () {
+  short.classList.add("hard-short");
+  short.classList.add("easy-short");
+});
+
+long.addEventListener("click", function () {
+  long.classList.add("hard-long");
+  long.classList.add("easy-long");
+});
+
+if (
+  hard.classList.contains("hard-short") === true &&
+  short.classList.contains("hard-short") === true
+) {
+  nextpage.setAttribute("href", "http://naver.com");
+  console.log(nextpage);
+}
