@@ -85,8 +85,16 @@ header {
         }
 
         button:hover {
+        button:hover {
           color: #fff;
           background-color: $main-green;
+        }
+
+        // 클릭된 버튼 색 다르게
+        button.clicked {
+          color: #fff;
+          border-color: $main-orange;
+          background-color: $main-orange;
         }
 
         // 클릭된 버튼 색 다르게
@@ -154,18 +162,28 @@ header {
       margin-bottom: 5vh;
     }
 
+<<<<<<< Updated upstream
     .results {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
 
+      // 그림 배치 다시 할 것! grid 사용???
       // 그림 배치 다시 할 것! grid 사용???
       .plant {
         width: calc(100vw / 5);
         // width: 300px;
         margin-bottom: 5vh;
         text-align: center; // 텍스트 중앙정렬
+        width: calc(100vw / 5);
+        // width: 300px;
+        margin-bottom: 5vh;
+        text-align: center; // 텍스트 중앙정렬
 
+        // hover 시 상세설명 뜨려면, html에서 <img> 대신 <div>로 바꿔야?
         // hover 시 상세설명 뜨려면, html에서 <img> 대신 <div>로 바꿔야?
         img {
           width: 100%;
@@ -173,18 +191,23 @@ header {
           border-radius: 20px;
           overflow: hidden;
           margin-bottom: 1vh;
+          margin-bottom: 1vh;
         }
 
         .kor {
           font-size: 1.3rem;
           line-height: 1.3rem;
+          font-size: 1.3rem;
+          line-height: 1.3rem;
           font-weight: 700;
           margin: 0;
+          color: $main-green;
           color: $main-green;
         }
 
         .eng {
           font-size: 0.6rem;
+          line-height: 1rem;
           line-height: 1rem;
           margin: 0;
           color: black;
