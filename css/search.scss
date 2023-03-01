@@ -15,7 +15,36 @@ $light-gray: #999;
 
 // NAVIGATION
 header {
-  background-color: $main-green;
+  background-color: #fff;
+  border: none;
+
+  .inner {
+    .logo {
+      a {
+        img {
+          width: 60px;
+        }
+      }
+    }
+
+    .menu-bar {
+      .menu-bar-menu {
+        li {
+          &:hover ::before {
+            background-color: $main-green;
+          }
+
+          a {
+            color: $main-green;
+          }
+        }
+      }
+
+      .menu-icon {
+        color: $main-green;
+      }
+    }
+  }
 }
 
 // 카테고리별 이미지 배너
@@ -55,10 +84,16 @@ header {
           cursor: pointer;
         }
 
-        button:hover,
-        button.clicked {
+        button:hover {
           color: #fff;
           background-color: $main-green;
+        }
+
+        // 클릭된 버튼 색 다르게
+        button.clicked {
+          color: #fff;
+          border-color: $main-orange;
+          background-color: $main-orange;
         }
       }
 
@@ -120,36 +155,46 @@ header {
     }
 
     .results {
-      // align-items: center;
-      // justify-content: space-between;
-      // display: flex;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
 
+      // 그림 배치 다시 할 것! grid 사용???
       .plant {
-        // 그림 배치 다시 할 것! grid 사용???
-        width: calc(100vw / 4);
-        text-align: center;
-        margin-bottom: 3vh;
+        width: calc(100vw / 5);
+        // width: 300px;
+        margin-bottom: 5vh;
+        text-align: center; // 텍스트 중앙정렬
 
+        // hover 시 상세설명 뜨려면, html에서 <img> 대신 <div>로 바꿔야?
         img {
           width: 100%;
           border: 1px solid $light-gray;
           border-radius: 20px;
           overflow: hidden;
+          margin-bottom: 1vh;
         }
 
         .kor {
-          font-size: 1.1rem;
+          font-size: 1.3rem;
+          line-height: 1.3rem;
           font-weight: 700;
-          line-height: 1.1rem;
           margin: 0;
+          color: $main-green;
         }
 
         .eng {
           font-size: 0.6rem;
-          line-height: 0.6rem;
+          line-height: 1rem;
           margin: 0;
           color: black;
         }
+      }
+
+      // hover 시, 사진 어둡게 처리 + 위에 상세 내용 뜰 예정
+      .plant:hover > img {
+        border: 5px solid $main-green;
+        filter: blur(0.7px);
       }
     }
   }
