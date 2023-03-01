@@ -30,11 +30,6 @@ a {
     width: 1200px;
   }
 }
-* {
-  font-family: "Montserrat";
-  line-height: 2.2rem;
-}
-
 div {
   font-family: "Montserrat";
   line-height: 2.2rem;
@@ -46,42 +41,6 @@ h1 {
 
 section {
   font-family: "Montserrat";
-}
-
-header {
-  width: 100%;
-  top: 0;
-  background-color: #3ea548;
-  border: none;
-  z-index: 3;
-}
-
-header > .inner {
-  position: relative;
-  height: 120px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.menu-bar:active .menu-bar-menu {
-  position: absolute;
-  z-index: 1;
-  top: 100px;
-  right: 0;
-  display: block;
-}
-.menu-bar:active .menu-bar-menu li a {
-  color: #fff;
-}
-.menu-bar .menu-bar-menu {
-  display: none;
-  justify-content: space-around;
-}
-.menu-bar .menu-icon {
-  display: block;
-  font-size: 30px;
-  color: #fff;
 }
 
 /* Mobile */
@@ -105,11 +64,12 @@ header > .inner {
 .testResult {
   display: flex;
   position: relative;
+  height: 100vh;
 }
 .testResult .card_image {
   background-color: rgba(130, 187, 83, 0.25);
   width: 30%;
-  background-image: url("../image/지구.svg");
+  background-image: url("../image/지구.svg");
   background-size: 30%;
   background-position-y: 50%;
   text-align: center;
@@ -120,7 +80,7 @@ header > .inner {
   margin: 30px;
   font-size: 30px;
   font-weight: 700;
-  color: green;
+  color: #3ea548;
 }
 .testResult .instruct {
   font-family: "Montserrat";
@@ -133,17 +93,16 @@ header > .inner {
 .testResult .instruct .text h1 {
   font-size: 40px;
   margin-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   font-family: "Montserrat" "sans-serif";
 }
 .testResult .instruct .text button {
   font-size: 0.9rem;
-  font-weight: 700;
   color: #3ea548;
   background-color: #fff;
   border-radius: 20px;
   border: 2px solid #3ea548;
-  padding: 5px 10px;
+  padding: 3px 10px;
 }
 .testResult .instruct .text p {
   margin: 50px;
@@ -160,8 +119,7 @@ header > .inner {
   position: relative;
   transition: height 0.4s;
 }
-
-.swiper {
+.tree_all .swiper {
   position: absolute;
   width: 100%;
   height: 300px;
@@ -170,16 +128,27 @@ header > .inner {
   transform: translateX(-50%);
   top: 30px;
 }
-
-.swiper-slide {
+.tree_all .swiper .swiper-slide {
   opacity: 1;
   transform: 0.2;
   height: 50%;
 }
-.swiper-slide img {
+.tree_all .swiper .swiper-slide img {
   box-shadow: 5px 5px 10px rgba(205, 205, 205, 0.852);
   height: 90%;
   width: 100%;
+}
+.tree_all .more-btn {
+  position: absolute;
+  margin: 20px;
+  right: 0;
+  background-color: #3ea548;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: 20px;
+  padding: 5px 20px;
+  border: 0px;
 }
 
 .swiper-slide-active {
