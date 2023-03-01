@@ -166,7 +166,6 @@ header .inner .menu-bar .menu-icon {
   cursor: pointer;
 }
 .selectSection .inner .selectTag li button:hover {
-.selectSection .inner .selectTag li button:hover {
   color: #fff;
   background-color: #3ea548;
 }
@@ -203,11 +202,6 @@ header .inner .menu-bar .menu-icon {
 .resultSection .inner .count {
   font-size: 1rem;
   margin-bottom: 5vh;
-}
-.resultSection .inner .results {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
 }
 .resultSection .inner .results {
   display: flex;
