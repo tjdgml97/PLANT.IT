@@ -13,6 +13,7 @@ recomendSectBtn.addEventListener("click", function () {
 
 // mouseover 시 요소 사라짐
 const liEl = document.querySelectorAll(".hidden-text > li");
+const hiddenEl = document.querySelector(".hidden-text");
 // liEl.addEventListener("mouseover", function () {
 
 liEl.forEach(function (el) {
@@ -23,4 +24,18 @@ liEl.forEach(function (el) {
   });
 });
 
-// hober
+window.onload = function () {
+  hiddenEl.classList.add("start");
+};
+
+// header
+const menuIcon = document.querySelector(".menu-icon");
+const menuEl = document.querySelector(".menu-bar-menu");
+
+menuIcon.addEventListener("click", function () {
+  if (menuEl.classList.contains("menu-hidden")) {
+    menuEl.classList.remove("menu-hidden");
+  } else {
+    menuEl.classList.add("menu-hidden");
+  }
+});
