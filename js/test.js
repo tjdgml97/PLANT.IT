@@ -8,6 +8,7 @@ const question2 = document.querySelector(".question2");
 const question3 = document.querySelector(".question3");
 const question = questionBox.querySelector("question");
 const btn = document.querySelector(".btn");
+const testBtn = document.querySelector(".btn-box");
 const resultBtn = document.querySelector("#btn-box");
 
 //자가진단 버튼 클릭시 스크롤 이동
@@ -20,63 +21,56 @@ function movetoScroll() {
 
 btn.addEventListener("click", movetoScroll);
 
-//답변 선택시 질문지 생성
-const answer1 = document.querySelector("first-answer");
-const answer2 = document.querySelector("second-answer");
-const answer3 = document.querySelector("third-answer");
-const answer4 = document.querySelector("forth-answer");
-
-function movetoQuestion2() {
-  question2.classList.remove("hide");
-}
-
-function movetoQuestion3() {
-  question3.classList.remove("hide");
-}
-
-function movetoResult() {
-  const location1 = resultBtn.offsetTop;
-  window.scrollTo({ top: location1, behavior: "smooth" });
-  resultBtn.classList.remove("hide");
-}
-
 window.onload = function () {
   setTimeout(function () {
     scrollTo(0, 0);
   }, 100);
 };
 
-// 경우의 수마다 페이지 이동
-const nextpage = document.querySelector(".btn-box>btn");
-const hard = document.querySelector(".level-hard");
-const easy = document.querySelector(".level-easy");
-const short = document.querySelector(".water-short");
-const long = document.querySelector(".water-long");
+//답변 선택시 질문지 생성
+const easyQuestion = document.querySelector(
+  ".question1 > .answer-box > .first-answer"
+);
+const hardQuestion = document.querySelector(
+  ".question1 > .answer-box > .second-answer"
+);
+const shortQuestion = document.querySelector(
+  ".question3 > .answer-box > .first-answer"
+);
+const longQuestion = document.querySelector(
+  ".question3 > .answer-box > .second-answer"
+);
 
-hard.addEventListener("click", function () {
-  hard.classList.add("hard-short");
-  hard.classList.add("hard-long");
-});
-
-easy.addEventListener("click", function () {
-  easy.classList.add("easy-short");
-  easy.classList.add("easy-long");
-});
-
-short.addEventListener("click", function () {
-  short.classList.add("hard-short");
-  short.classList.add("easy-short");
-});
-
-long.addEventListener("click", function () {
-  long.classList.add("hard-long");
-  long.classList.add("easy-long");
-});
-
-if (
-  hard.classList.contains("hard-short") === true &&
-  short.classList.contains("hard-short") === true
-) {
-  nextpage.setAttribute("href", "http://naver.com");
-  console.log(nextpage);
+function btnEasy() {
+  localStorage.setItem("easyBtn", "easy");
+  question2.classList.remove("hide");
 }
+
+function btnHard() {
+  localStorage.setItem("hardBtn", "hard");
+  question2.classList.remove("hide");
+}
+
+function btnShort() {
+  const location1 = testBtn.offsetTop;
+  window.scrollTo({ top: location1, behavior: "smooth" });
+  localStorage.setItem("shortBtn", "short");
+  testBtn.classList.remove("hide");
+}
+
+function btnLong() {
+  const location1 = testBtn.offsetTop;
+  window.scrollTo({ top: location1, behavior: "smooth" });
+  localStorage.setItem("hardBtn", "hard");
+  testBtn.classList.remove("hide");
+}
+
+function movetoQuestion3() {
+  question3.classList.remove("hide");
+}
+
+easyQuestion.addEventListener("click", btnEasy);
+hardQuestion.addEventListener("click", btnHard);
+
+shortQuestion.addEventListener("click", btnShort);
+longQuestion.addEventListener("click", btnLong);

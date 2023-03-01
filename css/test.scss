@@ -1,4 +1,5 @@
 @import "./reset";
+@import "./home.scss";
 
 .hide {
   opacity: 0;
@@ -90,7 +91,7 @@ header > .inner {
 
       .gototest {
         position: absolute;
-        top: 20%;
+        top: 14%;
         left: 50%;
         transform: translateX(-50%);
         width: 39%;
@@ -100,18 +101,58 @@ header > .inner {
         > p {
           font-size: 24px;
           color: white;
-          font-size: 400;
+          font-size: 700;
           line-height: 1;
-          margin-bottom: 50px;
+          margin-bottom: 30px;
         }
-        > a {
-          display: block;
-          text-align: center;
-          margin: auto;
-          width: 130px;
-          height: 40px;
-          border-radius: 5px;
-          background-color: green;
+
+        > h2 {
+          font-size: 70px;
+          color: tomato;
+          font-size: bold;
+          line-height: 1;
+          font-family: "CWDangamAsac-Bold";
+        }
+
+        > .btn {
+          position: absolute;
+          bottom: -15%;
+          left: 50%;
+          transform: translateX(-50%);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 260px;
+          &::before {
+            content: "테스트 바로가기 ▸";
+            color: green;
+            z-index: 1;
+            font-family: "CWDangamAsac-Bold";
+            font-size: 28px;
+          }
+          .circle {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            position: absolute;
+            &.circle-1 {
+              right: 0px;
+            }
+            &.circle-2 {
+              right: 60px;
+            }
+            &.circle-3 {
+              right: 120px;
+            }
+            &.circle-4 {
+              right: 180px;
+            }
+          }
+          &.btn--white {
+            .circle {
+              background-color: white;
+            }
+          }
         }
       }
 
