@@ -25,6 +25,7 @@ $light-gray: #999;
   color: white;
 }
 // MAIN
+
 section[class^="main-section"] {
   &.main-section-1 {
     height: calc(100vh - 120px);
@@ -37,6 +38,21 @@ section[class^="main-section"] {
       justify-content: center;
       align-items: center;
       .hidden-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        &.start {
+          animation: pop 0.3s ease-in;
+          @keyframes pop {
+            from {
+              scale: 0;
+            }
+            to {
+              scale: 1;
+            }
+          }
+        }
         li {
           text-align: center;
           padding: 30px 30px;
@@ -44,6 +60,7 @@ section[class^="main-section"] {
           color: #000;
           position: absolute;
           cursor: pointer;
+
           &:nth-child(odd) {
             background-color: $main-orange;
             font-family: "Montserrat";
@@ -59,137 +76,138 @@ section[class^="main-section"] {
           }
           &:nth-child(1) {
             // Dust
-            left: -20px;
-            bottom: 560px;
+            left: -500px;
+            bottom: 250px;
             transform: rotate(20deg);
             background-color: rgb(47, 132, 230);
           }
           &:nth-child(2) {
             // 미세먼지
-            left: 200px;
-            bottom: 80%;
+            right: -650px;
+            bottom: -300px;
             transform: rotate(40deg);
           }
           &:nth-child(3) {
             // melancholy
-            right: 100px;
-            bottom: 70px;
+            left: 200px;
+            bottom: -200px;
             transform: rotate(-10deg);
             background-color: #ffae22;
           }
           &:nth-child(4) {
             // 우울함
-            left: 50px;
-            bottom: 450px;
+            bottom: -300px;
             transform: rotate(-20deg);
             background-color: $main-green;
           }
           &:nth-child(5) {
             // Tired
-            right: 300px;
-            bottom: 85%;
+            right: -650px;
+            bottom: 0px;
             transform: rotate(-40deg);
             background-color: rgb(47, 132, 230);
           }
           &:nth-child(6) {
             // 피로감
-            right: 300px;
-            bottom: 160px;
+            left: -600px;
+            bottom: 150px;
+
             transform: rotate(-40deg);
           }
           &:nth-child(7) {
             //CO2
-            right: 200px;
-            bottom: 65%;
+            left: 250px;
+            bottom: 180px;
             transform: rotate(30deg);
             background-color: $main-green;
           }
           &:nth-child(8) {
             // 이산화탄소
-            left: 500px;
-            bottom: 500px;
-            transform: rotate(10deg);
+            left: 0px;
+            bottom: 160px;
+            transform: rotate(-10deg);
             background-color: #ffae22;
           }
           &:nth-child(9) {
             // Smoke
-            left: 150px;
-            bottom: 340px;
+            left: -500px;
+            bottom: -80px;
             transform: rotate(-60deg);
           }
           &:nth-child(10) {
             // 매연
-            right: -100px;
-            bottom: 400px;
-
+            right: -650px;
+            bottom: 100px;
             transform: rotate(60deg);
             background-color: $main-orange;
           }
           &:nth-child(11) {
             // Global Warming
-            left: 300px;
-            bottom: 400px;
+
+            left: -250px;
+            bottom: 100px;
             transform: rotate(20deg);
             background-color: $main-green;
           }
           &:nth-child(12) {
             //지구온난화
             left: 330px;
-            bottom: 250px;
+            bottom: 270px;
             transform: rotate(0deg);
             background-color: #a93fd1;
           }
           &:nth-child(13) {
             // Abnormal Climate
-            left: 550px;
-            bottom: 300px;
+            left: 50px;
+            bottom: -100px;
             transform: rotate(-30deg);
             background-color: #fb6bbf;
           }
           &:nth-child(14) {
             // 이상기후
-            right: 40px;
-            bottom: 300px;
-            transform: rotate(80deg);
+            left: 40px;
+            bottom: -400px;
+            transform: rotate(30deg);
             background-color: rgb(47, 132, 230);
           }
           &:nth-child(15) {
             // Humidity
-            left: 300px;
-            bottom: 10px;
+            left: -300px;
+            bottom: -350px;
             transform: rotate(-40deg);
           }
           &:nth-child(16) {
-            // 습도
-            left: -100px;
-            bottom: 300px;
+            // 습기
+            left: -650px;
+            bottom: -120px;
             transform: rotate(70deg);
             background-color: #fb6bbf;
           }
           &:nth-child(17) {
-            //formaldehyde
-            left: 10px;
-            bottom: 120px;
+            //Formaldehyde
+            left: -600px;
+            bottom: -300px;
             transform: rotate(10deg);
             background-color: $main-green;
           }
           &:nth-child(18) {
             // 포름알데히드
-            right: -100px;
+            right: 0px;
             top: 80px;
             transform: rotate(-10deg);
             background-color: #a93fd1;
           }
           &:nth-child(19) {
             left: 50%;
-            top: 45%;
-            transform: translate(-50%, -50%);
+            top: 30%;
+            transform: translate(-50%, -70%);
             background-color: #fff;
             border: 3px solid #000;
             padding: 15px;
             font-size: 36px;
             font-weight: 700;
             color: #000;
+            min-width: 330px;
             animation: infoMouseover 2s ease-in infinite;
             @keyframes infoMouseover {
               100% {
@@ -204,25 +222,25 @@ section[class^="main-section"] {
             }
           }
           &:nth-child(20) {
-            right: -100px;
-            bottom: 500px;
+            right: -700px;
+            bottom: -60px;
           }
           &:nth-child(21) {
-            right: 200px;
-            bottom: 600px;
+            right: 100px;
+            bottom: 240px;
           }
           &:nth-child(22) {
-            left: 200px;
+            left: -700px;
             bottom: 60px;
           }
           &:nth-child(23) {
-            left: 500px;
-            bottom: 150px;
+            right: 670px;
+            top: 200px;
             background-color: rgb(47, 132, 230);
           }
           &:nth-child(24) {
-            left: 500px;
-            bottom: 600px;
+            left: 0px;
+            bottom: 270px;
             background-color: #a93fd1;
           }
         }
@@ -248,7 +266,7 @@ section[class^="main-section"] {
         position: absolute;
 
         .arrow-bottom::before {
-          border: 2px solid #fff;
+          border: 4px solid #fff;
           border-right: 0;
           border-bottom: 0;
         }
@@ -272,11 +290,17 @@ section[class^="main-section"] {
   }
   &.main-section-2 {
     .inner {
+      .title-second {
+        & > div {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
       .arrow {
         left: 50%;
         transform: translate(-50%, 450%);
         .arrow-bottom::before {
-          border: 2px solid $main-green;
+          border: 4px solid $main-green;
           border-right: 0;
           border-bottom: 0;
         }
@@ -297,6 +321,7 @@ section[class^="main-section"] {
         justify-content: space-between;
         li {
           &:nth-child(1) {
+            cursor: pointer;
             bottom: -5%;
             z-index: 2;
             transform-origin: center bottom;
@@ -637,16 +662,25 @@ footer {
   display: flex;
   align-items: center;
   font-size: 14px;
+  overflow: hidden;
   .inner {
     display: flex;
     justify-content: flex-start;
+    .foo_logo {
+      width: 22vw;
+      max-width: 180px;
+      img {
+        width: 100%;
+      }
+    }
+
     .footer-text-box {
       p:first-child {
         margin-bottom: 10px;
         font-size: 16px;
         font-weight: 600;
       }
-      margin-left: 150px;
+      margin-left: 10vw;
       color: #fff;
       line-height: 1.5;
     }
@@ -789,6 +823,15 @@ footer {
             .box4 {
               width: 49%;
             }
+          }
+        }
+      }
+    }
+    &.main-section-1 {
+      .inner {
+        .hidden-text {
+          li {
+            white-space: nowrap;
           }
         }
       }
