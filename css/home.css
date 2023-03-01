@@ -1,5 +1,6 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200;300;400;500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -99,12 +100,186 @@ section[class^=main-section].main-section-1 {
   height: calc(100vh - 120px);
   width: 100%;
   background-color: #000;
+  overflow: hidden;
 }
 section[class^=main-section].main-section-1 .inner {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+section[class^=main-section].main-section-1 .inner .hidden-text li {
+  text-align: center;
+  padding: 30px 30px;
+  border: 3px solid #000;
+  color: #000;
+  position: absolute;
+  cursor: pointer;
+}
+section[class^=main-section].main-section-1 .inner .hidden-text li:nth-child(odd) {
+  background-color: #ff6652;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 40px;
+}
+section[class^=main-section].main-section-1 .inner .hidden-text li:nth-child(even) {
+  background-color: #ffe11d;
+  font-family: "Gothic A1";
+  font-weight: 600;
+  font-size: 40px;
+  border-radius: 100%;
+}
+section[class^=main-section].main-section-1 .inner .hidden-text li:nth-child(1) {
+  left: -20px;
+  bottom: 560px;
+  transform: rotate(20deg);
+  background-color: rgb(47, 132, 230);
+}
+section[class^=main-section].main-section-1 .inner .hidden-text li:nth-child(2) {
+  left: 200px;
+  bottom: 80%;
+  transform: rotate(40deg);
+}
+section[class^=main-section].main-section-1 .inner .hidden-text li:nth-child(3) {
+  right: 100px;
+  bottom: 70px;
+  transform: rotate(-10deg);
+  background-color: #ffae22;
+}
+section[class^=main-section].main-section-1 .inner .hidden-text li:nth-child(4) {
+  left: 50px;
+  bottom: 450px;
+  transform: rotate(-20deg);
+  background-color: #3ea548;
+}
+section[class^=main-section].main-section-1 .inner .hidden-text li:nth-child(5) {
+  right: 300px;
+  bottom: 85%;
+  transform: rotate(-40deg);
+  background-color: rgb(47, 132, 230);
+}
+section[class^=main-section].main-section-1 .inner .hidden-text li:nth-child(6) {
+  right: 300px;
+  bottom: 160px;
+  transform: rotate(-40deg);
+}
+section[class^=main-section].main-section-1 .inner .hidden-text li:nth-child(7) {
+  right: 200px;
+  bottom: 65%;
+  transform: rotate(30deg);
+  background-color: #3ea548;
+}
+section[class^=main-section].main-section-1 .inner .hidden-text li:nth-child(8) {
+  left: 500px;
+  bottom: 500px;
+  transform: rotate(10deg);
+  background-color: #ffae22;
+}
+section[class^=main-section].main-section-1 .inner .hidden-text li:nth-child(9) {
+  left: 150px;
+  bottom: 340px;
+  transform: rotate(-60deg);
+}
+section[class^=main-section].main-section-1 .inner .hidden-text li:nth-child(10) {
+  right: -100px;
+  bottom: 400px;
+  transform: rotate(60deg);
+  background-color: #ff6652;
+}
+section[class^=main-section].main-section-1 .inner .hidden-text li:nth-child(11) {
+  left: 300px;
+  bottom: 400px;
+  transform: rotate(20deg);
+  background-color: #3ea548;
+}
+section[class^=main-section].main-section-1 .inner .hidden-text li:nth-child(12) {
+  left: 330px;
+  bottom: 250px;
+  transform: rotate(0deg);
+  background-color: #a93fd1;
+}
+section[class^=main-section].main-section-1 .inner .hidden-text li:nth-child(13) {
+  left: 550px;
+  bottom: 300px;
+  transform: rotate(-30deg);
+  background-color: #fb6bbf;
+}
+section[class^=main-section].main-section-1 .inner .hidden-text li:nth-child(14) {
+  right: 40px;
+  bottom: 300px;
+  transform: rotate(80deg);
+  background-color: rgb(47, 132, 230);
+}
+section[class^=main-section].main-section-1 .inner .hidden-text li:nth-child(15) {
+  left: 300px;
+  bottom: 10px;
+  transform: rotate(-40deg);
+}
+section[class^=main-section].main-section-1 .inner .hidden-text li:nth-child(16) {
+  left: -100px;
+  bottom: 300px;
+  transform: rotate(70deg);
+  background-color: #fb6bbf;
+}
+section[class^=main-section].main-section-1 .inner .hidden-text li:nth-child(17) {
+  left: 10px;
+  bottom: 120px;
+  transform: rotate(10deg);
+  background-color: #3ea548;
+}
+section[class^=main-section].main-section-1 .inner .hidden-text li:nth-child(18) {
+  right: -100px;
+  top: 80px;
+  transform: rotate(-10deg);
+  background-color: #a93fd1;
+}
+section[class^=main-section].main-section-1 .inner .hidden-text li:nth-child(19) {
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 3px solid #000;
+  padding: 15px;
+  font-size: 36px;
+  font-weight: 700;
+  color: #000;
+  animation: infoMouseover 2s ease-in infinite;
+}
+@keyframes infoMouseover {
+  100% {
+    margin-top: -5px;
+  }
+  50% {
+    margin-top: 5px;
+  }
+  0% {
+    margin-top: -5px;
+  }
+}
+section[class^=main-section].main-section-1 .inner .hidden-text li:nth-child(20) {
+  right: -100px;
+  bottom: 500px;
+}
+section[class^=main-section].main-section-1 .inner .hidden-text li:nth-child(21) {
+  right: 200px;
+  bottom: 600px;
+}
+section[class^=main-section].main-section-1 .inner .hidden-text li:nth-child(22) {
+  left: 200px;
+  bottom: 60px;
+}
+section[class^=main-section].main-section-1 .inner .hidden-text li:nth-child(23) {
+  left: 500px;
+  bottom: 150px;
+  background-color: rgb(47, 132, 230);
+}
+section[class^=main-section].main-section-1 .inner .hidden-text li:nth-child(24) {
+  left: 500px;
+  bottom: 600px;
+  background-color: #a93fd1;
+}
+section[class^=main-section].main-section-1 .inner .hidden-text .hide {
+  display: none;
 }
 section[class^=main-section].main-section-1 .inner .text-box {
   color: #fff;
@@ -121,38 +296,17 @@ section[class^=main-section].main-section-1 .inner .text-box .brand-intro {
 }
 section[class^=main-section].main-section-1 .inner .arrow {
   position: absolute;
-  bottom: 7%;
-}
-section[class^=main-section].main-section-1 .inner .arrow .arrow-bottom {
-  cursor: pointer;
-  position: relative;
-  width: 32px;
-  height: 32px;
-  transform: rotate(225deg);
 }
 section[class^=main-section].main-section-1 .inner .arrow .arrow-bottom::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
   border: 2px solid #fff;
   border-right: 0;
   border-bottom: 0;
-}
-section[class^=main-section].main-section-1 .inner .arrow .arrow-bottom::after {
-  position: absolute;
-  content: "";
-  width: 50px;
-  height: 1px;
-  background-color: #fff;
-  transform-origin: 0 100%;
-  transform: rotate(45deg);
 }
 section[class^=main-section].main-section-1 .inner .brand-story {
   display: block;
   position: absolute;
   right: -50px;
-  bottom: 250px;
+  bottom: 180px;
   transition: 2s;
   animation: rotate_image 10s linear infinite;
   transform-origin: 50% 50%;
@@ -162,11 +316,18 @@ section[class^=main-section].main-section-1 .inner .brand-story {
     transform: rotate(360deg);
   }
 }
-section[class^=main-section].main-section-2, section[class^=main-section].main-section-3 {
-  height: 100vh;
+section[class^=main-section].main-section-2 .inner .arrow {
+  left: 50%;
+  transform: translate(-50%, 450%);
+}
+section[class^=main-section].main-section-2 .inner .arrow .arrow-bottom::before {
+  border: 2px solid #3ea548;
+  border-right: 0;
+  border-bottom: 0;
 }
 section[class^=main-section].main-section-3 {
   width: 100%;
+  overflow: hidden;
   background-color: #e0e0e0;
 }
 section[class^=main-section].main-section-3 .inner {
@@ -178,50 +339,111 @@ section[class^=main-section].main-section-3 .inner .character {
   display: flex;
   justify-content: space-between;
 }
-section[class^=main-section].main-section-3 .inner .character li {
-  position: absolute;
-}
 section[class^=main-section].main-section-3 .inner .character li:nth-child(1) {
-  left: -200px;
-  bottom: 0px;
+  bottom: -5%;
+  z-index: 2;
+  transform-origin: center bottom;
+  animation: dance 3.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
 }
-section[class^=main-section].main-section-3 .inner .character li:nth-child(1) img {
-  width: 400px;
+@keyframes dance {
+  0% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
 }
 section[class^=main-section].main-section-3 .inner .character li:nth-child(2) {
-  left: 200px;
+  transform-origin: bottom;
+  animation: jump 3s cubic-bezier(0.53, 0.03, 0.6, 0.99) infinite;
+  left: 22%;
 }
-section[class^=main-section].main-section-3 .inner .character li:nth-child(2) img {
-  width: 340px;
+@keyframes jump {
+  0% {
+    transform: translate(0, -8%);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, -8%);
+  }
 }
 section[class^=main-section].main-section-3 .inner .character li:nth-child(3) {
-  right: 230px;
-  bottom: -50px;
+  animation: wobble 3.5s ease-out infinite;
+  right: 20%;
+  bottom: -5%;
+  z-index: 1;
 }
-section[class^=main-section].main-section-3 .inner .character li:nth-child(3) img {
-  width: 480px;
+@keyframes wobble {
+  0% {
+    transform: none;
+  }
+  15% {
+    transform: translate3d(-3%, 0, 0) rotate(-1deg);
+  }
+  30% {
+    transform: translate3d(3%, 0, 0) rotate(2deg);
+  }
+  45% {
+    transform: translate3d(-3%, 0, 0) rotate(-2deg);
+  }
+  60% {
+    transform: translate3d(2%, 0, 0) rotate(1deg);
+  }
+  75% {
+    transform: translate3d(-1%, 0, 0) rotate(-1deg);
+  }
+  100% {
+    transform: none;
+  }
 }
 section[class^=main-section].main-section-3 .inner .character li:nth-child(4) {
-  bottom: 70px;
-  right: -200px;
+  transform-origin: bottom;
+  animation: dance_jump 3s ease-out infinite;
+  right: 0;
 }
-section[class^=main-section].main-section-3 .inner .character li:nth-child(4) img {
-  width: 450px;
+@keyframes dance_jump {
+  0% {
+    transform: none;
+  }
+  15% {
+    transform: rotate(-3deg);
+  }
+  30% {
+    transform: rotate(3deg);
+  }
+  45% {
+    transform: rotate(-3deg);
+  }
+  60% {
+    transform: translate3d(0, -5%, 0);
+  }
+  75% {
+    transform: translate3d(0, 1%, 0);
+  }
+  85% {
+    transform: translate3d(0, -3%, 0);
+  }
+  100% {
+    transform: none;
+  }
 }
 section[class^=main-section] .inner {
   height: inherit;
 }
 section[class^=main-section] .inner .title-second {
-  padding: 90px 0 50px;
+  padding: 60px 0 50px;
 }
 section[class^=main-section] .inner .title-second h3 {
-  font-size: 2rem;
+  font-family: "Montserrat";
+  font-size: 1.8rem;
+  font-weight: 700;
   line-height: 3.5rem;
   color: #3ea548;
-}
-section[class^=main-section] .inner .title-second > div {
-  display: flex;
-  justify-content: space-between;
 }
 section[class^=main-section] .inner .title-second > div p {
   font-size: 16px;
@@ -237,6 +459,11 @@ section[class^=main-section] .inner .title-second > div .btn {
   align-items: center;
   justify-content: center;
   width: 260px;
+  transition: 0.5s;
+  margin-top: 70px;
+}
+section[class^=main-section] .inner .title-second > div .btn:hover {
+  transform: scale(1.1);
 }
 section[class^=main-section] .inner .title-second > div .btn::before {
   content: "테스트 바로가기 ▸";
@@ -269,6 +496,7 @@ section[class^=main-section] .inner .plant-category {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  margin-bottom: 130px;
 }
 section[class^=main-section] .inner .plant-category a {
   display: block;
@@ -292,10 +520,12 @@ section[class^=main-section] .inner .plant-category > div.box1 a {
 }
 section[class^=main-section] .inner .plant-category > div.box1 img {
   position: absolute;
+  transform-origin: bottom;
   right: -20px;
   bottom: 15px;
   width: 58%;
   mix-blend-mode: multiply;
+  transition: 1s;
 }
 section[class^=main-section] .inner .plant-category > div:last-child {
   margin-top: 16px;
@@ -319,9 +549,10 @@ section[class^=main-section] .inner .plant-category > div .mini-box .box3 {
 }
 section[class^=main-section] .inner .plant-category > div .mini-box .box4 {
   background-image: url("../image/home_sect2_interior.jpg");
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
-  background-position: 0 -10px;
+  background-position: center;
+  transition: background-size 1s ease;
 }
 section[class^=main-section] .inner .plant-category > div .mini-box .box4 a {
   display: flex;
@@ -333,6 +564,29 @@ section[class^=main-section] .inner .plant-category div[class^=box] {
   border-radius: 20px;
   padding: 40px 30px;
   font-family: "Montserrat";
+}
+section[class^=main-section] .inner .plant-category div[class^=box]:hover img {
+  transform: scale(1.05);
+}
+section[class^=main-section] .inner .plant-category div[class^=box]:hover.box4 {
+  background-size: 110%;
+}
+section[class^=main-section] .inner .plant-category div[class^=box]:hover .arrow-move {
+  animation: hiddenContentsEven 1.5s ease-in infinite;
+}
+@keyframes hiddenContentsEven {
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(10px);
+    opacity: 0.5;
+  }
+  0% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
 }
 section[class^=main-section] .inner .plant-category div[class^=box] a p {
   font-size: 1.6rem;
@@ -347,8 +601,9 @@ section[class^=main-section] .inner .plant-category div[class^=box] a span {
 }
 section[class^=main-section] .inner .plant-category div[class^=box] a .arrow-move {
   position: absolute;
-  right: 40px;
+  right: 50px;
   bottom: 25px;
+  transition: 1.5s;
 }
 section[class^=main-section] .inner .plant-category div[class^=box] a .arrow-move .arrow-right {
   position: relative;
@@ -372,6 +627,36 @@ section[class^=main-section] .inner .plant-category div[class^=box] a .arrow-mov
   background-color: #fff;
   transform-origin: 0 100%;
   transform: rotate(45deg);
+}
+section[class^=main-section] .inner .arrow {
+  position: absolute;
+  bottom: 7%;
+  animation: scroll_bottom 1s ease-in infinite;
+}
+@keyframes scroll_bottom {
+  from {
+    bottom: 7%;
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    bottom: 5%;
+  }
+}
+section[class^=main-section] .inner .arrow .arrow-bottom {
+  cursor: pointer;
+  position: relative;
+  width: 32px;
+  height: 32px;
+  transform: rotate(225deg);
+}
+section[class^=main-section] .inner .arrow .arrow-bottom::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-right: 0;
+  border-bottom: 0;
 }
 
 footer {
@@ -397,15 +682,73 @@ footer .inner .footer-text-box p:first-child {
 }
 
 /* Mobile */
+@media screen and (max-width: 767px) {
+  section[class^=main-section].main-section-3 .inner .character {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+  section[class^=main-section].main-section-3 .inner .character li:nth-child(1) img {
+    width: 190px;
+  }
+  section[class^=main-section].main-section-3 .inner .character li:nth-child(2) img {
+    width: 180px;
+  }
+  section[class^=main-section].main-section-3 .inner .character li:nth-child(3) img {
+    width: 230px;
+  }
+  section[class^=main-section].main-section-3 .inner .character li:nth-child(4) img {
+    width: 220px;
+  }
+}
 /* Tablet */
 @media screen and (min-width: 768px) {
   section[class^=main-section] .inner .plant-category > div.box1 img {
     width: 38%;
   }
+  section[class^=main-section].main-section-3 .title-second > div {
+    display: flex;
+    justify-content: space-between;
+  }
+  section[class^=main-section].main-section-3 .title-second > div .btn {
+    margin-top: 0;
+  }
+  section[class^=main-section].main-section-3 .character li {
+    position: absolute;
+  }
+  section[class^=main-section].main-section-3 .character li:nth-child(1) {
+    bottom: -5%;
+    z-index: 2;
+  }
+  section[class^=main-section].main-section-3 .character li:nth-child(1) img {
+    width: 310px;
+  }
+  section[class^=main-section].main-section-3 .character li:nth-child(2) {
+    left: 22%;
+  }
+  section[class^=main-section].main-section-3 .character li:nth-child(2) img {
+    width: 280px;
+  }
+  section[class^=main-section].main-section-3 .character li:nth-child(3) {
+    right: 20%;
+    bottom: -5%;
+    z-index: 1;
+  }
+  section[class^=main-section].main-section-3 .character li:nth-child(3) img {
+    width: 380px;
+  }
+  section[class^=main-section].main-section-3 .character li:nth-child(4) {
+    transform-origin: bottom;
+    right: 0;
+  }
+  section[class^=main-section].main-section-3 .character li:nth-child(4) img {
+    width: 350px;
+  }
 }
 /* PC */
 @media screen and (min-width: 1280px) {
   section[class^=main-section] .inner .plant-category {
+    margin-bottom: 0;
     flex-direction: row;
   }
   section[class^=main-section] .inner .plant-category > div {
@@ -433,5 +776,42 @@ footer .inner .footer-text-box p:first-child {
   section[class^=main-section] .inner .plant-category > div .mini-box .box3,
   section[class^=main-section] .inner .plant-category > div .mini-box .box4 {
     width: 49%;
+  }
+  section[class^=main-section].main-section-2, section[class^=main-section].main-section-3 {
+    height: 100vh;
+  }
+  section[class^=main-section].main-section-2 .inner .arrow {
+    transform: translateY(0%);
+  }
+  section[class^=main-section].main-section-3 .inner .character li {
+    position: absolute;
+  }
+  section[class^=main-section].main-section-3 .inner .character li:nth-child(1) {
+    left: -200px;
+    bottom: 0px;
+  }
+  section[class^=main-section].main-section-3 .inner .character li:nth-child(1) img {
+    width: 400px;
+  }
+  section[class^=main-section].main-section-3 .inner .character li:nth-child(2) {
+    left: 200px;
+  }
+  section[class^=main-section].main-section-3 .inner .character li:nth-child(2) img {
+    width: 340px;
+  }
+  section[class^=main-section].main-section-3 .inner .character li:nth-child(3) {
+    right: 230px;
+    bottom: -50px;
+  }
+  section[class^=main-section].main-section-3 .inner .character li:nth-child(3) img {
+    width: 480px;
+  }
+  section[class^=main-section].main-section-3 .inner .character li:nth-child(4) {
+    bottom: 70px;
+    right: -200px;
+    transform-origin: bottom;
+  }
+  section[class^=main-section].main-section-3 .inner .character li:nth-child(4) img {
+    width: 450px;
   }
 }/*# sourceMappingURL=home.css.map */
