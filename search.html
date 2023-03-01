@@ -24,14 +24,15 @@
     <header>
       <div class="inner">
         <div class="logo">
-          <a href="index.html"><img src="./image/header_logo.svg" alt="" /></a>
+          <a href="index.html">
+            <img src="./image/favicon_green.png" alt="" />
+          </a>
         </div>
-        <div class="menu-bar">
-          <ul class="menu-bar-menu">
+        <div class="menu-bar menu-hidden">
+          <ul class="menu-bar-menu menu-hidden">
             <li><a href="story.html">스토리</a></li>
-            <li><a href="test.html">자가진단</a></li>
             <li><a href="search.html">식물 카테고리</a></li>
-            <li><a href="#">FAQ</a></li>
+            <li><a href="test.html">자가진단</a></li>
           </ul>
           <a href="#" class="menu-icon">
             <i class="fas fa-bars"></i>
@@ -43,7 +44,8 @@
     <!-- 이미지 배너 -->
     <section class="categoryImgs">
       <!-- swiper 로 구현 예정 -->
-      <img src="./image/category-4.jpg" alt="" />
+      <img src="./image/category-2.jpg" alt="" />
+      <img src="./image/category-2.jpg" alt="" />
     </section>
 
     <!-- 카테고리 선택 -->
@@ -51,7 +53,7 @@
       <div class="inner">
         <ul class="selectTag">
           <li>
-            <button type="reset" class="reset">
+            <button class="reset">
               <i class="fa-solid fa-arrow-rotate-right"></i>
             </button>
           </li>
@@ -74,6 +76,10 @@
     <section class="resultSection">
       <div class="inner">
         <p>식물 검색</p>
+
+        <!-- .js에서 수정 예정 -->
+
+        <!-- .js에서 수정 예정 -->
         <div class="count">총 개의 식물이 검색되었습니다.</div>
 
         <!-- 결과 식물 div들 -->
