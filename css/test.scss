@@ -5,9 +5,10 @@
   opacity: 0;
 }
 
-.click {
-  border: 3px solid tomato;
-}
+// .click {
+//   border: 3px solid tomato;
+//   color: tomato;
+// }
 
 // NAVIGATION
 header {
@@ -114,6 +115,7 @@ header > .inner {
           font-family: "CWDangamAsac-Bold";
         }
 
+        //테스트 버튼 생성
         > .btn {
           position: absolute;
           bottom: -15%;
@@ -156,6 +158,7 @@ header > .inner {
         }
       }
 
+      // 지구, 로켓, 인공위성, 별똥별 위치 및 애니메이션
       .card {
         // width: 200px;
         // height: 200px;
@@ -167,6 +170,19 @@ header > .inner {
       .card-1 {
         top: 7%;
         left: -13%;
+        transform-origin: center bottom;
+        animation: dance 3.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+        @keyframes dance {
+          0% {
+            transform: rotate(-3deg);
+          }
+          50% {
+            transform: rotate(3deg);
+          }
+          100% {
+            transform: rotate(-3deg);
+          }
+        }
         img {
           width: 400px;
           height: 400px;
@@ -175,6 +191,19 @@ header > .inner {
       .card-2 {
         top: 45%;
         left: 10%;
+        transform-origin: bottom;
+        animation: jump 3s cubic-bezier(0.53, 0.03, 0.6, 0.99) infinite;
+        @keyframes jump {
+          0% {
+            transform: translate(0, -8%);
+          }
+          50% {
+            transform: translate(0, 0);
+          }
+          100% {
+            transform: translate(0, -8%);
+          }
+        }
         img {
           width: 380px;
           height: 380px;
@@ -183,6 +212,31 @@ header > .inner {
       .card-3 {
         top: 45%;
         right: 15%;
+        animation: wobble 3.5s ease-out infinite;
+        z-index: 1;
+        @keyframes wobble {
+          0% {
+            transform: none;
+          }
+          15% {
+            transform: translate3d(-3%, 0, 0) rotate(-1deg);
+          }
+          30% {
+            transform: translate3d(3%, 0, 0) rotate(2deg);
+          }
+          45% {
+            transform: translate3d(-3%, 0, 0) rotate(-2deg);
+          }
+          60% {
+            transform: translate3d(2%, 0, 0) rotate(1deg);
+          }
+          75% {
+            transform: translate3d(-1%, 0, 0) rotate(-1deg);
+          }
+          100% {
+            transform: none;
+          }
+        }
         img {
           width: 380px;
           height: 380px;
@@ -191,6 +245,33 @@ header > .inner {
       .card-4 {
         top: 5%;
         right: -10%;
+        animation: dance_jump 3s ease-out infinite;
+        @keyframes dance_jump {
+          0% {
+            transform: none;
+          }
+          15% {
+            transform: rotate(-3deg);
+          }
+          30% {
+            transform: rotate(3deg);
+          }
+          45% {
+            transform: rotate(-3deg);
+          }
+          60% {
+            transform: translate3d(0, -5%, 0);
+          }
+          75% {
+            transform: translate3d(0, 1%, 0);
+          }
+          85% {
+            transform: translate3d(0, -3%, 0);
+          }
+          100% {
+            transform: none;
+          }
+        }
         img {
           width: 400px;
           height: 400px;
@@ -198,7 +279,7 @@ header > .inner {
       }
     }
 
-    //질문
+    //질문 파트
     .question-mainbox {
       position: relative;
       height: 90%;
@@ -245,7 +326,8 @@ header > .inner {
             border: 2px solid gray;
             text-align: center;
 
-            &:hover {
+            &:hover,
+            &.click {
               border: 2px solid tomato;
               transition: 0.2s;
               p.answer {
@@ -272,7 +354,8 @@ header > .inner {
             border: 2px solid gray;
             text-align: center;
 
-            &:hover {
+            &:hover,
+            &.click {
               border: 2px solid tomato;
               transition: 0.2s;
               p.answer {
@@ -323,7 +406,8 @@ header > .inner {
             border: 2px solid gray;
             text-align: center;
 
-            &:hover {
+            &:hover,
+            &.click {
               border: 2px solid tomato;
               transition: 0.2s;
               p.answer {
@@ -350,7 +434,8 @@ header > .inner {
             border: 2px solid gray;
             text-align: center;
 
-            &:hover {
+            &:hover,
+            &.click {
               border: 2px solid tomato;
               transition: 0.2s;
               p.answer {
@@ -378,7 +463,8 @@ header > .inner {
             text-align: center;
             margin-top: 10px;
 
-            &:hover {
+            &:hover,
+            &.click {
               border: 2px solid tomato;
               transition: 0.2s;
               p.answer {
@@ -406,7 +492,8 @@ header > .inner {
             text-align: center;
             margin-top: 10px;
 
-            &:hover {
+            &:hover,
+            &.click {
               border: 2px solid tomato;
               transition: 0.2s;
               p.answer {
@@ -456,7 +543,8 @@ header > .inner {
             border: 2px solid gray;
             text-align: center;
 
-            &:hover {
+            &:hover,
+            &.click {
               border: 2px solid tomato;
               transition: 0.2s;
               p.answer {
@@ -483,7 +571,8 @@ header > .inner {
             border: 2px solid gray;
             text-align: center;
 
-            &:hover {
+            &:hover,
+            &.click {
               border: 2px solid tomato;
               transition: 0.2s;
               p.answer {
@@ -501,6 +590,8 @@ header > .inner {
         }
       }
     }
+
+    //마지막 테스트하러가기 버튼
     .btn-box {
       width: 100%;
       height: 200px;
