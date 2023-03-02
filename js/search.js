@@ -119,9 +119,9 @@ console.log(divArr); ///////////////////////////////////////////////////////////
 const resetBtn = document.querySelector(".reset");
 
 resetBtn.addEventListener("click", function () {
-  const clickedAll = document.querySelectorAll(".clicked");
+  const clickedBtnAll = document.querySelectorAll(".clicked");
 
-  clickedAll.forEach(function (el) {
+  clickedBtnAll.forEach(function (el) {
     el.classList.remove("clicked");
     // el.setAttribute("display", "block"); ///////////////////////////////////// test 중 //////
   });
