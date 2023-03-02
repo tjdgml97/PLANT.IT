@@ -643,6 +643,78 @@ header {
   background-color: #282a4e;
 }
 
+/* Mobile */
+@media screen and (max-width: 767px) {
+  .test .inner .category {
+    position: relative;
+    width: 100%;
+  }
+  .test .inner .category .gototest {
+    width: 100%;
+    height: 32%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+  .test .inner .category .gototest > p {
+    height: 20%;
+    margin-bottom: 10px;
+  }
+  .test .inner .category .gototest > h2 {
+    position: absolute;
+    top: 22%;
+  }
+  .test .inner .category .gototest > .btn {
+    top: 45%;
+  }
+  .test .inner .category .card {
+    display: none;
+  }
+  .test .inner .category .promotion {
+    position: absolute;
+    transition: height 0.4s;
+    width: 100%;
+    height: 40%;
+    bottom: 10%;
+    display: block;
+  }
+  .test .inner .category .promotion .swiper {
+    height: 100%;
+  }
+  .test .inner .category .promotion .swiper .swiper-wrapper {
+    height: 100%;
+    display: flex;
+    left: 25%;
+  }
+  .test .inner .category .promotion .swiper .swiper-wrapper .swiper-slide {
+    opacity: 0.5;
+    transition: 0.5s;
+    margin: 0;
+  }
+  .test .inner .category .promotion .swiper .swiper-wrapper .swiper-slide-active {
+    opacity: 1;
+  }
+  .test .inner .category .promotion .swiper .swiper-wrapper .swiper-slide img {
+    width: 320px;
+    height: 320px;
+  }
+  .test .inner .question-mainbox .question-box {
+    display: flex;
+    align-items: center;
+  }
+  .test .inner .question-mainbox .box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+  }
+  .test .inner .question-mainbox .box .answer-box {
+    width: 100%;
+  }
+  .test .inner .question-mainbox .question1 {
+    height: 230px;
+  }
+}
 /* PC */
 @media screen and (min-width: 1280px) {
   .test .inner .category .gototest > h2 {
