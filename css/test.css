@@ -3,7 +3,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200;300;400;500;600;700&display=swap");
 @font-face {
   font-family: "CWDangamAsac-Bold";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/CWDangamAsac-Bold.woff") format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/CWDangamAsac-Bold.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -382,11 +383,25 @@ header {
   border: 2px solid gray;
   text-align: center;
 }
-.test .inner .question-mainbox .question1 .answer-box .first-answer:hover, .test .inner .question-mainbox .question1 .answer-box .first-answer.click {
+.test .inner .question-mainbox .question1 .answer-box .first-answer:hover,
+.test .inner .question-mainbox .question1 .answer-box .first-answer.click {
   border: 2px solid tomato;
   transition: 0.2s;
 }
-.test .inner .question-mainbox .question1 .answer-box .first-answer:hover p.answer, .test .inner .question-mainbox .question1 .answer-box .first-answer.click p.answer {
+.test
+  .inner
+  .question-mainbox
+  .question1
+  .answer-box
+  .first-answer:hover
+  p.answer,
+.test
+  .inner
+  .question-mainbox
+  .question1
+  .answer-box
+  .first-answer.click
+  p.answer {
   color: tomato;
   transition: 0.2s;
 }
@@ -406,15 +421,35 @@ header {
   border: 2px solid gray;
   text-align: center;
 }
-.test .inner .question-mainbox .question1 .answer-box .second-answer:hover, .test .inner .question-mainbox .question1 .answer-box .second-answer.click {
+.test .inner .question-mainbox .question1 .answer-box .second-answer:hover,
+.test .inner .question-mainbox .question1 .answer-box .second-answer.click {
   border: 2px solid tomato;
   transition: 0.2s;
 }
-.test .inner .question-mainbox .question1 .answer-box .second-answer:hover p.answer, .test .inner .question-mainbox .question1 .answer-box .second-answer.click p.answer {
+.test
+  .inner
+  .question-mainbox
+  .question1
+  .answer-box
+  .second-answer:hover
+  p.answer,
+.test
+  .inner
+  .question-mainbox
+  .question1
+  .answer-box
+  .second-answer.click
+  p.answer {
   color: tomato;
   transition: 0.2s;
 }
-.test .inner .question-mainbox .question1 .answer-box .second-answer > p.answer {
+.test
+  .inner
+  .question-mainbox
+  .question1
+  .answer-box
+  .second-answer
+  > p.answer {
   display: block;
   font-size: 16px;
   font-weight: 600;
@@ -448,11 +483,25 @@ header {
   border: 2px solid gray;
   text-align: center;
 }
-.test .inner .question-mainbox .question2 .answer-box .first-answer:hover, .test .inner .question-mainbox .question2 .answer-box .first-answer.click {
+.test .inner .question-mainbox .question2 .answer-box .first-answer:hover,
+.test .inner .question-mainbox .question2 .answer-box .first-answer.click {
   border: 2px solid tomato;
   transition: 0.2s;
 }
-.test .inner .question-mainbox .question2 .answer-box .first-answer:hover p.answer, .test .inner .question-mainbox .question2 .answer-box .first-answer.click p.answer {
+.test
+  .inner
+  .question-mainbox
+  .question2
+  .answer-box
+  .first-answer:hover
+  p.answer,
+.test
+  .inner
+  .question-mainbox
+  .question2
+  .answer-box
+  .first-answer.click
+  p.answer {
   color: tomato;
   transition: 0.2s;
 }
@@ -472,15 +521,35 @@ header {
   border: 2px solid gray;
   text-align: center;
 }
-.test .inner .question-mainbox .question2 .answer-box .second-answer:hover, .test .inner .question-mainbox .question2 .answer-box .second-answer.click {
+.test .inner .question-mainbox .question2 .answer-box .second-answer:hover,
+.test .inner .question-mainbox .question2 .answer-box .second-answer.click {
   border: 2px solid tomato;
   transition: 0.2s;
 }
-.test .inner .question-mainbox .question2 .answer-box .second-answer:hover p.answer, .test .inner .question-mainbox .question2 .answer-box .second-answer.click p.answer {
+.test
+  .inner
+  .question-mainbox
+  .question2
+  .answer-box
+  .second-answer:hover
+  p.answer,
+.test
+  .inner
+  .question-mainbox
+  .question2
+  .answer-box
+  .second-answer.click
+  p.answer {
   color: tomato;
   transition: 0.2s;
 }
-.test .inner .question-mainbox .question2 .answer-box .second-answer > p.answer {
+.test
+  .inner
+  .question-mainbox
+  .question2
+  .answer-box
+  .second-answer
+  > p.answer {
   display: block;
   font-size: 16px;
   font-weight: 600;
@@ -497,11 +566,25 @@ header {
   text-align: center;
   margin-top: 10px;
 }
-.test .inner .question-mainbox .question2 .answer-box .third-answer:hover, .test .inner .question-mainbox .question2 .answer-box .third-answer.click {
+.test .inner .question-mainbox .question2 .answer-box .third-answer:hover,
+.test .inner .question-mainbox .question2 .answer-box .third-answer.click {
   border: 2px solid tomato;
   transition: 0.2s;
 }
-.test .inner .question-mainbox .question2 .answer-box .third-answer:hover p.answer, .test .inner .question-mainbox .question2 .answer-box .third-answer.click p.answer {
+.test
+  .inner
+  .question-mainbox
+  .question2
+  .answer-box
+  .third-answer:hover
+  p.answer,
+.test
+  .inner
+  .question-mainbox
+  .question2
+  .answer-box
+  .third-answer.click
+  p.answer {
   color: tomato;
   transition: 0.2s;
 }
@@ -522,11 +605,25 @@ header {
   text-align: center;
   margin-top: 10px;
 }
-.test .inner .question-mainbox .question2 .answer-box .forth-answer:hover, .test .inner .question-mainbox .question2 .answer-box .forth-answer.click {
+.test .inner .question-mainbox .question2 .answer-box .forth-answer:hover,
+.test .inner .question-mainbox .question2 .answer-box .forth-answer.click {
   border: 2px solid tomato;
   transition: 0.2s;
 }
-.test .inner .question-mainbox .question2 .answer-box .forth-answer:hover p.answer, .test .inner .question-mainbox .question2 .answer-box .forth-answer.click p.answer {
+.test
+  .inner
+  .question-mainbox
+  .question2
+  .answer-box
+  .forth-answer:hover
+  p.answer,
+.test
+  .inner
+  .question-mainbox
+  .question2
+  .answer-box
+  .forth-answer.click
+  p.answer {
   color: tomato;
   transition: 0.2s;
 }
@@ -563,11 +660,25 @@ header {
   border: 2px solid gray;
   text-align: center;
 }
-.test .inner .question-mainbox .question3 .answer-box .first-answer:hover, .test .inner .question-mainbox .question3 .answer-box .first-answer.click {
+.test .inner .question-mainbox .question3 .answer-box .first-answer:hover,
+.test .inner .question-mainbox .question3 .answer-box .first-answer.click {
   border: 2px solid tomato;
   transition: 0.2s;
 }
-.test .inner .question-mainbox .question3 .answer-box .first-answer:hover p.answer, .test .inner .question-mainbox .question3 .answer-box .first-answer.click p.answer {
+.test
+  .inner
+  .question-mainbox
+  .question3
+  .answer-box
+  .first-answer:hover
+  p.answer,
+.test
+  .inner
+  .question-mainbox
+  .question3
+  .answer-box
+  .first-answer.click
+  p.answer {
   color: tomato;
   transition: 0.2s;
 }
@@ -587,15 +698,35 @@ header {
   border: 2px solid gray;
   text-align: center;
 }
-.test .inner .question-mainbox .question3 .answer-box .second-answer:hover, .test .inner .question-mainbox .question3 .answer-box .second-answer.click {
+.test .inner .question-mainbox .question3 .answer-box .second-answer:hover,
+.test .inner .question-mainbox .question3 .answer-box .second-answer.click {
   border: 2px solid tomato;
   transition: 0.2s;
 }
-.test .inner .question-mainbox .question3 .answer-box .second-answer:hover p.answer, .test .inner .question-mainbox .question3 .answer-box .second-answer.click p.answer {
+.test
+  .inner
+  .question-mainbox
+  .question3
+  .answer-box
+  .second-answer:hover
+  p.answer,
+.test
+  .inner
+  .question-mainbox
+  .question3
+  .answer-box
+  .second-answer.click
+  p.answer {
   color: tomato;
   transition: 0.2s;
 }
-.test .inner .question-mainbox .question3 .answer-box .second-answer > p.answer {
+.test
+  .inner
+  .question-mainbox
+  .question3
+  .answer-box
+  .second-answer
+  > p.answer {
   display: block;
   font-size: 16px;
   font-weight: 600;
@@ -648,4 +779,4 @@ header {
   .test .inner .category .gototest > h2 {
     white-space: nowrap;
   }
-}/*# sourceMappingURL=test.css.map */
+} /*# sourceMappingURL=test.css.map */

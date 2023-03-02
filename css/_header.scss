@@ -3,6 +3,10 @@ $main-green: #3ea548;
 $main-orange: #ff6652;
 $light-gray: #999;
 
+@mixin header_font($font-color) {
+  color: $font-color;
+}
+
 // NAVIGATION
 header {
   width: 100%;

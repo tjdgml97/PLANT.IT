@@ -12,7 +12,7 @@ header {
       .menu-bar-menu {
         li {
           a {
-            @include header_font(#ff00f0);
+            @include header_font(#fff);
           }
         }
       }

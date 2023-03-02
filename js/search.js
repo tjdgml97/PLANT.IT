@@ -17,8 +17,7 @@ menuIcon.addEventListener("click", function () {
 // 이미지 파일 한글명 영어로 바꿀 예정
 const plantsStr = [
   "스파팁휠룸, SPATHIPHYLLUM, easy, short, air",
-  "산세비에리아 쉴린드리카, SANSEVIERIA CYLINDRICA, easy, long, air",
-  "헤데라 헬릭스, HEDERA HELIX, hard, short, air",
+  "클루시아, CLUSIA, easy, short, deco",
   "아레카 야자, CHRYSALIDOCARPUS LUTESCENS, hard, short, air, pet, big",
   "파시라 아크바티카, PACHIRA AQUATICA, easy, long, pet, big",
   "샤마에도레아 엘레간스, CHAMAEDOREA ELEGANS, easy, short, pet",
@@ -28,12 +27,14 @@ const plantsStr = [
   "헤테로파낙스 시넨시스, HETEROPANAX CHINENSIS, hard, short, big",
   "사미오쿨카스, ZAMIOCULCAS, easy, long, deco",
   "칵타세아에, CACTACEAE, easy, long, deco",
-  "클루시아, CLUSIA, easy, short, deco",
+
   "페페로미아, PEPEROMIA, easy, short, deco",
   "칼란쇼에, KALANCHOE, hard, long, deco",
   "휘아신투스, HYACINTHUS, hard, short, deco",
   "블라드베르크, BLADVERK, hard, short, deco",
   "프힐로덴드론 콩오, PHILODENDRON CONGO, hard, short, deco",
+  "산세비에리아 쉴린드리카, SANSEVIERIA CYLINDRICA, easy, long, air",
+  "헤데라 헬릭스, HEDERA HELIX, hard, short, air",
 ];
 
 // 0. 데이터 객체화
@@ -69,7 +70,7 @@ for (let i = 0; i < arr.length; i++) {
     )
   );
 }
-
+console.log(plants);
 // 1. div.plant 에 데이터 일괄 처리
 const divArr = document.querySelectorAll(".plant"); // html의 div 요소
 
@@ -85,16 +86,8 @@ for (let i = 0; i < plants.length; i++) {
   // div 의 이미지
   // 이미지 파일명을 영어로 수정 시, ${plants[i].engName} 으로 바꾸기
   const img = divArr[i].querySelector("img");
-  if (
-    // .webp 파일일 때
-    plants[i].korName === "산세비에리아 쉴린드리카" ||
-    plants[i].korName === "헤테로파낙스 시넨시스"
-  ) {
-    img.setAttribute("src", `./image/${plants[i].korName}.webp`);
-  } else {
-    // .avif 파일일 때
-    img.setAttribute("src", `./image/${plants[i].korName}.avif`);
-  }
+
+  img.setAttribute("src", `./image/${plants[i].korName}.jpg`);
 
   // 클래스명 추가 - easy/hard, short/long, air, pet, big, deco
   plants[i].isEasy === "easy"
@@ -114,6 +107,10 @@ console.log(divArr); ///////////////////////////////////////////////////////////
 
 // 2. 버튼 click 에 따라 클래스명(clicked) 부여
 // 버튼 hover, click 되면 디자인 바뀌게
+
+// 검색된 식물 갯수
+const plantsLength = document.querySelector(".arrLength");
+plantsLength.textContent = divArr.length;
 
 // reset 버튼
 const resetBtn = document.querySelector(".reset");
@@ -245,3 +242,20 @@ const resultArr = [];
 // console.log(resultArr);
 // console.log(resultArr.children);
 // console.log(resultArr.length); // 결과 갯수
+
+// SWIPER PROMOTION
+const swiperPromotion = new Swiper(".categoryImgs .swiper", {
+  direction: "horizontal",
+  slidesPerView: 1,
+  spaceBetween: 10,
+  centeredSlides: true,
+  loop: true,
+  autoplay: {
+    delay: 1500,
+    // disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".promotion .swiper-pagination",
+    type: "bullets",
+  },
+});

@@ -4,14 +4,28 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>식물 카테고리</title>
-
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./image/favicon_green.png"
+    />
+    <title>Plant.it</title>
     <!-- FONTAWESOME -->
     <script
       src="https://kit.fontawesome.com/72f198168b.js"
       crossorigin="anonymous"
     ></script>
+    <!-- SWIPER -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
 
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
+    ></script>
     <!-- CSS -->
     <link rel="stylesheet" href="./css/search.css" />
 
@@ -44,7 +58,19 @@
     <!-- 이미지 배너 -->
     <section class="categoryImgs">
       <!-- swiper 로 구현 예정 -->
-      <img src="./image/category-2.jpg" alt="" />
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./image/category-1.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./image/category-2.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./image/category-3.jpg" alt="" />
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- 카테고리 선택 -->
@@ -68,125 +94,121 @@
           <li><button class="short">2주 이내 물주기</button></li>
           <li><button class="long">2주 초과 물주기</button></li>
         </ul>
-      </div>
-    </section>
+        <div class="resultSection">
+          <h3>Plant Types</h3>
 
-    <!-- 검색 결과 -->
-    <section class="resultSection">
-      <div class="inner">
-        <p>식물 검색</p>
+          <!-- .js에서 수정 예정 -->
+          <p>총 <span class="arrLength"></span>개의 식물이 검색되었습니다.</p>
 
-        <!-- .js에서 수정 예정 -->
-        <div class="count">총 개의 식물이 검색되었습니다.</div>
+          <!-- 결과 식물 div들 -->
+          <div class="results">
+            <div class="plant">
+              <div class="image"><img src="" alt="" /></div>
+              <p class="kor"></p>
+              <p class="eng"></p>
+            </div>
 
-        <!-- 결과 식물 div들 -->
-        <div class="results">
-          <div class="plant">
-            <img src="" alt="" />
-            <p class="kor"></p>
-            <p class="eng"></p>
-          </div>
+            <div class="plant">
+              <div class="image"><img src="" alt="" /></div>
+              <p class="kor"></p>
+              <p class="eng"></p>
+            </div>
 
-          <div class="plant">
-            <img src="" alt="" />
-            <p class="kor"></p>
-            <p class="eng"></p>
-          </div>
+            <div class="plant">
+              <div class="image"><img src="" alt="" /></div>
+              <p class="kor"></p>
+              <p class="eng"></p>
+            </div>
 
-          <div class="plant">
-            <img src="" alt="" />
-            <p class="kor"></p>
-            <p class="eng"></p>
-          </div>
+            <div class="plant">
+              <div class="image"><img src="" alt="" /></div>
+              <p class="kor"></p>
+              <p class="eng"></p>
+            </div>
 
-          <div class="plant">
-            <img src="" alt="" />
-            <p class="kor"></p>
-            <p class="eng"></p>
-          </div>
+            <div class="plant">
+              <div class="image"><img src="" alt="" /></div>
+              <p class="kor"></p>
+              <p class="eng"></p>
+            </div>
 
-          <div class="plant">
-            <img src="" alt="" />
-            <p class="kor"></p>
-            <p class="eng"></p>
-          </div>
+            <div class="plant">
+              <div class="image"><img src="" alt="" /></div>
+              <p class="kor"></p>
+              <p class="eng"></p>
+            </div>
 
-          <div class="plant">
-            <img src="" alt="" />
-            <p class="kor"></p>
-            <p class="eng"></p>
-          </div>
+            <div class="plant">
+              <div class="image"><img src="" alt="" /></div>
+              <p class="kor"></p>
+              <p class="eng"></p>
+            </div>
 
-          <div class="plant">
-            <img src="" alt="" />
-            <p class="kor"></p>
-            <p class="eng"></p>
-          </div>
+            <div class="plant">
+              <div class="image"><img src="" alt="" /></div>
+              <p class="kor"></p>
+              <p class="eng"></p>
+            </div>
 
-          <div class="plant">
-            <img src="" alt="" />
-            <p class="kor"></p>
-            <p class="eng"></p>
-          </div>
+            <div class="plant">
+              <div class="image"><img src="" alt="" /></div>
+              <p class="kor"></p>
+              <p class="eng"></p>
+            </div>
 
-          <div class="plant">
-            <img src="" alt="" />
-            <p class="kor"></p>
-            <p class="eng"></p>
-          </div>
+            <div class="plant">
+              <div class="image"><img src="" alt="" /></div>
+              <p class="kor"></p>
+              <p class="eng"></p>
+            </div>
 
-          <div class="plant">
-            <img src="" alt="" />
-            <p class="kor"></p>
-            <p class="eng"></p>
-          </div>
+            <div class="plant">
+              <div class="image"><img src="" alt="" /></div>
+              <p class="kor"></p>
+              <p class="eng"></p>
+            </div>
 
-          <div class="plant">
-            <img src="" alt="" />
-            <p class="kor"></p>
-            <p class="eng"></p>
-          </div>
+            <div class="plant">
+              <div class="image"><img src="" alt="" /></div>
+              <p class="kor"></p>
+              <p class="eng"></p>
+            </div>
 
-          <div class="plant">
-            <img src="" alt="" />
-            <p class="kor"></p>
-            <p class="eng"></p>
-          </div>
+            <div class="plant">
+              <div class="image"><img src="" alt="" /></div>
+              <p class="kor"></p>
+              <p class="eng"></p>
+            </div>
 
-          <div class="plant">
-            <img src="" alt="" />
-            <p class="kor"></p>
-            <p class="eng"></p>
-          </div>
+            <div class="plant">
+              <div class="image"><img src="" alt="" /></div>
+              <p class="kor"></p>
+              <p class="eng"></p>
+            </div>
 
-          <div class="plant">
-            <img src="" alt="" />
-            <p class="kor"></p>
-            <p class="eng"></p>
-          </div>
+            <div class="plant">
+              <div class="image"><img src="" alt="" /></div>
+              <p class="kor"></p>
+              <p class="eng"></p>
+            </div>
 
-          <div class="plant">
-            <img src="" alt="" />
-            <p class="kor"></p>
-            <p class="eng"></p>
-          </div>
+            <div class="plant">
+              <div class="image"><img src="" alt="" /></div>
+              <p class="kor"></p>
+              <p class="eng"></p>
+            </div>
 
-          <div class="plant">
-            <img src="" alt="" />
-            <p class="kor"></p>
-            <p class="eng"></p>
-          </div>
+            <div class="plant">
+              <div class="image"><img src="" alt="" /></div>
+              <p class="kor"></p>
+              <p class="eng"></p>
+            </div>
 
-          <div class="plant">
-            <img src="" alt="" />
-            <p class="kor"></p>
-            <p class="eng"></p>
-          </div>
-
-          <div class="plant">
-            <img src="" alt="" />
-            <p class="kor"></p>
-            <p class="eng"></p>
+            <div class="plant">
+              <div class="image"><img src="" alt="" /></div>
+              <p class="kor"></p>
+              <p class="eng"></p>
+            </div>
           </div>
         </div>
       </div>

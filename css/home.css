@@ -1,6 +1,12 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200;300;400;500;600;700&display=swap");
+@font-face {
+  font-family: "CWDangamAsac-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/CWDangamAsac-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   margin: 0;
   padding: 0;
@@ -168,14 +174,12 @@ footer .inner .footer-text-box p:first-child {
   font-weight: 600;
 }
 
-@font-face {
-  font-family: "CWDangamAsac-Bold";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/CWDangamAsac-Bold.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 .font-color--white {
   color: white;
+}
+
+header .inner .menu-bar .menu-bar-menu li a {
+  color: #fff;
 }
 
 section[class^=main-section].main-section-1 {
@@ -870,6 +874,9 @@ section[class^=main-section] .inner .arrow .arrow-bottom::before {
   }
   section[class^=main-section].main-section-2 .inner .plant-category {
     margin-bottom: 100px;
+  }
+  section[class^=main-section].main-section-3 {
+    overflow: hidden;
   }
   section[class^=main-section].main-section-3 .inner .character li {
     position: absolute;
