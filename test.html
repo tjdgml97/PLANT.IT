@@ -8,22 +8,28 @@
     <!-- JAVASCRIPT -->
     <!-- SWIPER -->
     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./image/favicon_green.png"
     />
-
+    <title>Plant.it</title>
+    <!-- JAVASCRIPT -->
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
     ></script>
+
     <!-- FONTASSOME -->
     <script
       src="https://kit.fontawesome.com/bdd3c23416.js"
       crossorigin="anonymous"
     ></script>
+    <!-- MAIN -->
+    <script defer src="./js/test.js"></script>
+    <!-- STYLE -->
     <link rel="stylesheet" href="./css/home.css" />
     <link rel="stylesheet" href="./css/test.css" />
-    <script defer src="./js/test.js"></script>
   </head>
   <body>
     <header>
@@ -34,11 +40,10 @@
           /></a>
         </div>
         <div class="menu-bar">
-          <ul class="menu-bar-menu">
+          <ul class="menu-bar-menu menu-hidden">
             <li><a href="story.html">스토리</a></li>
-            <li><a href="test.html">자가진단</a></li>
             <li><a href="search.html">식물 카테고리</a></li>
-            <li><a href="#">FAQ</a></li>
+            <li><a href="test.html">자가진단</a></li>
           </ul>
           <a href="#" class="menu-icon">
             <i class="fas fa-bars"></i>
@@ -55,8 +60,8 @@
       <div class="inner">
         <div class="category">
           <div class="gototest">
-            <p>나는 어떤 유형일까?</p>
-            <h2>제목은 알아서</h2>
+            <p>나는 어떻게 지구를 지킬 수 있을까?</p>
+            <h2>유형검사테스트</h2>
             <a href="#" class="btn btn--white">
               <div class="circle circle-1"></div>
               <div class="circle circle-2"></div>
@@ -77,7 +82,7 @@
             <img src="./image/satellite.svg" alt="지구캐릭터" />
           </div>
         </div>
-        <div class="question-mainbox" id="question-box">
+        <div class="question-mainbox hide" id="question-box">
           <div class="question1 box hide">
             <div class="question-box">
               <p class="main-question">Q1.</p>
@@ -98,16 +103,16 @@
               <p class="sub-question">당신의 키우기 실력은 어떠한가요?</p>
             </div>
             <div class="answer-box">
-              <div class="first-answer" onclick="movetoQuestion3(this)">
+              <div class="first-answer" onclick="movetoQuestion1(this)">
                 <p class="answer">매번 식물을 죽이는 똥손이에요..</p>
               </div>
-              <div class="second-answer" onclick="movetoQuestion3(this)">
+              <div class="second-answer" onclick="movetoQuestion2(this)">
                 <p class="answer">죽은 식물도 살릴 수 있는 금손이에요.</p>
               </div>
               <div class="third-answer" onclick="movetoQuestion3(this)">
                 <p class="answer">매번 식물을 죽이는 똥손이에요..</p>
               </div>
-              <div class="forth-answer" onclick="movetoQuestion3(this)">
+              <div class="forth-answer" onclick="movetoQuestion4(this)">
                 <p class="answer">죽은 식물도 살릴 수 있는 금손이에요.</p>
               </div>
             </div>
