@@ -1,4 +1,4 @@
-@import "./reset";
+@import "../reset";
 // @import "./header";
 
 //font
@@ -7,7 +7,7 @@
 
 // color
 $main-color :  #3ea548;
-$card-color : rgba(130, 187, 83, 0.25);
+$card-color : rgba(228, 138, 111, 0.25);
 $font-first : "Montserrat";
 $imagePath : "지구" ;
 
@@ -61,7 +61,7 @@ section{
     .card_image{
       background-color: $card-color;
       width: 30%;
-      background-image: url("../image/지구.svg");
+      background-image: url("../../image/earth.svg");
       background-size:30%;
       background-position-y: 50%;
       text-align: center;
