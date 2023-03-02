@@ -1,0 +1,205 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.inner {
+  width: 90%;
+  margin: auto;
+  position: relative;
+}
+
+/* Mobile */
+/* Tablet */
+/* PC */
+@media screen and (min-width: 1280px) {
+  .inner {
+    width: 1200px;
+  }
+}
+div {
+  font-family: "Montserrat";
+  line-height: 2.2rem;
+}
+
+h1 {
+  font-family: "Montserrat";
+}
+
+section {
+  font-family: "Montserrat";
+}
+
+/* Mobile */
+/* Tablet */
+/* PC */
+@media screen and (min-width: 1280px) {
+  .menu-bar {
+    width: 35%;
+  }
+  .menu-bar:active .menu-bar-menu {
+    position: static;
+    display: flex;
+  }
+  .menu-bar .menu-bar-menu {
+    display: flex;
+  }
+  .menu-bar .menu-icon {
+    display: none;
+  }
+}
+.testResult {
+  display: flex;
+  position: relative;
+  height: 100vh;
+}
+.testResult .card_image {
+  background-color: rgba(130, 187, 83, 0.25);
+  width: 30%;
+  background-image: url("../image/지구.svg");
+  background-size: 30%;
+  background-position-y: 50%;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.testResult .card_image p {
+  margin: 30px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #3ea548;
+}
+.testResult .instruct {
+  font-family: "Montserrat";
+  width: 70%;
+}
+.testResult .instruct .text {
+  margin: 30px;
+  color: green;
+}
+.testResult .instruct .text h1 {
+  font-size: 40px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-family: "Montserrat" "sans-serif";
+}
+.testResult .instruct .text button {
+  font-size: 0.9rem;
+  color: #3ea548;
+  background-color: #fff;
+  border-radius: 20px;
+  border: 2px solid #3ea548;
+  padding: 3px 10px;
+}
+.testResult .instruct .text p {
+  margin: 50px;
+  font-size: 20px;
+  font-family: "Montserrat" "sans-serif";
+}
+.testResult .instruct .text h3 {
+  color: #3ea548;
+  margin-top: 20px;
+  font-family: "Montserrat";
+}
+
+.tree_all {
+  position: relative;
+  transition: height 0.4s;
+}
+.tree_all .swiper {
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 30px;
+}
+.tree_all .swiper .swiper-slide {
+  opacity: 1;
+  transform: 0.2;
+  height: 50%;
+}
+.tree_all .swiper .swiper-slide img {
+  box-shadow: 5px 5px 10px rgba(205, 205, 205, 0.852);
+  height: 90%;
+  width: 100%;
+}
+.tree_all .more-btn {
+  position: absolute;
+  margin: 20px;
+  right: 0;
+  background-color: #3ea548;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: 20px;
+  padding: 5px 20px;
+  border: 0px;
+}
+
+.swiper-slide-active {
+  opacity: 1;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 190px;
+  cursor: pointer;
+  width: 55px;
+  height: 55px;
+  border: 2px solid #333;
+  color: #333;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.swiper-button-prev {
+  left: 50%;
+  transform: translateX(-500px);
+}
+
+.swiper-button-next {
+  right: 50%;
+  transform: translateX(500px);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 24px;
+}
+
+footer {
+  height: 150px;
+  background-color: #3ea548;
+  display: flex;
+  align-items: center;
+}
+footer .inner {
+  display: flex;
+  justify-content: flex-start;
+}
+footer .inner .footer-text-box {
+  margin-left: 150px;
+  color: #fff;
+  line-height: 1.5;
+}
+footer .inner .footer-text-box p:first-child {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}/*# sourceMappingURL=testResult.css.map */
