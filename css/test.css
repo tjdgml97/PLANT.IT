@@ -1019,6 +1019,7 @@ header .inner .menu-bar .menu-icon {
 }
 .hide {
   opacity: 0;
+  display: none;
 }
 
 header {
@@ -1227,7 +1228,7 @@ header {
 }
 .test .inner .question-mainbox .question1 {
   height: 200px;
-  transition: 0.5s;
+  transition: 1s;
 }
 .test .inner .question-mainbox .question1 .question-box .main-question {
   font-size: 36px;

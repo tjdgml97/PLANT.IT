@@ -4,6 +4,7 @@
 
 .hide {
   opacity: 0;
+  display: none;
 }
 
 // .click {
@@ -237,7 +238,7 @@ header {
 
       .question1 {
         height: 200px;
-        transition: 0.5s;
+        transition: 1s;
 
         .question-box {
           .main-question {

@@ -4,13 +4,13 @@ const question2 = document.querySelector(".question2");
 const question3 = document.querySelector(".question3");
 const question = questionBox.querySelector("question");
 const btn = document.querySelector(".btn");
-const testBtn = document.querySelector(".btn-box");
 
 //자가진단 버튼 클릭시 스크롤 이동
 // 스크롤 이동 기능
 // 클래스, 아이디 값을 인자로 받아 offsetTop 밸류 초기화
 // 초기화된 offsetTop 값을 위치로 이동
 function movetoScroll() {
+  questionBox.classList.remove("hide");
   const location = questionBox.offsetTop;
   window.scrollTo({ top: location, behavior: "smooth" });
   question1.classList.remove("hide");
@@ -62,44 +62,51 @@ function btnHard() {
 }
 
 //onclick 으로 3번째 질문 생성
-function movetoQuestion3() {
-  const answerBox = question2.querySelector(".answer-box");
-  const first = answerBox.querySelector(".first-answer");
-  const second = answerBox.querySelector(".second-answer");
-  const third = answerBox.querySelector(".third-answer");
-  const forth = answerBox.querySelector(".forth-answer");
+const answerBox = question2.querySelector(".answer-box");
+const first = answerBox.querySelector(".first-answer");
+const second = answerBox.querySelector(".second-answer");
+const third = answerBox.querySelector(".third-answer");
+const forth = answerBox.querySelector(".forth-answer");
 
+function movetoQuestion1() {
   if (first.classList.contains("click")) {
     first.classList.remove("click");
   } else {
     first.classList.add("click");
   }
-
+  question3.classList.remove("hide");
+}
+function movetoQuestion2() {
   if (second.classList.contains("click")) {
     second.classList.remove("click");
   } else {
     second.classList.add("click");
   }
-
+  question3.classList.remove("hide");
+}
+function movetoQuestion3() {
   if (third.classList.contains("click")) {
     third.classList.remove("click");
   } else {
     third.classList.add("click");
   }
 
+  question3.classList.remove("hide");
+}
+function movetoQuestion4() {
   if (forth.classList.contains("click")) {
     forth.classList.remove("click");
   } else {
     forth.classList.add("click");
   }
-
   question3.classList.remove("hide");
 }
 
 //마지막 답변을 클릭하면 테스트 결과를 보러가는 버튼 생성
+const testBtn = document.querySelector("#btn-box");
+const footer = document.querySelector("footer");
+
 function btnShort() {
-  const location1 = testBtn.offsetTop;
-  window.scrollTo({ top: location1, behavior: "smooth" });
   localStorage.setItem("shortBtn", "short");
   testBtn.classList.remove("hide");
   if (shortQuestion.classList.contains("click")) {
@@ -107,11 +114,11 @@ function btnShort() {
   } else {
     shortQuestion.classList.add("click");
   }
+  const location1 = footer.offsetTop;
+  window.scrollTo({ top: location1, behavior: "smooth" });
 }
 
 function btnLong() {
-  const location1 = testBtn.offsetTop;
-  window.scrollTo({ top: location1, behavior: "smooth" });
   localStorage.setItem("longBtn", "long");
   testBtn.classList.remove("hide");
   if (longQuestion.classList.contains("click")) {
@@ -119,6 +126,8 @@ function btnLong() {
   } else {
     longQuestion.classList.add("click");
   }
+  const location1 = footer.offsetTop;
+  window.scrollTo({ top: location1, behavior: "smooth" });
 }
 
 easyQuestion.addEventListener("click", btnEasy);
