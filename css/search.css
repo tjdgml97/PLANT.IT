@@ -144,6 +144,36 @@ header .inner .menu-bar .menu-icon {
     display: none;
   }
 }
+footer {
+  height: 150px;
+  background-color: #3ea548;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  overflow: hidden;
+}
+footer .inner {
+  display: flex;
+  justify-content: flex-start;
+}
+footer .inner .foo_logo {
+  width: 22vw;
+  max-width: 180px;
+}
+footer .inner .foo_logo img {
+  width: 100%;
+}
+footer .inner .footer-text-box {
+  margin-left: 10vw;
+  color: #fff;
+  line-height: 1.5;
+}
+footer .inner .footer-text-box p:first-child {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
 header {
   background-color: #fff;
   border: none;
@@ -153,6 +183,9 @@ header .inner .logo a img {
 }
 header .inner .menu-bar .menu-bar-menu li:hover ::before {
   background-color: #3ea548;
+}
+header .inner .menu-bar .menu-bar-menu li a {
+  color: #fff;
 }
 header .inner .menu-bar .menu-icon {
   color: #3ea548;
@@ -164,11 +197,14 @@ header .inner .menu-bar .menu-icon {
 
 .selectSection .inner .selectTag {
   display: flex;
-  justify-content: space-between;
-  height: 5vh;
-  margin-top: 10vh;
-  padding: 0 2vw;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 60px 0 30px;
   line-height: 1.2;
+}
+.selectSection .inner .selectTag li {
+  margin-bottom: 10px;
+  margin-right: 10px;
 }
 .selectSection .inner .selectTag li button {
   font-size: 1rem;
@@ -177,7 +213,8 @@ header .inner .menu-bar .menu-icon {
   background-color: #fff;
   border-radius: 20px;
   border: 2px solid #3ea548;
-  padding: 5px 10px;
+  padding: 5px 20px;
+  line-height: 1.2;
   cursor: pointer;
 }
 .selectSection .inner .selectTag li button:hover {
@@ -201,56 +238,83 @@ header .inner .menu-bar .menu-icon {
   font-size: 1.5rem;
   font-weight: 700;
   color: #3ea548;
+  line-height: 1.5;
 }
-
-.resultSection .inner {
-  margin-top: 8vh;
-  margin-bottom: 10vh;
-}
-.resultSection .inner p {
+.selectSection .inner .resultSection h3 {
   font-family: "Montserrat";
   font-size: 1.8rem;
-  font-weight: 600;
-  line-height: 2.2rem;
+  font-weight: 700;
+  line-height: 3.5rem;
   color: #3ea548;
 }
-.resultSection .inner .count {
-  font-size: 1rem;
-  margin-bottom: 5vh;
+.selectSection .inner .resultSection p {
+  font-size: 16px;
+  color: #999;
+  line-height: 26px;
 }
-.resultSection .inner .results {
+.selectSection .inner .resultSection p .arrLength {
+  color: #3ea548;
+}
+.selectSection .inner .resultSection .results {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  gap: 0.8vw;
+  margin-top: 30px;
 }
-.resultSection .inner .results .plant {
-  width: 20vw;
+.selectSection .inner .resultSection .results .plant {
+  width: 49%;
   margin-bottom: 5vh;
-  text-align: center;
-}
-.resultSection .inner .results .plant img {
-  width: 100%;
-  border: 1px solid #999;
-  border-radius: 20px;
   overflow: hidden;
+}
+.selectSection .inner .resultSection .results .plant .image {
+  position: relative;
+  border: 1px solid #3ea548;
+  overflow: hidden;
+}
+.selectSection .inner .resultSection .results .plant .image:hover {
+  border: 1px solid #3ea548;
+}
+.selectSection .inner .resultSection .results .plant .image:hover img {
+  transform: scale(1.3);
+}
+.selectSection .inner .resultSection .results .plant .image:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  mix-blend-mode: multiply;
+  background: linear-gradient(180deg, rgba(52, 152, 56, 0), rgba(52, 152, 56, 0.2), rgba(52, 152, 56, 0.7));
+}
+.selectSection .inner .resultSection .results .plant .image {
+  cursor: pointer;
+  border: 1px solid #ddd;
+  overflow: hidden;
+}
+.selectSection .inner .resultSection .results .plant .image img {
+  transition: 0.5s;
+  width: 100%;
+  border-radius: 10px;
   margin-bottom: 1vh;
+  transform: scale(1.15);
 }
-.resultSection .inner .results .plant .kor {
-  font-size: 1.3rem;
-  line-height: 1.3rem;
+.selectSection .inner .resultSection .results .plant .kor {
+  width: 100%;
   font-weight: 700;
-  margin: 0;
+  margin-top: 20px;
   color: #3ea548;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.resultSection .inner .results .plant .eng {
-  font-size: 0.6rem;
-  line-height: 1rem;
+.selectSection .inner .resultSection .results .plant .eng {
   margin: 0;
-  color: black;
-}
-.resultSection .inner .results .plant:hover > img {
-  border: 5px solid #3ea548;
-  filter: blur(0.7px);
+  color: #999;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 footer {
@@ -274,11 +338,47 @@ footer .inner .footer-text-box p:first-child {
   font-weight: 600;
 }
 
+/* Mobile */
+@media screen and (max-width: 767px) {
+  .selectSection .inner .resultSection .results .kor {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+  .selectSection .inner .resultSection .results .eng {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
+}
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .selectSection .inner .resultSection .results .plant {
+    width: 24%;
+  }
+  .selectSection .inner .resultSection .results .kor {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+  .selectSection .inner .resultSection .results .eng {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+}
 @media screen and (min-width: 1280px) {
   header .inner .menu-bar .menu-bar-menu li:hover ::before {
     background-color: #3ea548;
   }
   header .inner .menu-bar .menu-bar-menu li a {
     color: #3ea548;
+  }
+  .selectSection .inner .resultSection .results .plant {
+    width: 24%;
+  }
+  .selectSection .inner .resultSection .results .kor {
+    font-size: 20px;
+    line-height: 1.3rem;
+  }
+  .selectSection .inner .resultSection .results .eng {
+    font-size: 14px;
+    line-height: 1.4rem;
   }
 }/*# sourceMappingURL=search.css.map */

@@ -1,6 +1,6 @@
 @import "reset";
 @import "header";
-
+@import "footer";
 // FONT
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
 //font-family: 'Montserrat', sans-serif;
@@ -9,9 +9,6 @@
 $main-green: #3ea548;
 $main-orange: #ff6652;
 $light-gray: #999;
-// .font-color--white {
-//   color: white;
-// }
 
 // NAVIGATION
 header {
@@ -34,20 +31,11 @@ header {
             background-color: $main-green;
           }
 
-          // a {
-          //   color: $main-green;
-          // }
+          a {
+            @include header_font(#fff);
+          }
         }
       }
-
-      // .menu-hidden {
-      //   li {
-      //     a {
-      //       color: #fff;
-      //     }
-      //   }
-      // }
-
       .menu-icon {
         color: $main-green;
       }
@@ -67,19 +55,16 @@ header {
 .selectSection {
   .inner {
     .selectTag {
-      // position: relative; // ::before 를 위한
-
       display: flex;
-      justify-content: space-between;
-      height: 5vh;
-      margin-top: 10vh;
-      padding: 0 2vw;
-
-      // 수직 중앙정렬
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      margin: 60px 0 30px;
       line-height: 1.2;
 
       // 버튼 디자인
       li {
+        margin-bottom: 10px;
+        margin-right: 10px;
         button {
           // font-size: 16px;
           font-size: 1rem;
@@ -88,7 +73,8 @@ header {
           background-color: #fff;
           border-radius: 20px;
           border: 2px solid $main-green;
-          padding: 5px 10px;
+          padding: 5px 20px;
+          line-height: 1.2;
           cursor: pointer;
         }
 
@@ -118,91 +104,103 @@ header {
 
       // 카테고리 구분선 - 방법1
       li.contour {
-        // font-size: 25px;
         font-size: 1.5rem;
         font-weight: 700;
         color: $main-green;
+        line-height: 1.5;
       }
-
-      // 카테고리 구분선 - 방법2 (.contour 없앤 상태에서)
-      // li:nth-child(2)::before,
-      // li:nth-child(4)::before,
-      // li:nth-child(8)::before {
-      //   position: absolute;
-      //   top: 0;
-      //   bottom: 0;
-      //   margin: auto -14px;
-
-      //   content: "";
-      //   display: block;
-      //   width: 2px;
-      //   height: 25px;
-      //   background-color: $main-green;
-      // }
     }
-  }
-}
-
-// 식물 검색 결과
-.resultSection {
-  .inner {
-    margin-top: 8vh;
-    margin-bottom: 10vh;
-
-    p {
-      font-family: "Montserrat";
-      font-size: 1.8rem;
-      font-weight: 600;
-      line-height: 2.2rem;
-      color: $main-green;
-    }
-
-    .count {
-      font-size: 1rem;
-      margin-bottom: 5vh;
-    }
-
-    .results {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-
-      // 그림 배치 다시 할 것! grid 사용???
-      .plant {
-        width: calc(100vw / 5);
-        // width: 300px;
-        margin-bottom: 5vh;
-        text-align: center; // 텍스트 중앙정렬
-
-        // hover 시 상세설명 뜨려면, html에서 <img> 대신 <div>로 바꿔야?
-        img {
-          width: 100%;
-          border: 1px solid $light-gray;
-          border-radius: 20px;
-          overflow: hidden;
-          margin-bottom: 1vh;
-        }
-
-        .kor {
-          font-size: 1.3rem;
-          line-height: 1.3rem;
-          font-weight: 700;
-          margin: 0;
+    .resultSection {
+      h3 {
+        font-family: "Montserrat";
+        font-size: 1.8rem;
+        font-weight: 700;
+        line-height: 3.5rem;
+        color: $main-green;
+      }
+      p {
+        font-size: 16px;
+        color: $light-gray;
+        line-height: 26px;
+        .arrLength {
           color: $main-green;
         }
-
-        .eng {
-          font-size: 0.6rem;
-          line-height: 1rem;
-          margin: 0;
-          color: black;
-        }
       }
 
-      // hover 시, 사진 어둡게 처리 + 위에 상세 내용 뜰 예정
-      .plant:hover > img {
-        border: 5px solid $main-green;
-        filter: blur(0.7px);
+      .results {
+        display: flex;
+        flex-wrap: wrap;
+        // justify-content: flex-starst;
+        gap: 0.8vw;
+        margin-top: 30px;
+        // 그림 배치 다시 할 것! grid 사용???
+        .plant {
+          width: 49%;
+          margin-bottom: 5vh;
+          overflow: hidden;
+          .image {
+            position: relative;
+            border: 1px solid $main-green;
+            overflow: hidden;
+
+            &:hover {
+              border: 1px solid $main-green;
+              img {
+                transform: scale(1.3);
+              }
+              &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 2;
+                mix-blend-mode: multiply;
+
+                background: linear-gradient(
+                  180deg,
+                  rgba(52, 152, 56, 0),
+                  rgba(52, 152, 56, 0.2),
+                  rgba(52, 152, 56, 0.7)
+                );
+              }
+            }
+          }
+          .image {
+            cursor: pointer;
+            border: 1px solid #ddd;
+            overflow: hidden;
+            img {
+              transition: 0.5s;
+              width: 100%;
+              border-radius: 10px;
+              margin-bottom: 1vh;
+              transform: scale(1.15);
+            }
+          }
+
+          .kor {
+            width: 100%;
+
+            font-weight: 700;
+            margin-top: 20px;
+            color: $main-green;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
+          .eng {
+            margin: 0;
+            color: $light-gray;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+
+        // hover 시, 사진 어둡게 처리 + 위에 상세 내용 뜰 예정
       }
     }
   }
@@ -229,6 +227,49 @@ footer {
     }
   }
 }
+/* Mobile */
+@media screen and (max-width: 767px) {
+  .selectSection {
+    .inner {
+      .resultSection {
+        .results {
+          .kor {
+            font-size: 1.6rem;
+            line-height: 2rem;
+          }
+          .eng {
+            font-size: 1.2rem;
+            line-height: 1.6rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .selectSection {
+    .inner {
+      .resultSection {
+        .results {
+          .plant {
+            width: 24%;
+          }
+
+          .kor {
+            font-size: 1.4rem;
+            line-height: 2rem;
+          }
+          .eng {
+            font-size: 1rem;
+            line-height: 1.6rem;
+          }
+        }
+      }
+    }
+  }
+}
 // PC
 @media screen and (min-width: 1280px) {
   header {
@@ -241,8 +282,28 @@ footer {
             }
 
             a {
-              color: $main-green;
+              @include header_font($main-green);
             }
+          }
+        }
+      }
+    }
+  }
+  .selectSection {
+    .inner {
+      .resultSection {
+        .results {
+          .plant {
+            width: 24%;
+          }
+
+          .kor {
+            font-size: 20px;
+            line-height: 1.3rem;
+          }
+          .eng {
+            font-size: 14px;
+            line-height: 1.4rem;
           }
         }
       }
