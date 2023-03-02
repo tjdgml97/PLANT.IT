@@ -70,49 +70,52 @@ section {
 }
 .testResult {
   display: flex;
-  position: relative;
   height: 100vh;
 }
 .testResult .card_image {
-  background-color: rgba(228, 138, 111, 0.25);
-  width: 30%;
-  background-image: url("../../image/earth.svg");
-  background-size: 30%;
+  background-color: rgba(255, 122, 102, 0.499);
+  width: 33%;
+  height: 100%;
+  background-image: url("../../image/rocket.svg");
+  background-size: 27%;
   background-position-y: 50%;
   text-align: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 .testResult .card_image p {
+  position: absolute;
+  bottom: 10px;
   margin: 30px;
   font-size: 30px;
   font-weight: 700;
-  color: #3ea548;
+  color: black;
 }
 .testResult .instruct {
   font-family: "Montserrat";
-  width: 70%;
+  width: 67%;
+  height: 100%;
 }
 .testResult .instruct .text {
-  margin: 30px;
+  margin: 30px 30px 0 30px;
+  height: 50%;
   color: green;
 }
 .testResult .instruct .text h1 {
   font-size: 40px;
-  margin-top: 50px;
   margin-bottom: 20px;
   font-family: "Montserrat" "sans-serif";
 }
 .testResult .instruct .text button {
   font-size: 0.9rem;
-  color: #3ea548;
-  background-color: #fff;
+  color: white;
+  background-color: #3ea548;
   border-radius: 20px;
   border: 2px solid #3ea548;
   padding: 3px 10px;
 }
 .testResult .instruct .text p {
-  margin: 50px;
+  margin-top: 50px;
   font-size: 20px;
   font-family: "Montserrat" "sans-serif";
 }
@@ -121,41 +124,67 @@ section {
   margin-top: 20px;
   font-family: "Montserrat";
 }
-
-.tree_all {
+.testResult .instruct .tree_all {
+  margin: 0 30px;
+  height: 50%;
   position: relative;
-  transition: height 0.4s;
 }
-.tree_all .swiper {
+.testResult .instruct .tree_all h2 {
+  margin-bottom: 10px;
+  color: #3ea548;
+}
+.testResult .instruct .tree_all .swiper {
+  margin-top: 30px;
   position: absolute;
   width: 100%;
-  height: 300px;
+  height: 80%;
   text-align: center;
   left: 50%;
   transform: translateX(-50%);
-  top: 30px;
+  justify-content: center;
 }
-.tree_all .swiper .swiper-slide {
+.testResult .instruct .tree_all .swiper .swiper-slide {
+  width: 50px;
+  padding: 10px;
+  height: 80%;
+  border: 1px solid green;
+  background-color: white;
+  border-radius: 20px;
+  top: 5px;
   opacity: 1;
   transform: 0.2;
-  height: 50%;
 }
-.tree_all .swiper .swiper-slide img {
-  box-shadow: 5px 5px 10px rgba(205, 205, 205, 0.852);
-  height: 90%;
-  width: 100%;
+.testResult .instruct .tree_all .swiper .swiper-slide img {
+  transform: scale(0.8);
+  opacity: 0.7;
+  background-color: black;
+  width: 75%;
+  height: 80%;
 }
-.tree_all .more-btn {
+.testResult .instruct .tree_all .swiper .swiper-slide img:hover {
+  opacity: 1;
+  transform: scale(0.9);
+  transition: 0.7s;
+}
+.testResult .instruct .tree_all .more-btn {
   position: absolute;
-  margin: 20px;
   right: 0;
-  background-color: #3ea548;
-  color: white;
+  top: -5px;
+  z-index: 99;
+  background-color: white;
+  color: rgb(242, 114, 85);
   font-size: 0.9rem;
   font-weight: 700;
   border-radius: 20px;
   padding: 5px 20px;
-  border: 0px;
+  border: 1px solid rgb(242, 114, 85);
+}
+.testResult .instruct .tree_all .more-btn:hover {
+  cursor: pointer;
+  transition: 1s;
+  border: 1px solid rgba(255, 122, 102, 0.499);
+  color: rgb(242, 114, 85);
+  background-color: rgba(255, 122, 102, 0.499);
 }
 
 .swiper-slide-active {
@@ -188,25 +217,4 @@ section {
 .swiper-button-prev::after,
 .swiper-button-next::after {
   font-size: 24px;
-}
-
-footer {
-  height: 150px;
-  background-color: #3ea548;
-  display: flex;
-  align-items: center;
-}
-footer .inner {
-  display: flex;
-  justify-content: flex-start;
-}
-footer .inner .footer-text-box {
-  margin-left: 150px;
-  color: #fff;
-  line-height: 1.5;
-}
-footer .inner .footer-text-box p:first-child {
-  margin-bottom: 10px;
-  font-size: 18px;
-  font-weight: 600;
 }/*# sourceMappingURL=testResultRoket.css.map */

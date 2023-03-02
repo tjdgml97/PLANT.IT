@@ -1,3 +1,4 @@
+
 @import "../reset";
 // @import "./header";
 
@@ -7,7 +8,8 @@
 
 // color
 $main-color :  #3ea548;
-$card-color : rgba(130, 187, 83, 0.25);
+$card-color : rgba(100, 208, 37, 0.313);
+$button-color : green;
 $font-first : "Montserrat";
 $imagePath : "지구" ;
 
@@ -17,7 +19,7 @@ div {
 }
 
 
-h1{
+h1{ 
   font-family: $font-first;
 
 }
@@ -53,14 +55,14 @@ section{
 
 
 .testResult {
-
     display: flex;
-    position: relative;
+    // position: relative;
     height: 100vh;
 
     .card_image{
       background-color: $card-color;
-      width: 30%;
+      width: 33%;
+      height: 100%;
       background-image: url("../../image/earth.svg");
       background-size:30%;
       background-position-y: 50%;
@@ -68,7 +70,11 @@ section{
       background-repeat: no-repeat;
       background-attachment: fixed;
       p{
-        margin: 30px;
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        margin: 10px;
+        z-index: 10;
         font-size: 30px;
         font-weight:700;
         color: $main-color;
@@ -76,15 +82,18 @@ section{
     }
     .instruct{
       font-family: $font-first;
-      width: 70%;
+      width: 67%;
+      height: 100%;
+      // background-color: rgb(2, 2, 63);;
 
       .text{
-        margin: 30px;
+        margin: 30px 30px 0 30px;
+        height: 50%;
         color:green;
 
         h1{
           font-size: 40px;
-          margin-top: 50px;
+          // margin-top: 50px;
           margin-bottom: 20px;
           font-family: "Montserrat" "sans-serif";
 
@@ -93,15 +102,15 @@ section{
         button {
           font-size: 0.9rem;
           // font-weight: 700;
-          color:  #3ea548;
-          background-color: #fff;
+          color: white;
+          background-color: $main-color;
           border-radius: 20px;
-          border: 2px solid  #3ea548;
+          border: 2px solid  $main-color;
           padding: 3px 10px;
         }
 
         p{
-          margin: 50px;
+          margin-top: 50px;
           font-size: 20px;
           font-family: "Montserrat" "sans-serif";
         }
@@ -112,49 +121,92 @@ section{
           font-family: "Montserrat";
         }
       }
+
+      .tree_all {
+        margin: 0 30px;
+        height: 50%;
+        position : relative;
+        // transition: height 0.4s;
+        h2{
+          margin-bottom: 10px;
+          color: $main-color;
+          // margin: 100px;
+        }
+        
+        .swiper{
+          margin-top:30px;
+          
+          // background-color: $main-color;
+          position: absolute;
+          width: 100%;
+          height: 80%;
+          text-align: center;
+          left: 50%;
+          transform: translateX(-50%);
+          justify-content: center;
+          // top: 0px;
+      
+          .swiper-slide{
+            width: 50px;
+            padding: 10px;
+            height: 80%;
+            border: 1px solid green;
+            // margin: 30px;
+            background-color:white;
+            border-radius: 20px;
+
+            top: 5px;
+            // background-color: red;
+            opacity:1;
+            transform: 0.2;
+            // height: 100%;
+          
+            img{              
+              transform: scale(0.8);
+              opacity: 0.7;
+              // border: 2px solid $main-color;
+              background-color: black;
+              // box-shadow: 5px 5px 10px rgba(205, 205, 205, 0.852);
+              width: 75%;
+              height:80%;
+            }
+            img:hover{
+              opacity: 1;
+              transform: scale(0.9);
+              transition: 0.7s;
+              
+            }
+
+          }
+        }
+        .more-btn{
+          // bottom: 0;
+          position: absolute;
+          // margin: 20px;
+          right: 0;
+          top: -5px;
+          z-index: 99;
+          background-color: white;
+          color: $main-color;
+      
+          font-size: 0.9rem;
+          font-weight: 700;
+          border-radius: 20px;
+          padding: 5px 20px;
+          border: 1px solid $main-color; 
+
+          &:hover{
+            cursor: pointer;
+            transition: 1s;
+            background-color: $card-color;
+          }
+        }
+
+       }
     }
 }
 
-.tree_all {
-  position : relative;
-  transition: height 0.4s;
 
-  .swiper{
-    position: absolute;
-    width: 100%;
-    height: 300px;
-    text-align: center;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 30px;
-
-    .swiper-slide{
-      opacity:1;
-      transform: 0.2;
-      height: 50%;
-    
-      img{
-        box-shadow: 5px 5px 10px rgba(205, 205, 205, 0.852);
-        height: 90%;
-        width: 100%;
-      }
-    }
-  }
-  .more-btn{
-    position: absolute;
-    margin: 20px;
-    right: 0;
-    background-color: $main-color;
-    color: white;
-
-    font-size: 0.9rem;
-    font-weight: 700;
-    border-radius: 20px;
-    padding: 5px 20px;
-    border: 0px;
-
-  }
- }
 
 
 
@@ -192,23 +244,241 @@ section{
 }
 
 
-footer {
-  height: 150px;
-  background-color: #3ea548;
-  display: flex;
-  align-items: center;
-  .inner {
-    display: flex;
-    justify-content: flex-start;
-    .footer-text-box {
-      p:first-child {
-        margin-bottom: 10px;
-        font-size: 18px;
-        font-weight: 600;
-      }
-      margin-left: 150px;
-      color: #fff;
-      line-height: 1.5;
-    }
-  }
-}
+// footer {
+//   height: 150px;
+//   background-color: #3ea548;
+//   display: flex;
+//   align-items: center;
+//   .inner {
+//     display: flex;
+//     justify-content: flex-start;
+//     .footer-text-box {
+//       p:first-child {
+//         margin-bottom: 10px;
+//         font-size: 18px;
+//         font-weight: 600;
+//       }
+//       margin-left: 150px;
+//       color: #fff;
+//       line-height: 1.5;
+//     }
+//   }
+// }
+
+
+
+//
+// @import "../reset";
+// // @import "./header";
+
+// //font
+// @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
+
+
+// // color
+// $main-color :  #3ea548;
+// $card-color : rgba(130, 187, 83, 0.25);
+// $font-first : "Montserrat";
+// $imagePath : "지구" ;
+
+// div {
+//   font-family: $font-first;
+//   line-height: 2.2rem;
+// }
+
+
+// h1{
+//   font-family: $font-first;
+
+// }
+// section{
+//     font-family: $font-first;
+// }
+
+
+// /* Mobile */
+// @media screen and (max-width: 767px) {
+// }
+
+// /* Tablet */
+// @media screen and (min-width: 768px) {
+// }
+
+// /* PC */
+// @media screen and (min-width: 1280px) {
+//   .menu-bar {
+//     width: 35%;
+//     &:active .menu-bar-menu {
+//       position: static;
+//       display: flex;
+//     }
+//     .menu-bar-menu {
+//       display: flex;
+//     }
+//     .menu-icon {
+//       display: none;
+//     }
+//   }
+// }
+
+
+// .testResult {
+
+//     display: flex;
+//     position: relative;
+//     height: 100vh;
+
+//     .card_image{
+//       background-color: $card-color;
+//       width: 30%;
+//       background-image: url("../../image/earth.svg");
+//       background-size:30%;
+//       background-position-y: 50%;
+//       text-align: center;
+//       background-repeat: no-repeat;
+//       background-attachment: fixed;
+//       p{
+//         margin: 30px;
+//         font-size: 30px;
+//         font-weight:700;
+//         color: $main-color;
+//       }
+//     }
+//     .instruct{
+//       font-family: $font-first;
+//       width: 70%;
+
+//       .text{
+//         margin: 30px;
+//         color:green;
+
+//         h1{
+//           font-size: 40px;
+//           margin-top: 50px;
+//           margin-bottom: 20px;
+//           font-family: "Montserrat" "sans-serif";
+
+//         }
+
+//         button {
+//           font-size: 0.9rem;
+//           // font-weight: 700;
+//           color:  #3ea548;
+//           background-color: #fff;
+//           border-radius: 20px;
+//           border: 2px solid  #3ea548;
+//           padding: 3px 10px;
+//         }
+
+//         p{
+//           margin: 50px;
+//           font-size: 20px;
+//           font-family: "Montserrat" "sans-serif";
+//         }
+
+//         h3{
+//           color: #3ea548;
+//           margin-top: 20px;
+//           font-family: "Montserrat";
+//         }
+//       }
+//     }
+// }
+
+// .tree_all {
+//   position : relative;
+//   transition: height 0.4s;
+
+//   .swiper{
+//     position: absolute;
+//     width: 100%;
+//     height: 300px;
+//     text-align: center;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     top: 30px;
+
+//     .swiper-slide{
+//       opacity:1;
+//       transform: 0.2;
+//       height: 50%;
+    
+//       img{
+//         box-shadow: 5px 5px 10px rgba(205, 205, 205, 0.852);
+//         height: 90%;
+//         width: 100%;
+//       }
+//     }
+//   }
+//   .more-btn{
+//     position: absolute;
+//     margin: 20px;
+//     right: 0;
+//     background-color: $main-color;
+//     color: white;
+
+//     font-size: 0.9rem;
+//     font-weight: 700;
+//     border-radius: 20px;
+//     padding: 5px 20px;
+//     border: 0px;
+
+//   }
+//  }
+
+
+
+// .swiper-slide-active{
+//   opacity: 1;
+// }
+
+// .swiper-button-prev,
+// .swiper-button-next{
+//   position: absolute;
+//   top:  190px;
+//   cursor: pointer;
+//   width: 55px;
+//   height: 55px;
+//   border : 2px solid #333;
+//   color: #333;
+//   border-radius: 50%;
+//   z-index: 1;
+// }
+
+// .swiper-button-prev{
+//   left: 50%;
+//   transform: translateX(-500px);
+// }
+
+// .swiper-button-next{
+//   right: 50%;
+//   transform: translateX(500px);
+// }
+
+
+// .swiper-button-prev::after,
+// .swiper-button-next::after{
+//   font-size: 24px;
+// }
+
+
+// footer {
+//   height: 150px;
+//   background-color: #3ea548;
+//   display: flex;
+//   align-items: center;
+//   .inner {
+//     display: flex;
+//     justify-content: flex-start;
+//     .footer-text-box {
+//       p:first-child {
+//         margin-bottom: 10px;
+//         font-size: 18px;
+//         font-weight: 600;
+//       }
+//       margin-left: 150px;
+//       color: #fff;
+//       line-height: 1.5;
+//     }
+//   }
+// }

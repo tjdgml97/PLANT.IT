@@ -1,11 +1,14 @@
 const swiperTree = new Swiper(".swiper",{
   direction:"horizontal",
   slidesPerView:3,
-  spaceBetween:3,
+  spaceBetween:20,
   centeredSlides:true,
   loop:true,
+  speed: 5000,
+  freeMode :true,
+  // freeModeMomentum : false,
   autoplay:{
-    delay: 1000,
+    delay:1,
     disableOnInteraction:false,
   },
   navigation: {
