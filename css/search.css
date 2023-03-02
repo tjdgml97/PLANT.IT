@@ -1,4 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
+@font-face {
+  font-family: "CWDangamAsac-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/CWDangamAsac-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   margin: 0;
   padding: 0;
@@ -96,7 +104,17 @@ header .inner .menu-bar .menu-icon {
 }
 
 /* Mobile */
+@media screen and (max-width: 767px) {
+  header .inner .menu-bar .menu-bar-menu li a {
+    color: #fff;
+  }
+}
 /* Tablet */
+@media screen and (min-width: 768px) {
+  header .inner .menu-bar .menu-bar-menu li a {
+    color: #fff;
+  }
+}
 /* PC */
 @media screen and (min-width: 1280px) {
   header .inner .menu-bar .menu-bar-menu {
@@ -135,9 +153,6 @@ header .inner .logo a img {
 }
 header .inner .menu-bar .menu-bar-menu li:hover ::before {
   background-color: #3ea548;
-}
-header .inner .menu-bar .menu-bar-menu li a {
-  color: #3ea548;
 }
 header .inner .menu-bar .menu-icon {
   color: #3ea548;
@@ -257,4 +272,13 @@ footer .inner .footer-text-box p:first-child {
   margin-bottom: 10px;
   font-size: 18px;
   font-weight: 600;
+}
+
+@media screen and (min-width: 1280px) {
+  header .inner .menu-bar .menu-bar-menu li:hover ::before {
+    background-color: #3ea548;
+  }
+  header .inner .menu-bar .menu-bar-menu li a {
+    color: #3ea548;
+  }
 }/*# sourceMappingURL=search.css.map */

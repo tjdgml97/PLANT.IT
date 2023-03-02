@@ -1,5 +1,24 @@
-// RESET
+// FONT
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");
+//font-family: 'Montserrat', sans-serif;
 
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200;300;400;500;600;700&display=swap");
+// font-family: 'Gothic A1', sans-serif;
+
+@font-face {
+  font-family: "CWDangamAsac-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/CWDangamAsac-Bold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+// COLOR
+$main-green: #3ea548;
+$main-orange: #ff6652;
+$light-gray: #999;
+
+// RESET
 * {
   margin: 0;
   padding: 0;
