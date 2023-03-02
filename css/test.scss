@@ -1,5 +1,4 @@
 @import "./reset";
-@import "./home.scss";
 @import "./header";
 
 .hide {
@@ -40,11 +39,12 @@ header {
         width: 39%;
         height: 200px;
         text-align: center;
+        white-space: nowrap;
 
         > p {
           font-size: 24px;
           color: white;
-          font-size: 700;
+          font-weight: 900;
           line-height: 1;
           margin-bottom: 30px;
         }
@@ -52,7 +52,7 @@ header {
         > h2 {
           font-size: 70px;
           color: tomato;
-          font-size: bold;
+          font-weight: bold;
           line-height: 1;
           font-family: "CWDangamAsac-Bold";
         }
@@ -579,5 +579,12 @@ header {
         }
       }
     }
+  }
+}
+
+/* PC */
+@media screen and (min-width: 1280px) {
+  .test .inner .category .gototest > h2 {
+    white-space: nowrap;
   }
 }
