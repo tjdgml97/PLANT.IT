@@ -882,7 +882,7 @@ footer .inner .footer-text-box p:first-child {
   section[class^=main-section].main-section-1 .inner .hidden-text li {
     white-space: nowrap;
   }
-  section[class^=main-section].main-section-3 {
+  section[class^=main-section].main-section-2, section[class^=main-section].main-section-3 {
     height: 100vh;
   }
   section[class^=main-section].main-section-2 .inner .arrow {
