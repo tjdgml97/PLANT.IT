@@ -75,10 +75,36 @@ header {
 }
 /* Mobile */
 @media screen and (max-width: 767px) {
+  header {
+    .inner {
+      .menu-bar {
+        .menu-bar-menu {
+          li {
+            a {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 /* Tablet */
 @media screen and (min-width: 768px) {
+  header {
+    .inner {
+      .menu-bar {
+        .menu-bar-menu {
+          li {
+            a {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 /* PC */

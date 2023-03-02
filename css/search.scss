@@ -34,9 +34,9 @@ header {
             background-color: $main-green;
           }
 
-          a {
-            color: $main-green;
-          }
+          // a {
+          //   color: $main-green;
+          // }
         }
       }
 
@@ -226,6 +226,26 @@ footer {
       margin-left: 150px;
       color: #fff;
       line-height: 1.5;
+    }
+  }
+}
+// PC
+@media screen and (min-width: 1280px) {
+  header {
+    .inner {
+      .menu-bar {
+        .menu-bar-menu {
+          li {
+            &:hover ::before {
+              background-color: $main-green;
+            }
+
+            a {
+              color: $main-green;
+            }
+          }
+        }
+      }
     }
   }
 }

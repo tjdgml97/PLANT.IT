@@ -1,5 +1,6 @@
 @import "reset";
-@import "header";
+
+@import "footer";
 
 // FONT
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");
@@ -25,7 +26,21 @@ $light-gray: #999;
   color: white;
 }
 // MAIN
+header {
+  .inner {
+    .menu-bar {
+      .menu-bar-menu {
+        li {
+          a {
+            @include header_font(#ff00f0);
+          }
+        }
+      }
+    }
+  }
+}
 
+@import "header";
 section[class^="main-section"] {
   &.main-section-1 {
     height: calc(100vh - 120px);
@@ -656,36 +671,6 @@ section[class^="main-section"] {
     }
   }
 }
-footer {
-  height: 150px;
-  background-color: $main-green;
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-  overflow: hidden;
-  .inner {
-    display: flex;
-    justify-content: flex-start;
-    .foo_logo {
-      width: 22vw;
-      max-width: 180px;
-      img {
-        width: 100%;
-      }
-    }
-
-    .footer-text-box {
-      p:first-child {
-        margin-bottom: 10px;
-        font-size: 16px;
-        font-weight: 600;
-      }
-      margin-left: 10vw;
-      color: #fff;
-      line-height: 1.5;
-    }
-  }
-}
 
 /* Mobile */
 @media screen and (max-width: 767px) {
@@ -851,6 +836,7 @@ footer {
       }
     }
     &.main-section-3 {
+      overflow: hidden;
       .inner {
         .character {
           li {

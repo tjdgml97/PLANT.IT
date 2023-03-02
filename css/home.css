@@ -98,7 +98,17 @@ header .inner .menu-bar .menu-icon {
 }
 
 /* Mobile */
+@media screen and (max-width: 767px) {
+  header .inner .menu-bar .menu-bar-menu li a {
+    color: #fff;
+  }
+}
 /* Tablet */
+@media screen and (min-width: 768px) {
+  header .inner .menu-bar .menu-bar-menu li a {
+    color: #fff;
+  }
+}
 /* PC */
 @media screen and (min-width: 1280px) {
   header .inner .menu-bar .menu-bar-menu {
@@ -128,6 +138,36 @@ header .inner .menu-bar .menu-icon {
     display: none;
   }
 }
+footer {
+  height: 150px;
+  background-color: #3ea548;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  overflow: hidden;
+}
+footer .inner {
+  display: flex;
+  justify-content: flex-start;
+}
+footer .inner .foo_logo {
+  width: 22vw;
+  max-width: 180px;
+}
+footer .inner .foo_logo img {
+  width: 100%;
+}
+footer .inner .footer-text-box {
+  margin-left: 10vw;
+  color: #fff;
+  line-height: 1.5;
+}
+footer .inner .footer-text-box p:first-child {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
 @font-face {
   font-family: "CWDangamAsac-Bold";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/CWDangamAsac-Bold.woff") format("woff");
@@ -721,36 +761,6 @@ section[class^=main-section] .inner .arrow .arrow-bottom::before {
   height: 100%;
   border-right: 0;
   border-bottom: 0;
-}
-
-footer {
-  height: 150px;
-  background-color: #3ea548;
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-  overflow: hidden;
-}
-footer .inner {
-  display: flex;
-  justify-content: flex-start;
-}
-footer .inner .foo_logo {
-  width: 22vw;
-  max-width: 180px;
-}
-footer .inner .foo_logo img {
-  width: 100%;
-}
-footer .inner .footer-text-box {
-  margin-left: 10vw;
-  color: #fff;
-  line-height: 1.5;
-}
-footer .inner .footer-text-box p:first-child {
-  margin-bottom: 10px;
-  font-size: 16px;
-  font-weight: 600;
 }
 
 /* Mobile */

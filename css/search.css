@@ -96,7 +96,17 @@ header .inner .menu-bar .menu-icon {
 }
 
 /* Mobile */
+@media screen and (max-width: 767px) {
+  header .inner .menu-bar .menu-bar-menu li a {
+    color: #fff;
+  }
+}
 /* Tablet */
+@media screen and (min-width: 768px) {
+  header .inner .menu-bar .menu-bar-menu li a {
+    color: #fff;
+  }
+}
 /* PC */
 @media screen and (min-width: 1280px) {
   header .inner .menu-bar .menu-bar-menu {
@@ -135,9 +145,6 @@ header .inner .logo a img {
 }
 header .inner .menu-bar .menu-bar-menu li:hover ::before {
   background-color: #3ea548;
-}
-header .inner .menu-bar .menu-bar-menu li a {
-  color: #3ea548;
 }
 header .inner .menu-bar .menu-icon {
   color: #3ea548;
@@ -257,4 +264,13 @@ footer .inner .footer-text-box p:first-child {
   margin-bottom: 10px;
   font-size: 18px;
   font-weight: 600;
+}
+
+@media screen and (min-width: 1280px) {
+  header .inner .menu-bar .menu-bar-menu li:hover ::before {
+    background-color: #3ea548;
+  }
+  header .inner .menu-bar .menu-bar-menu li a {
+    color: #3ea548;
+  }
 }/*# sourceMappingURL=search.css.map */

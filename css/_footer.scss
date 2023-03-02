@@ -1,0 +1,34 @@
+// COLOR
+$main-green: #3ea548;
+$main-orange: #ff6652;
+$light-gray: #999;
+footer {
+  height: 150px;
+  background-color: $main-green;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  overflow: hidden;
+  .inner {
+    display: flex;
+    justify-content: flex-start;
+    .foo_logo {
+      width: 22vw;
+      max-width: 180px;
+      img {
+        width: 100%;
+      }
+    }
+
+    .footer-text-box {
+      p:first-child {
+        margin-bottom: 10px;
+        font-size: 16px;
+        font-weight: 600;
+      }
+      margin-left: 10vw;
+      color: #fff;
+      line-height: 1.5;
+    }
+  }
+}
