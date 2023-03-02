@@ -21,6 +21,7 @@ btn.addEventListener("click", movetoScroll);
 
 //초기화시 페이지 상단으로 이동
 window.onload = function () {
+  localStorage.clear();
   setTimeout(function () {
     scrollTo(0, 0);
   }, 100);
@@ -28,6 +29,7 @@ window.onload = function () {
 
 //답변 선택시 질문지 생성
 //답변  hard,easy,short,long 선택시 local value값 저장 후 다음 질문지 보이게하기
+// hard/easy, short/long 구분지어서 결과페이지로 이동시키기
 const easyQuestion = document.querySelector(
   ".question1 > .answer-box > .first-answer"
 );
@@ -44,6 +46,7 @@ const longQuestion = document.querySelector(
 function btnEasy() {
   localStorage.setItem("easyBtn", "easy");
   question2.classList.remove("hide");
+  hardQuestion.classList.remove("click");
   if (easyQuestion.classList.contains("click")) {
     easyQuestion.classList.remove("click");
   } else {
@@ -54,6 +57,7 @@ function btnEasy() {
 function btnHard() {
   localStorage.setItem("hardBtn", "hard");
   question2.classList.remove("hide");
+  easyQuestion.classList.remove("click");
   if (hardQuestion.classList.contains("click")) {
     hardQuestion.classList.remove("click");
   } else {
@@ -104,11 +108,21 @@ function movetoQuestion4() {
 
 //마지막 답변을 클릭하면 테스트 결과를 보러가는 버튼 생성
 const testBtn = document.querySelector("#btn-box");
+const testBtna = document.querySelector(".btn-box>a");
 const footer = document.querySelector("footer");
 
 function btnShort() {
   localStorage.setItem("shortBtn", "short");
   testBtn.classList.remove("hide");
+  longQuestion.classList.remove("click");
+
+  if (localStorage.getItem("shortBtn")) {
+    if (localStorage.getItem("easyBtn")) {
+      testBtna.href = `./index.html`;
+    } else if (localStorage.getItem("hardBtn")) {
+      testBtna.href = `./search.html`;
+    }
+  }
   if (shortQuestion.classList.contains("click")) {
     shortQuestion.classList.remove("click");
   } else {
@@ -121,6 +135,14 @@ function btnShort() {
 function btnLong() {
   localStorage.setItem("longBtn", "long");
   testBtn.classList.remove("hide");
+  shortQuestion.classList.remove("click");
+  if (localStorage.getItem("longBtn")) {
+    if (localStorage.getItem("easyBtn")) {
+      testBtna.href = `./testResult.html`;
+    } else if (localStorage.getItem("hardBtn")) {
+      testBtna.href = `./story.html`;
+    }
+  }
   if (longQuestion.classList.contains("click")) {
     longQuestion.classList.remove("click");
   } else {
