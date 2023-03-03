@@ -47,39 +47,72 @@ $arrow-color: #000;
   position: relative;
 
   &--slogan {
+    // test 중
+    align-items: center;
+    background-color: #000;
+    display: flex;
+    flex-basis: content;
+    flex-direction: column;
+    padding: 2rem;
+
     .inner {
       height: calc(100vh - 120px);
-      width: 100%;
-      background-color: #000;
       text-align: center;
+      justify-content: center;
 
       .sloganTitle {
-        position: absolute;
-        top: 10vh;
-        left: 1vw;
-
-        color: #fff;
+        display: inline-block;
         font-family: "CWDangamAsac-Bold";
-        font-size: 5rem;
+        // font-size: 4em;
+        font-size: 4rem;
+        // letter-spacing: -0.05em;
+        letter-spacing: -0.05em;
+        // line-height: 0.75;
+        line-height: 1;
+        margin: 0.5em 0;
+        text-align: center;
+        text-transform: uppercase;
+        transform: rotate(-7deg);
 
-        span:first-child {
-          color: $main-orange;
+        span {
+          // background-color: $light-gray;
+          // background-color: #166032;
+          box-sizing: border-box;
+          // color: $light-gray;
+          // color: #166032;
+          display: inline-block;
+          // padding: 0.25em 0.5em;
+          margin: -0.1em auto;
+          width: auto;
+          // width: 700px;
         }
-        span:last-child {
-          color: $main-green;
+
+        span::before {
+          animation-name: title;
+          animation-duration: 3s;
+          animation-iteration-count: infinite;
+          animation-timing-function: ease;
+          box-sizing: border-box;
+          content: attr(data-text);
+          display: inline;
+          color: #fff;
+          display: block;
+          position: absolute;
+          z-index: 1;
+        }
+
+        span:last-child::before {
+          animation-delay: 0.25s;
         }
       }
 
       .sloganContent {
-        display: none;
         color: #fff;
-        font-family: "Montserrat";
-        font-size: 2rem;
       }
 
       .arrow {
         position: absolute;
-        left: 50%; // 이후 코드에도 적용시키기!!
+        left: 50%;
         // transform: translate(-50%, 420%);
 
         // 모션
@@ -103,6 +136,65 @@ $arrow-color: #000;
       }
     }
   }
+
+  // 이전 코드
+  // &--slogan {
+  //   .inner {
+  //     height: calc(100vh - 120px);
+  //     width: 100%;
+  //     background-color: #000;
+  //     text-align: center;
+
+  //     .sloganTitle {
+  //       position: absolute;
+  //       top: 10vh;
+  //       left: 1vw;
+
+  //       color: #fff;
+  //       font-family: "CWDangamAsac-Bold";
+  //       font-size: 5rem;
+
+  //       span:first-child {
+  //         color: $main-orange;
+  //       }
+  //       span:last-child {
+  //         color: $main-green;
+  //       }
+  //     }
+
+  //     .sloganContent {
+  //       display: none;
+  //       color: #fff;
+  //       font-family: "Montserrat";
+  //       font-size: 2rem;
+  //     }
+
+  //     .arrow {
+  //       position: absolute;
+  //       left: 50%;
+  //       // transform: translate(-50%, 420%);
+
+  //       // 모션
+  //       animation: scroll_bottom 1s ease-in infinite;
+  //       @keyframes scroll_bottom {
+  //         from {
+  //           bottom: 7%;
+  //           opacity: 1;
+  //         }
+  //         to {
+  //           opacity: 0;
+  //           bottom: 5%;
+  //         }
+  //       }
+
+  //       .arrow-bottom::before {
+  //         border: 4px solid #fff;
+  //         border-right: 0;
+  //         border-bottom: 0;
+  //       }
+  //     }
+  //   }
+  // }
 
   &--logo {
     color: #fff; // 임시
@@ -244,5 +336,35 @@ $arrow-color: #000;
         left: 32vw;
       }
     }
+  }
+}
+
+@keyframes title {
+  0% {
+    opacity: 0;
+    transform: translateY(-0.2em);
+    -webkit-clip-path: polygon(0 70%, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 70%, 100% 0, 100% 100%, 0 100%);
+  }
+
+  20% {
+    opacity: 1;
+    transform: translateY(0);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  80% {
+    opacity: 1;
+    transform: translateY(0);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(0.1em);
+    -webkit-clip-path: polygon(0 70%, 100% 0, 100% 30%, 0 100%);
+    clip-path: polygon(0 70%, 100% 0, 100% 30%, 0 100%);
   }
 }
