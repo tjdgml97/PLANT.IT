@@ -39,3 +39,31 @@ menuIcon.addEventListener("click", function () {
     menuEl.classList.add("menu-hidden");
   }
 });
+
+//localStorage로 값 보내기
+const largePlant = document.querySelector(".box1");
+const airPlant = document.querySelector(".box2");
+const petPlant = document.querySelector(".box3");
+const interiorPlant = document.querySelector(".box4");
+
+function largePlantLocal(event) {
+  event.preventDefault();
+  localStorage.setItem("largeBtn", "large");
+}
+function airPlantLocal(event) {
+  event.preventDefault();
+  localStorage.setItem("airBtn", "air");
+}
+function petPlantLocal(event) {
+  event.preventDefault();
+  localStorage.setItem("petBtn", "pet");
+}
+function interiorPlantLocal(event) {
+  event.preventDefault();
+  localStorage.setItem("interiorBtn", "interior");
+}
+
+largePlant.addEventListener("click", largePlantLocal);
+airPlant.addEventListener("click", airPlantLocal);
+petPlant.addEventListener("click", petPlantLocal);
+interiorPlant.addEventListener("click", interiorPlantLocal);
