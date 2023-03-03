@@ -44,3 +44,69 @@ mineSectBtn.addEventListener("click", function () {
 interviewSectBtn.addEventListener("click", function () {
   window.scrollTo({ top: campaignSect.offsetTop, behavior: "smooth" });
 });
+
+// merit 색션 이미지 움직임
+const merit1 = document.querySelector(".merit--1");
+const merit2 = document.querySelector(".merit--2");
+const merit3 = document.querySelector(".merit--3");
+const merit4 = document.querySelector(".merit--4");
+const reason = document.querySelector(".reason-box");
+
+function moveto1() {
+  if (merit1.classList.contains("move1")) {
+    merit1.classList.remove("move1");
+    merit2.style = "display:block;";
+    merit3.style = "display:block;";
+    merit4.style = "display:block;";
+    reason.classList.add("hide");
+  } else {
+    merit1.classList.add("move1");
+    merit2.style = "display:none;";
+    merit3.style = "display:none;";
+    merit4.style = "display:none;";
+    reason.classList.remove("hide");
+  }
+}
+function moveto2() {
+  if (merit2.classList.contains("move2")) {
+    merit2.classList.remove("move2");
+    merit1.style = "display:block;";
+    merit3.style = "display:block;";
+    merit4.style = "display:block;";
+  } else {
+    merit2.classList.add("move2");
+    merit1.style = "display:none;";
+    merit3.style = "display:none;";
+    merit4.style = "display:none;";
+  }
+}
+function moveto3() {
+  if (merit3.classList.contains("move1")) {
+    merit3.classList.remove("move1");
+    merit1.style = "display:block;";
+    merit2.style = "display:block;";
+    merit4.style = "display:block;";
+  } else {
+    merit3.classList.add("move1");
+    merit2.style = "display:none;";
+    merit1.style = "display:none;";
+    merit4.style = "display:none;";
+  }
+}
+function moveto4() {
+  if (merit4.classList.contains("move1")) {
+    merit4.classList.remove("move1");
+    merit2.style = "display:block;";
+    merit3.style = "display:block;";
+    merit1.style = "display:block;";
+  } else {
+    merit4.classList.add("move1");
+    merit2.style = "display:none;";
+    merit3.style = "display:none;";
+    merit1.style = "display:none;";
+  }
+}
+merit1.addEventListener("click", moveto1);
+merit2.addEventListener("click", moveto2);
+merit3.addEventListener("click", moveto3);
+merit4.addEventListener("click", moveto4);
