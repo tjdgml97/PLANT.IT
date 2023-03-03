@@ -26,6 +26,7 @@ liEl.forEach(function (el) {
 
 window.onload = function () {
   hiddenEl.classList.add("start");
+  localStorage.clear();
 };
 
 // header
@@ -39,3 +40,27 @@ menuIcon.addEventListener("click", function () {
     menuEl.classList.add("menu-hidden");
   }
 });
+
+//localStorage로 값 보내기
+const largePlant = document.querySelector(".box1");
+const airPlant = document.querySelector(".box2");
+const petPlant = document.querySelector(".box3");
+const interiorPlant = document.querySelector(".box4");
+
+function largePlantLocal() {
+  localStorage.setItem("bigBtn", "big");
+}
+function airPlantLocal() {
+  localStorage.setItem("airBtn", "air");
+}
+function petPlantLocal() {
+  localStorage.setItem("petBtn", "pet");
+}
+function interiorPlantLocal() {
+  localStorage.setItem("decoBtn", "deco");
+}
+
+largePlant.addEventListener("click", largePlantLocal);
+airPlant.addEventListener("click", airPlantLocal);
+petPlant.addEventListener("click", petPlantLocal);
+interiorPlant.addEventListener("click", interiorPlantLocal);

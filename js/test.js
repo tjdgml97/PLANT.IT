@@ -131,14 +131,12 @@ const longQuestion = document.querySelector(
 );
 const saveBtnArr = ["easyBtn", "hardBtn", "shortBtn", "longBtn"];
 const saveBtnName = localStorage.getItem(saveBtnArr);
-
 function btnEasy() {
   if (saveBtnName !== "easyBtn") {
     localStorage.setItem("easyBtn", "easy");
     localStorage.removeItem("hardBtn", "hard");
     console.log("!!!!");
-  } else {
-    localStorage.removeItem("easyBtn", "easy");
+    console.log(localStorage.getItem("easyBtn"));
   }
   question2.classList.remove("hide");
   hardQuestion.classList.remove("click");
@@ -154,8 +152,6 @@ function btnHard() {
     localStorage.setItem("hardBtn", "hard");
     localStorage.removeItem("easyBtn", "easy");
     console.log("!!!!");
-  } else {
-    localStorage.removeItem("hardBtn", "hard");
   }
   question2.classList.remove("hide");
   easyQuestion.classList.remove("click");
@@ -227,16 +223,13 @@ function btnShort() {
   if (saveBtnName !== "shortBtn") {
     localStorage.setItem("shortBtn", "short");
     localStorage.removeItem("longBtn", "long");
-    console.log("!!!!");
-  } else {
-    localStorage.removeItem("shortBtn", "short");
   }
   testBtna.classList.remove("hide");
   longQuestion.classList.remove("click");
 
   if (localStorage.getItem("shortBtn")) {
     if (localStorage.getItem("easyBtn")) {
-      testBtna.href = `./index.html`;
+      testBtna.href = `./search.html`;
     } else if (localStorage.getItem("hardBtn")) {
       testBtna.href = `./search.html`;
     }
@@ -255,16 +248,14 @@ function btnLong() {
     localStorage.setItem("longBtn", "long");
     localStorage.removeItem("shortBtn", "short");
     console.log("!!!!");
-  } else {
-    localStorage.removeItem("longBtn", "long");
   }
   testBtna.classList.remove("hide");
   shortQuestion.classList.remove("click");
   if (localStorage.getItem("longBtn")) {
     if (localStorage.getItem("easyBtn")) {
-      testBtna.href = `./testResult.html`;
+      testBtna.href = `./search.html`;
     } else if (localStorage.getItem("hardBtn")) {
-      testBtna.href = `./story.html`;
+      testBtna.href = `./search.html`;
     }
   }
   if (longQuestion.classList.contains("click")) {

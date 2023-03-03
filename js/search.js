@@ -169,6 +169,91 @@ const hardBtn = document.querySelector(".hard");
 const shortBtn = document.querySelector(".short");
 const longBtn = document.querySelector(".long");
 
+//받아온 localStorage value
+const saveBtnName1 = localStorage.getItem("easyBtn");
+const saveBtnName2 = localStorage.getItem("hardBtn");
+const saveBtnName3 = localStorage.getItem("shortBtn");
+const saveBtnName4 = localStorage.getItem("longBtn");
+const saveBtnName5 = localStorage.getItem("bigBtn");
+const saveBtnName6 = localStorage.getItem("airBtn");
+const saveBtnName7 = localStorage.getItem("petBtn");
+const saveBtnName8 = localStorage.getItem("decoBtn");
+const saveBtnArr = [saveBtnName1, saveBtnName2, saveBtnName3, saveBtnName4];
+const saveBtncate = [saveBtnName5, saveBtnName6, saveBtnName7, saveBtnName8];
+
+if (saveBtnArr[0] === "easy") {
+  if (saveBtnArr[2] === "short") {
+    if (easyBtn.classList.contains("clicked")) {
+      easyBtn.classList.remove("clicked");
+      shortBtn.classList.remove("clicked");
+    } else {
+      easyBtn.classList.add("clicked");
+      shortBtn.classList.add("clicked");
+    }
+  }
+}
+if (saveBtnArr[0] === "easy") {
+  if (saveBtnArr[3] === "long") {
+    if (easyBtn.classList.contains("clicked")) {
+      easyBtn.classList.remove("clicked");
+      longBtn.classList.remove("clicked");
+    } else {
+      easyBtn.classList.add("clicked");
+      longBtn.classList.add("clicked");
+    }
+  }
+}
+if (saveBtnArr[1] === "hard") {
+  if (saveBtnArr[2] === "short") {
+    if (hardBtn.classList.contains("clicked")) {
+      hardBtn.classList.remove("clicked");
+      shortBtn.classList.remove("clicked");
+    } else {
+      hardBtn.classList.add("clicked");
+      shortBtn.classList.add("clicked");
+    }
+  }
+}
+if (saveBtnArr[1] === "hard") {
+  if (saveBtnArr[3] === "long") {
+    if (hardBtn.classList.contains("clicked")) {
+      hardBtn.classList.remove("clicked");
+      longBtn.classList.remove("clicked");
+    } else {
+      hardBtn.classList.add("clicked");
+      longBtn.classList.add("clicked");
+    }
+  }
+}
+if (saveBtncate[0] === "big") {
+  if (bigBtn.classList.contains("clicked")) {
+    bigBtn.classList.remove("clicked");
+  } else {
+    bigBtn.classList.add("clicked");
+  }
+}
+if (saveBtncate[1] === "air") {
+  if (airBtn.classList.contains("clicked")) {
+    airBtn.classList.remove("clicked");
+  } else {
+    airBtn.classList.add("clicked");
+  }
+}
+if (saveBtncate[2] === "pet") {
+  if (petBtn.classList.contains("clicked")) {
+    petBtn.classList.remove("clicked");
+  } else {
+    petBtn.classList.add("clicked");
+  }
+}
+if (saveBtncate[3] === "deco") {
+  if (decoBtn.classList.contains("clicked")) {
+    decoBtn.classList.remove("clicked");
+  } else {
+    decoBtn.classList.add("clicked");
+  }
+}
+
 easyBtn.addEventListener("click", function () {
   // 반대되는 설정값은 무조건 삭제
   hardBtn.classList.remove("clicked");
