@@ -354,15 +354,21 @@ header {
   justify-content: space-between;
   margin-bottom: 30px;
 }
-.test .inner .question-mainbox .question1 {
-  height: 200px;
-  transition: 1s;
-}
-.test .inner .question-mainbox .question1 .question-box .main-question {
+.test .inner .question-mainbox .box .question-box .main-question {
   font-size: 36px;
   font-weight: 700;
   color: green;
   margin-bottom: 10px;
+  font-family: "Gothic A1";
+}
+.test .inner .question-mainbox .box .question-box .sub-question {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Gothic A1";
+}
+.test .inner .question-mainbox .question1 {
+  height: 200px;
+  transition: 1s;
 }
 .test .inner .question-mainbox .question1 .answer-box {
   display: flex;
@@ -643,6 +649,177 @@ header {
   background-color: #282a4e;
 }
 
+/* Mobile */
+@media screen and (max-width: 767px) {
+  .test .inner .category {
+    position: relative;
+    width: 100%;
+  }
+  .test .inner .category .gototest {
+    width: 100%;
+    height: 32%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+  .test .inner .category .gototest > p {
+    height: 20%;
+    margin-bottom: 10px;
+  }
+  .test .inner .category .gototest > h2 {
+    position: absolute;
+    top: 22%;
+  }
+  .test .inner .category .gototest > .btn {
+    top: 45%;
+  }
+  .test .inner .category .card {
+    display: none;
+  }
+  .test .inner .category .promotion {
+    position: absolute;
+    transition: height 0.4s;
+    width: 100%;
+    height: 40%;
+    bottom: 10%;
+    display: block;
+  }
+  .test .inner .category .promotion .swiper {
+    height: 100%;
+  }
+  .test .inner .category .promotion .swiper .swiper-wrapper {
+    height: 100%;
+    display: flex;
+    left: 22%;
+  }
+  .test .inner .category .promotion .swiper .swiper-wrapper .swiper-slide {
+    opacity: 0.5;
+    transition: 0.5s;
+    margin: 0;
+  }
+  .test .inner .category .promotion .swiper .swiper-wrapper .swiper-slide-active {
+    opacity: 1;
+  }
+  .test .inner .category .promotion .swiper .swiper-wrapper .swiper-slide img {
+    width: 320px;
+    height: 320px;
+  }
+  .test .inner .question-mainbox .question-box {
+    display: flex;
+    align-items: center;
+  }
+  .test .inner .question-mainbox .question-box .main-question {
+    font-size: 40px;
+    margin-right: 10px;
+    font-family: "Gothic A1";
+  }
+  .test .inner .question-mainbox .question-box .sub-question {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Gothic A1";
+  }
+  .test .inner .question-mainbox .box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+  }
+  .test .inner .question-mainbox .box .answer-box {
+    width: 100%;
+  }
+  .test .inner .question-mainbox .question1 {
+    height: 200px;
+  }
+  .test .inner .question-mainbox .question3 {
+    height: 200px;
+  }
+}
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1150px) {
+  .test .inner .category {
+    position: relative;
+    width: 100%;
+  }
+  .test .inner .category .gototest {
+    width: 100%;
+    height: 32%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+  .test .inner .category .gototest > p {
+    height: 20%;
+    margin-bottom: 10px;
+  }
+  .test .inner .category .gototest > h2 {
+    position: absolute;
+    top: 22%;
+  }
+  .test .inner .category .gototest > .btn {
+    top: 45%;
+  }
+  .test .inner .category .card {
+    display: none;
+  }
+  .test .inner .category .promotion {
+    position: absolute;
+    transition: height 0.4s;
+    width: 100%;
+    height: 40%;
+    bottom: 10%;
+    display: block;
+  }
+  .test .inner .category .promotion .swiper {
+    height: 100%;
+  }
+  .test .inner .category .promotion .swiper .swiper-wrapper {
+    height: 100%;
+    display: flex;
+    left: 26%;
+  }
+  .test .inner .category .promotion .swiper .swiper-wrapper .swiper-slide {
+    opacity: 0.5;
+    transition: 0.5s;
+    margin: 0;
+  }
+  .test .inner .category .promotion .swiper .swiper-wrapper .swiper-slide-active {
+    opacity: 1;
+  }
+  .test .inner .category .promotion .swiper .swiper-wrapper .swiper-slide img {
+    width: 400px;
+    height: 400px;
+  }
+  .test .inner .question-mainbox .question-box {
+    display: flex;
+    align-items: center;
+  }
+  .test .inner .question-mainbox .question-box .main-question {
+    font-size: 40px;
+    margin-right: 10px;
+    font-family: "Gothic A1";
+  }
+  .test .inner .question-mainbox .question-box .sub-question {
+    font-size: 24px;
+    font-weight: 700;
+    font-family: "Gothic A1";
+  }
+  .test .inner .question-mainbox .box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+  }
+  .test .inner .question-mainbox .box .answer-box {
+    width: 100%;
+    font-weight: 600;
+  }
+  .test .inner .question-mainbox .question1 {
+    height: 230px;
+  }
+  .test .inner .btn-box {
+    display: block;
+  }
+}
 /* PC */
 @media screen and (min-width: 1280px) {
   .test .inner .category .gototest > h2 {

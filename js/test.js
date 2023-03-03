@@ -19,12 +19,99 @@ function movetoScroll() {
 
 btn.addEventListener("click", movetoScroll);
 
+//SWIPER PROMOTION
+const swiper = document.querySelector(".promotion");
+
+window.addEventListener("resize", function () {
+  if (window.innerWidth <= 767) {
+    if (swiper.classList.contains("hide")) {
+      swiper.classList.remove("hide");
+    } else {
+      swiper.classList.add("hide");
+    }
+  }
+});
+
+this.window.addEventListener("resize", function () {
+  if (this.window.innerWidth > 767) {
+    swiper.classList.add("hide");
+  } else {
+    swiper.classList.remove("hide");
+  }
+});
+window.addEventListener("resize", function () {
+  if (window.innerWidth <= 1150) {
+    if (swiper.classList.contains("hide")) {
+      swiper.classList.remove("hide");
+    } else {
+      swiper.classList.add("hide");
+    }
+  }
+});
+
+this.window.addEventListener("resize", function () {
+  if (this.window.innerWidth > 1150) {
+    swiper.classList.add("hide");
+  } else {
+    swiper.classList.remove("hide");
+  }
+});
+
+const swiperPromotion = new Swiper(".test .promotion .swiper", {
+  direction: "horizontal", // 기본값이 수평. 안 써줘도 됨.
+  slidesPerView: 1, // 슬라이드에서 몇장 보여줄 것인지
+  spaceBetween: 10, // 아이템 간 거리
+  centeredSlides: true, // 핵심 슬라이드를 어디에 보여줄 것인지
+  loop: true,
+  autoplay: {
+    // 객체를 줘서 세부사항 설정 가능
+    delay: 2000,
+    disableOnInteraction: false, // 사용자가 건드려도 계속 autoplay 되게
+  },
+  // observer: true,
+  // observerParents: true,
+});
+
+// CONTROLAUTOPLAY
+function controlAutoPlay() {
+  if (swiperPromotion.autoplay.running === false) {
+    swiperPromotion.autoplay.start(); // 실행중이 아니면 시작
+  } else {
+    swiperPromotion.autoplay.stop();
+  }
+}
+
 //초기화시 페이지 상단으로 이동
 window.onload = function () {
   localStorage.clear();
   setTimeout(function () {
     scrollTo(0, 0);
   }, 100);
+  console.log(window.innerWidth);
+  if (window.innerWidth <= 767) {
+    if (swiper.classList.contains("hide")) {
+      swiper.classList.remove("hide");
+    } else {
+      swiper.classList.add("hide");
+    }
+  }
+  if (this.window.innerWidth > 767) {
+    swiper.classList.add("hide");
+  } else {
+    swiper.classList.remove("hide");
+  }
+  if (window.innerWidth <= 1150) {
+    if (swiper.classList.contains("hide")) {
+      swiper.classList.remove("hide");
+    } else {
+      swiper.classList.add("hide");
+    }
+  }
+  if (this.window.innerWidth > 1150) {
+    swiper.classList.add("hide");
+  } else {
+    swiper.classList.remove("hide");
+  }
 };
 
 //답변 선택시 질문지 생성
@@ -42,9 +129,17 @@ const shortQuestion = document.querySelector(
 const longQuestion = document.querySelector(
   ".question3 > .answer-box > .second-answer"
 );
+const saveBtnArr = ["easyBtn", "hardBtn", "shortBtn", "longBtn"];
+const saveBtnName = localStorage.getItem(saveBtnArr);
 
 function btnEasy() {
-  localStorage.setItem("easyBtn", "easy");
+  if (saveBtnName !== "easyBtn") {
+    localStorage.setItem("easyBtn", "easy");
+    localStorage.removeItem("hardBtn", "hard");
+    console.log("!!!!");
+  } else {
+    localStorage.removeItem("easyBtn", "easy");
+  }
   question2.classList.remove("hide");
   hardQuestion.classList.remove("click");
   if (easyQuestion.classList.contains("click")) {
@@ -55,7 +150,13 @@ function btnEasy() {
 }
 
 function btnHard() {
-  localStorage.setItem("hardBtn", "hard");
+  if (saveBtnName !== "hardBtn") {
+    localStorage.setItem("hardBtn", "hard");
+    localStorage.removeItem("easyBtn", "easy");
+    console.log("!!!!");
+  } else {
+    localStorage.removeItem("hardBtn", "hard");
+  }
   question2.classList.remove("hide");
   easyQuestion.classList.remove("click");
   if (hardQuestion.classList.contains("click")) {
@@ -79,6 +180,9 @@ function movetoQuestion1() {
     first.classList.add("click");
   }
   question3.classList.remove("hide");
+  testBtn.classList.remove("hide");
+  const location1 = footer.offsetTop;
+  window.scrollTo({ top: location1, behavior: "smooth" });
 }
 function movetoQuestion2() {
   if (second.classList.contains("click")) {
@@ -87,6 +191,9 @@ function movetoQuestion2() {
     second.classList.add("click");
   }
   question3.classList.remove("hide");
+  testBtn.classList.remove("hide");
+  const location1 = footer.offsetTop;
+  window.scrollTo({ top: location1, behavior: "smooth" });
 }
 function movetoQuestion3() {
   if (third.classList.contains("click")) {
@@ -94,8 +201,10 @@ function movetoQuestion3() {
   } else {
     third.classList.add("click");
   }
-
   question3.classList.remove("hide");
+  testBtn.classList.remove("hide");
+  const location1 = footer.offsetTop;
+  window.scrollTo({ top: location1, behavior: "smooth" });
 }
 function movetoQuestion4() {
   if (forth.classList.contains("click")) {
@@ -104,6 +213,9 @@ function movetoQuestion4() {
     forth.classList.add("click");
   }
   question3.classList.remove("hide");
+  testBtn.classList.remove("hide");
+  const location1 = footer.offsetTop;
+  window.scrollTo({ top: location1, behavior: "smooth" });
 }
 
 //마지막 답변을 클릭하면 테스트 결과를 보러가는 버튼 생성
@@ -112,8 +224,14 @@ const testBtna = document.querySelector(".btn-box>a");
 const footer = document.querySelector("footer");
 
 function btnShort() {
-  localStorage.setItem("shortBtn", "short");
-  testBtn.classList.remove("hide");
+  if (saveBtnName !== "shortBtn") {
+    localStorage.setItem("shortBtn", "short");
+    localStorage.removeItem("longBtn", "long");
+    console.log("!!!!");
+  } else {
+    localStorage.removeItem("shortBtn", "short");
+  }
+  testBtna.classList.remove("hide");
   longQuestion.classList.remove("click");
 
   if (localStorage.getItem("shortBtn")) {
@@ -133,8 +251,14 @@ function btnShort() {
 }
 
 function btnLong() {
-  localStorage.setItem("longBtn", "long");
-  testBtn.classList.remove("hide");
+  if (saveBtnName !== "longBtn") {
+    localStorage.setItem("longBtn", "long");
+    localStorage.removeItem("shortBtn", "short");
+    console.log("!!!!");
+  } else {
+    localStorage.removeItem("longBtn", "long");
+  }
+  testBtna.classList.remove("hide");
   shortQuestion.classList.remove("click");
   if (localStorage.getItem("longBtn")) {
     if (localStorage.getItem("easyBtn")) {

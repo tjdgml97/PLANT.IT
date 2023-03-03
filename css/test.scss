@@ -234,11 +234,6 @@ header {
         justify-content: space-between;
         margin-bottom: 30px;
         // border: 1px solid black;
-      }
-
-      .question1 {
-        height: 200px;
-        transition: 1s;
 
         .question-box {
           .main-question {
@@ -246,8 +241,19 @@ header {
             font-weight: 700;
             color: green;
             margin-bottom: 10px;
+            font-family: "Gothic A1";
+          }
+          .sub-question {
+            font-size: 20px;
+            font-weight: 700;
+            font-family: "Gothic A1";
           }
         }
+      }
+
+      .question1 {
+        height: 200px;
+        transition: 1s;
 
         .answer-box {
           // position: relative;
@@ -581,10 +587,206 @@ header {
     }
   }
 }
+/* Mobile */
+@media screen and (max-width: 767px) {
+  .test {
+    .inner {
+      .category {
+        position: relative;
+        width: 100%;
+        .gototest {
+          width: 100%;
+          height: 32%;
+          display: flex;
+          justify-content: center;
+          flex-wrap: nowrap;
+
+          > p {
+            height: 20%;
+            margin-bottom: 10px;
+          }
+          > h2 {
+            position: absolute;
+            top: 22%;
+          }
+          > .btn {
+            top: 45%;
+          }
+        }
+        .card {
+          display: none;
+        }
+        .promotion {
+          position: absolute;
+          transition: height 0.4s;
+          width: 100%;
+          height: 40%;
+          bottom: 10%;
+          display: block;
+
+          .swiper {
+            height: 100%;
+            .swiper-wrapper {
+              height: 100%;
+              display: flex;
+              left: 22%;
+              .swiper-slide {
+                opacity: 0.5;
+                transition: 0.5s;
+                margin: 0;
+
+                &-active {
+                  opacity: 1;
+                }
+
+                img {
+                  width: 320px;
+                  height: 320px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .question-mainbox {
+        .question-box {
+          display: flex;
+          align-items: center;
+          .main-question {
+            font-size: 40px;
+            margin-right: 10px;
+            font-family: "Gothic A1";
+          }
+          .sub-question {
+            font-size: 20px;
+            font-weight: 600;
+            font-family: "Gothic A1";
+          }
+        }
+        .box {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 100px;
+          .answer-box {
+            width: 100%;
+          }
+        }
+        .question1 {
+          height: 200px;
+        }
+        .question3 {
+          height: 200px;
+        }
+      }
+    }
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1150px) {
+  .test {
+    .inner {
+      .category {
+        position: relative;
+        width: 100%;
+        .gototest {
+          width: 100%;
+          height: 32%;
+          display: flex;
+          justify-content: center;
+          flex-wrap: nowrap;
+
+          > p {
+            height: 20%;
+            margin-bottom: 10px;
+          }
+          > h2 {
+            position: absolute;
+            top: 22%;
+          }
+          > .btn {
+            top: 45%;
+          }
+        }
+        .card {
+          display: none;
+        }
+        .promotion {
+          position: absolute;
+          transition: height 0.4s;
+          width: 100%;
+          height: 40%;
+          bottom: 10%;
+          display: block;
+
+          .swiper {
+            height: 100%;
+            .swiper-wrapper {
+              height: 100%;
+              display: flex;
+              left: 26%;
+              .swiper-slide {
+                opacity: 0.5;
+                transition: 0.5s;
+                margin: 0;
+
+                &-active {
+                  opacity: 1;
+                }
+
+                img {
+                  width: 400px;
+                  height: 400px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .question-mainbox {
+        .question-box {
+          display: flex;
+          align-items: center;
+          .main-question {
+            font-size: 40px;
+            margin-right: 10px;
+            font-family: "Gothic A1";
+          }
+          .sub-question {
+            font-size: 24px;
+            font-weight: 700;
+            font-family: "Gothic A1";
+          }
+        }
+        .box {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 100px;
+          .answer-box {
+            width: 100%;
+            font-weight: 600;
+          }
+        }
+        .question1 {
+          height: 230px;
+        }
+      }
+      .btn-box {
+        display: block;
+      }
+    }
+  }
+}
 
 /* PC */
 @media screen and (min-width: 1280px) {
-  .test .inner .category .gototest > h2 {
-    white-space: nowrap;
+  .test .inner {
+    .category {
+      .gototest > h2 {
+        white-space: nowrap;
+      }
+    }
   }
 }
