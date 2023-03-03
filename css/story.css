@@ -207,31 +207,54 @@ footer .inner .footer-text-box p:first-child {
 .section {
   position: relative;
 }
+.section--slogan {
+  align-items: center;
+  background-color: #000;
+  display: flex;
+  flex-basis: content;
+  flex-direction: column;
+  padding: 2rem;
+}
 .section--slogan .inner {
   height: calc(100vh - 120px);
-  width: 100%;
-  background-color: #000;
   text-align: center;
+  justify-content: center;
 }
 .section--slogan .inner .sloganTitle {
-  position: absolute;
-  top: 10vh;
-  left: 1vw;
-  color: #fff;
+  display: inline-block;
   font-family: "CWDangamAsac-Bold";
-  font-size: 5rem;
+  font-size: 4rem;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  margin: 0.5em 0;
+  text-align: center;
+  text-transform: uppercase;
+  transform: rotate(-7deg);
 }
-.section--slogan .inner .sloganTitle span:first-child {
-  color: #ff6652;
+.section--slogan .inner .sloganTitle span {
+  box-sizing: border-box;
+  display: inline-block;
+  margin: -0.1em auto;
+  width: auto;
 }
-.section--slogan .inner .sloganTitle span:last-child {
-  color: #3ea548;
+.section--slogan .inner .sloganTitle span::before {
+  animation-name: title;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  box-sizing: border-box;
+  content: attr(data-text);
+  display: inline;
+  color: #fff;
+  display: block;
+  position: absolute;
+  z-index: 1;
+}
+.section--slogan .inner .sloganTitle span:last-child::before {
+  animation-delay: 0.25s;
 }
 .section--slogan .inner .sloganContent {
-  display: none;
   color: #fff;
-  font-family: "Montserrat";
-  font-size: 2rem;
 }
 .section--slogan .inner .arrow {
   position: absolute;
@@ -348,5 +371,31 @@ footer .inner .footer-text-box p:first-child {
     display: block;
     top: 50vh;
     left: 32vw;
+  }
+}
+@keyframes title {
+  0% {
+    opacity: 0;
+    transform: translateY(-0.2em);
+    -webkit-clip-path: polygon(0 70%, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 70%, 100% 0, 100% 100%, 0 100%);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0.1em);
+    -webkit-clip-path: polygon(0 70%, 100% 0, 100% 30%, 0 100%);
+    clip-path: polygon(0 70%, 100% 0, 100% 30%, 0 100%);
   }
 }/*# sourceMappingURL=story.css.map */
