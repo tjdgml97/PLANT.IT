@@ -76,12 +76,30 @@ section {
   background-color: rgba(100, 208, 37, 0.313);
   width: 33%;
   height: 100%;
-  background-image: url("../../image/earth.svg");
   background-size: 30%;
   background-position-y: 50%;
   text-align: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+}
+.testResult .card_image img {
+  position: absolute;
+  width: 400px;
+  cursor: pointer;
+  left: 4%;
+  top: 25%;
+  z-index: 2;
+  transform-origin: center bottom;
+  animation: dance 3.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+@keyframes dance {
+  0% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
 }
 .testResult .card_image p {
   position: absolute;

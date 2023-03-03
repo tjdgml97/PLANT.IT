@@ -7,11 +7,29 @@
 
 // color
 $main-color :  #3ea548;
-$card-color : rgba(255, 122, 102, 0.499);
+$card-color : rgba(255, 194, 102, 0.582);
 $button-hover-color:  rgb(242, 114, 85);
 $button-color : rgb(255, 238, 0);
 $font-first : "Montserrat";
 $imagePath : "지구" ;
+
+@import url("https://fonts.googleapis.com/css2?family=Sen&display=swap");
+// * {
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+//   font-family: "Sen", sans-serif;
+// }
+// body {
+//   background-color: #1abc9c;
+//   color: #fff;
+//   min-height: 100vh;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   padding: 18px;
+// }
 
 div {
   font-family: $font-first;
@@ -19,10 +37,10 @@ div {
 }
 
 
-h1{ 
-  font-family: $font-first;
+// h1{ 
+//   font-family: $font-first;
 
-}
+// }
 section{
     font-family: $font-first;
 }
@@ -53,22 +71,69 @@ section{
   }
 }
 
+body{
+  background-color: green;
+  margin: 30px;
+}
 
 .testResult {
+  background-color: white;
+  // background-color: $card-color;
     display: flex;
     // position: relative;
-    height: 100vh;
+    // height: 100vh;
 
+    //left - card 이미지 
     .card_image{
-      background-color: $card-color;
+      // background-color: $card-color;
       width: 33%;
-      height: 100%;
-      background-image: url("../../image/rocket.svg");
+      // height: 100%;
+      // background-image: url("../../image/rocket.svg");
       background-size:27%;
       background-position-y: 50%;
       text-align: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
+      // background-repeat: no-repeat;
+      // background-attachment: fixed;
+
+      img{
+        transform-origin: bottom;
+        animation: dance_jump 3s ease-out infinite;
+        right: 0;
+        position: absolute;
+        // width: 400px;
+        left: 4%;
+        top:25%;
+        z-index: 2;
+        transform-origin: center bottom;
+        @keyframes dance_jump {
+          0% {
+            transform: none;
+          }
+          15% {
+            transform: rotate(-3deg);
+          }
+          30% {
+            transform: rotate(3deg);
+          }
+          45% {
+            transform: rotate(-3deg);
+          }
+          60% {
+            transform: translate3d(0, -5%, 0);
+          }
+          75% {
+            transform: translate3d(0, 1%, 0);
+          }
+          85% {
+            transform: translate3d(0, -3%, 0);
+          }
+          100% {
+            transform: none;
+          }
+        }
+      }
+
+
       p{
         position: absolute;
         bottom: 10px;
@@ -78,7 +143,10 @@ section{
         color: white;
       }
     }
+
+    //오른쪽 설명 섹션
     .instruct{
+      // background-color: black;
       font-family: $font-first;
       width: 67%;
       // height: 100%;
@@ -89,13 +157,47 @@ section{
         // height: 50%;
         color:green;
 
-        h1{
-          font-size: 40px;
-          // margin-top: 50px;
-          margin-bottom: 20px;
-          font-family: "Montserrat" "sans-serif";
 
+
+        // h1{
+        //   font-size: 40px;
+        //   // margin-top: 50px;
+        //   margin-bottom: 20px;
+        //   font-family: "Montserrat" "sans-serif";
+
+        // }
+        .name{
+          font-size: 20px;
+          // transition: 2s all;
+          text-align: center;
+          margin-top: 40px;
+          margin-bottom: 40px;
+
+          div{
+            font-size: 40px;
+            transform-origin: bottom;
+            animation: jump 3s cubic-bezier(0.53, 0.03, 0.6, 0.99) infinite;
+            left: 22%;
+            @keyframes jump {
+              0% {
+                transform: translate(0, -10%);
+              }
+              50% {
+                transform: translate(0, 0);
+              }
+              100% {
+                transform: translate(0, -10%);
+              }
+            }
+          }
+          
         }
+
+        // .spaced {
+        //   font-size: 50px;
+        //   letter-spacing: 3px;
+        //   transform: scale(1.8);
+        // }
 
         button {
           font-size: 0.9rem;
@@ -121,15 +223,45 @@ section{
       }
 
       .tree_all {
+        // background-color: green;
         margin: 0 30px;
-        height: 400px;
+        // height: 400px;
         position : relative;
         // transition: height 0.4s;
         
         .tree_text {
+          // background-color: yellow;
+          
           display: flex;
           flex-direction: column;
           justify-content: space-between;
+
+          .typewriter {
+            font-size: clamp(1rem, 1.8vw, 3rem);
+            font-weight: bold;
+            width: 21.5ch;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 4px solid #212121;
+            animation: cursor 1s step-start infinite, 
+              text 3s steps(18) alternate infinite;
+          }
+          
+          @keyframes cursor {
+            0%, 100% { 
+              border-color: #212121; 
+            }
+          }
+          
+          @keyframes text {
+            0% { 
+              width: 0; 
+            }
+            100% { 
+              width:15ch; 
+            }
+          }
+
 
 
         h2{
@@ -170,12 +302,14 @@ section{
 
         
         .swiper{
+          margin-bottom: 5px;
+          // background-color: blue;
           margin-top:30px;
           
           // background-color: $main-color;
-          position: absolute;
-          width: 95%;
-          height: 70%;
+          // position: absolute;
+          // width: 95%;
+          height: 230px;
           text-align: center;
           left: 50%;
           transform: translateX(-50%);
@@ -183,12 +317,13 @@ section{
           // top: 0px;
       
           .swiper-slide{
-            width: 90%;
-            margin-bottom: 10px;
+            height: 225px;
+            // width: 90%;
+            // margin-bottom: 10px;
             position: relative;
             overflow: hidden;
             // width: 50px;
-            height: 80%;
+            // height: 100000px;
             padding: 10px;
             // height:300px;
             border: 1px solid green;
@@ -210,7 +345,7 @@ section{
               background-color: black;
               // box-shadow: 5px 5px 10px rgba(205, 205, 205, 0.852);
               width: 110%;
-              // height:80%;
+              height:100%;
               ;
             }
             img:hover{
