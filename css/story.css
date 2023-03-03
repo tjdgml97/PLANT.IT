@@ -209,15 +209,19 @@ footer .inner .footer-text-box p:first-child {
 }
 
 .move1 {
-  transform: scale(1.1) translateX(-30%);
+  transform: scale(1.1);
 }
 
 .move2 {
-  transform: scale(1.1) translateX(-90%);
+  transform: scale(1.1);
 }
 
 .move3 {
-  transform: scale(1.1) translateX(-180%);
+  transform: scale(1.1);
+}
+
+.move4 {
+  transform: scale(1.1);
 }
 
 .section {

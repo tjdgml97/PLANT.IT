@@ -48,13 +48,16 @@ $arrow-color: #000;
 }
 // 이미지 클래스
 .move1 {
-  transform: scale(1.1) translateX(-30%);
+  transform: scale(1.1);
 }
 .move2 {
-  transform: scale(1.1) translateX(-90%);
+  transform: scale(1.1);
 }
 .move3 {
-  transform: scale(1.1) translateX(-180%);
+  transform: scale(1.1);
+}
+.move4 {
+  transform: scale(1.1);
 }
 
 .section {
