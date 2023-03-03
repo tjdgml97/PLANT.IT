@@ -89,16 +89,14 @@ section {
   margin: 30px;
   font-size: 30px;
   font-weight: 700;
-  color: black;
+  color: white;
 }
 .testResult .instruct {
   font-family: "Montserrat";
   width: 67%;
-  height: 100%;
 }
 .testResult .instruct .text {
   margin: 30px 30px 0 30px;
-  height: 50%;
   color: green;
 }
 .testResult .instruct .text h1 {
@@ -126,47 +124,20 @@ section {
 }
 .testResult .instruct .tree_all {
   margin: 0 30px;
-  height: 50%;
+  height: 400px;
   position: relative;
 }
-.testResult .instruct .tree_all h2 {
-  margin-bottom: 10px;
+.testResult .instruct .tree_all .tree_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.testResult .instruct .tree_all .tree_text h2 {
+  margin-top: 30px;
   color: #3ea548;
 }
-.testResult .instruct .tree_all .swiper {
+.testResult .instruct .tree_all .tree_text .more-btn {
   margin-top: 30px;
-  position: absolute;
-  width: 100%;
-  height: 80%;
-  text-align: center;
-  left: 50%;
-  transform: translateX(-50%);
-  justify-content: center;
-}
-.testResult .instruct .tree_all .swiper .swiper-slide {
-  width: 50px;
-  padding: 10px;
-  height: 80%;
-  border: 1px solid green;
-  background-color: white;
-  border-radius: 20px;
-  top: 5px;
-  opacity: 1;
-  transform: 0.2;
-}
-.testResult .instruct .tree_all .swiper .swiper-slide img {
-  transform: scale(0.8);
-  opacity: 0.7;
-  background-color: black;
-  width: 75%;
-  height: 80%;
-}
-.testResult .instruct .tree_all .swiper .swiper-slide img:hover {
-  opacity: 1;
-  transform: scale(0.9);
-  transition: 0.7s;
-}
-.testResult .instruct .tree_all .more-btn {
   position: absolute;
   right: 0;
   top: -5px;
@@ -179,12 +150,47 @@ section {
   padding: 5px 20px;
   border: 1px solid rgb(242, 114, 85);
 }
-.testResult .instruct .tree_all .more-btn:hover {
+.testResult .instruct .tree_all .tree_text .more-btn:hover {
   cursor: pointer;
   transition: 1s;
   border: 1px solid rgba(255, 122, 102, 0.499);
   color: rgb(242, 114, 85);
   background-color: rgba(255, 122, 102, 0.499);
+}
+.testResult .instruct .tree_all .swiper {
+  margin-top: 30px;
+  position: absolute;
+  width: 95%;
+  height: 70%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  justify-content: center;
+}
+.testResult .instruct .tree_all .swiper .swiper-slide {
+  width: 90%;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+  height: 80%;
+  padding: 10px;
+  border: 1px solid green;
+  border-radius: 20px;
+  top: 5px;
+  opacity: 1;
+  transform: 0.2;
+}
+.testResult .instruct .tree_all .swiper .swiper-slide img {
+  overflow: hidden;
+  transform: scale(1.15);
+  opacity: 0.7;
+  background-color: black;
+  width: 110%;
+}
+.testResult .instruct .tree_all .swiper .swiper-slide img:hover {
+  opacity: 1;
+  transform: scale(1.2);
+  transition: 0.7s;
 }
 
 .swiper-slide-active {

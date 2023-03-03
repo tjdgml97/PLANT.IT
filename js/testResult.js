@@ -7,10 +7,10 @@ const swiperTree = new Swiper(".swiper",{
   speed: 5000,
   freeMode :true,
   // freeModeMomentum : false,
-  autoplay:{
-    delay:1,
-    disableOnInteraction:false,
-  },
+  // autoplay:{
+  //   delay:1,
+  //   disableOnInteraction:false,
+  // },
   navigation: {
     prevEl: ".swiper-button-prev",
     nextEl: ".swiper-button-next",
