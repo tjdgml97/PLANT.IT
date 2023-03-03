@@ -1,4 +1,4 @@
-const swiperTree = new Swiper(".swiper",{
+const swiperTree = new Swiper(".tree_all .swiper",{
   direction:"horizontal",
   slidesPerView:3,
   spaceBetween:20,
@@ -12,8 +12,8 @@ const swiperTree = new Swiper(".swiper",{
   //   disableOnInteraction:false,
   // },
   navigation: {
-    prevEl: ".swiper-button-prev",
-    nextEl: ".swiper-button-next",
+    prevEl: ".tree_all .swiper-button-prev",
+    nextEl: ".tree_all .swiper-button-next",
   }
 }
 )
