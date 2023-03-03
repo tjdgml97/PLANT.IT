@@ -76,12 +76,46 @@ section {
   background-color: rgba(255, 122, 102, 0.499);
   width: 33%;
   height: 100%;
-  background-image: url("../../image/rocket.svg");
   background-size: 27%;
   background-position-y: 50%;
   text-align: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+}
+.testResult .card_image img {
+  transform-origin: bottom;
+  animation: dance_jump 3s ease-out infinite;
+  right: 0;
+  position: absolute;
+  width: 400px;
+  left: 4%;
+  top: 25%;
+  z-index: 2;
+  transform-origin: center bottom;
+}
+@keyframes dance_jump {
+  0% {
+    transform: none;
+  }
+  15% {
+    transform: rotate(-3deg);
+  }
+  30% {
+    transform: rotate(3deg);
+  }
+  45% {
+    transform: rotate(-3deg);
+  }
+  60% {
+    transform: translate3d(0, -5%, 0);
+  }
+  75% {
+    transform: translate3d(0, 1%, 0);
+  }
+  85% {
+    transform: translate3d(0, -3%, 0);
+  }
+  100% {
+    transform: none;
+  }
 }
 .testResult .card_image p {
   position: absolute;
