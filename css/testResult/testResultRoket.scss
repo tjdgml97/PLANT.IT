@@ -7,7 +7,9 @@
 
 // color
 $main-color :  #3ea548;
-$card-color : rgba(228, 138, 111, 0.25);
+$card-color : rgba(255, 122, 102, 0.499);
+$button-hover-color:  rgb(242, 114, 85);
+$button-color : rgb(255, 238, 0);
 $font-first : "Montserrat";
 $imagePath : "지구" ;
 
@@ -17,7 +19,7 @@ div {
 }
 
 
-h1{
+h1{ 
   font-family: $font-first;
 
 }
@@ -53,38 +55,43 @@ section{
 
 
 .testResult {
-
     display: flex;
-    position: relative;
+    // position: relative;
     height: 100vh;
 
     .card_image{
       background-color: $card-color;
-      width: 30%;
-      background-image: url("../../image/earth.svg");
-      background-size:30%;
+      width: 33%;
+      height: 100%;
+      background-image: url("../../image/rocket.svg");
+      background-size:27%;
       background-position-y: 50%;
       text-align: center;
       background-repeat: no-repeat;
       background-attachment: fixed;
       p{
+        position: absolute;
+        bottom: 10px;
         margin: 30px;
         font-size: 30px;
         font-weight:700;
-        color: $main-color;
+        color: white;
       }
     }
     .instruct{
       font-family: $font-first;
-      width: 70%;
+      width: 67%;
+      // height: 100%;
+      // background-color: rgb(2, 2, 63);;
 
       .text{
-        margin: 30px;
+        margin: 30px 30px 0 30px;
+        // height: 50%;
         color:green;
 
         h1{
           font-size: 40px;
-          margin-top: 50px;
+          // margin-top: 50px;
           margin-bottom: 20px;
           font-family: "Montserrat" "sans-serif";
 
@@ -93,15 +100,15 @@ section{
         button {
           font-size: 0.9rem;
           // font-weight: 700;
-          color:  #3ea548;
-          background-color: #fff;
+          color: white;
+          background-color: $main-color;
           border-radius: 20px;
-          border: 2px solid  #3ea548;
+          border: 2px solid  $main-color;
           padding: 3px 10px;
         }
 
         p{
-          margin: 50px;
+          margin-top: 50px;
           font-size: 20px;
           font-family: "Montserrat" "sans-serif";
         }
@@ -112,49 +119,113 @@ section{
           font-family: "Montserrat";
         }
       }
+
+      .tree_all {
+        margin: 0 30px;
+        height: 400px;
+        position : relative;
+        // transition: height 0.4s;
+        
+        .tree_text {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+
+        h2{
+          margin-top: 30px;
+          color: $main-color;
+          // margin: 100px;
+        }
+
+        .more-btn{
+          // bottom: 0;
+          margin-top: 30px;
+          position: absolute;
+          // margin: 20px;
+          right: 0;
+          top: -5px;
+          z-index: 99;
+          background-color: white;
+          color: $button-hover-color;
+      
+          font-size: 0.9rem;
+          font-weight: 700;
+          border-radius: 20px;
+          padding: 5px 20px;
+          border: 1px solid $button-hover-color; 
+        }
+        .more-btn:hover{
+          cursor: pointer;
+          transition: 1s;
+          border: 1px solid $card-color;
+          color: $button-hover-color;
+          background-color: $card-color;
+        }
+
+          
+        }
+
+
+
+        
+        .swiper{
+          margin-top:30px;
+          
+          // background-color: $main-color;
+          position: absolute;
+          width: 95%;
+          height: 70%;
+          text-align: center;
+          left: 50%;
+          transform: translateX(-50%);
+          justify-content: center;
+          // top: 0px;
+      
+          .swiper-slide{
+            width: 90%;
+            margin-bottom: 10px;
+            position: relative;
+            overflow: hidden;
+            // width: 50px;
+            height: 80%;
+            padding: 10px;
+            // height:300px;
+            border: 1px solid green;
+            // margin: 30px;
+            // background-color:white;
+            border-radius: 20px;
+
+            top: 5px;
+            // background-color: red;
+            opacity:1;
+            transform: 0.2;
+            // height: 100%;
+          
+            img{         
+              overflow: hidden;     
+              transform: scale(1.15);
+              opacity: 0.7;
+              // border: 2px solid $main-color;
+              background-color: black;
+              // box-shadow: 5px 5px 10px rgba(205, 205, 205, 0.852);
+              width: 110%;
+              // height:80%;
+              ;
+            }
+            img:hover{
+              opacity: 1;
+              transform: scale(1.2);
+              transition: 0.7s;
+            }
+
+          }
+        }
+       }
     }
 }
 
-.tree_all {
-  position : relative;
-  transition: height 0.4s;
 
-  .swiper{
-    position: absolute;
-    width: 100%;
-    height: 300px;
-    text-align: center;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 30px;
-
-    .swiper-slide{
-      opacity:1;
-      transform: 0.2;
-      height: 50%;
-    
-      img{
-        box-shadow: 5px 5px 10px rgba(205, 205, 205, 0.852);
-        height: 90%;
-        width: 100%;
-      }
-    }
-  }
-  .more-btn{
-    position: absolute;
-    margin: 20px;
-    right: 0;
-    background-color: $main-color;
-    color: white;
-
-    font-size: 0.9rem;
-    font-weight: 700;
-    border-radius: 20px;
-    padding: 5px 20px;
-    border: 0px;
-
-  }
- }
 
 
 
@@ -192,23 +263,23 @@ section{
 }
 
 
-footer {
-  height: 150px;
-  background-color: #3ea548;
-  display: flex;
-  align-items: center;
-  .inner {
-    display: flex;
-    justify-content: flex-start;
-    .footer-text-box {
-      p:first-child {
-        margin-bottom: 10px;
-        font-size: 18px;
-        font-weight: 600;
-      }
-      margin-left: 150px;
-      color: #fff;
-      line-height: 1.5;
-    }
-  }
-}
+// footer {
+//   height: 150px;
+//   background-color: #3ea548;
+//   display: flex;
+//   align-items: center;
+//   .inner {
+//     display: flex;
+//     justify-content: flex-start;
+//     .footer-text-box {
+//       p:first-child {
+//         margin-bottom: 10px;
+//         font-size: 18px;
+//         font-weight: 600;
+//       }
+//       margin-left: 150px;
+//       color: #fff;
+//       line-height: 1.5;
+//     }
+//   }
+// }
