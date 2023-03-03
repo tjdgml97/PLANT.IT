@@ -45,6 +45,7 @@ interviewSectBtn.addEventListener("click", function () {
   window.scrollTo({ top: campaignSect.offsetTop, behavior: "smooth" });
 });
 
+
 // merit 색션 이미지 움직임
 const merit1 = document.querySelector(".merit--1");
 const merit2 = document.querySelector(".merit--2");

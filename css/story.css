@@ -224,7 +224,6 @@ footer .inner .footer-text-box p:first-child {
 .move4 {
   transform: translate(0, 0) scale(1.15);
 }
-
 .section {
   position: relative;
 }
@@ -412,6 +411,7 @@ footer .inner .footer-text-box p:first-child {
   border-right: 0;
   border-bottom: 0;
 }
+
 .section--merit .inner .reason-box {
   position: absolute;
   width: 65%;
@@ -419,6 +419,7 @@ footer .inner .footer-text-box p:first-child {
   left: 40%;
   transition: 0.5s;
 }
+
 .section--reason .inner {
   height: 100vh;
 }

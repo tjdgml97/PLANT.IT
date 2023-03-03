@@ -43,6 +43,7 @@ $arrow-color: #000;
   }
 }
 
+
 .hide {
   display: none;
   transition: all 0.5s;
@@ -60,7 +61,6 @@ $arrow-color: #000;
 .move4 {
   transform: translate(0, 0) scale(1.15);
 }
-
 .section {
   position: relative;
 
@@ -348,6 +348,11 @@ $arrow-color: #000;
         }
       }
 
+    .inner {
+      height: 100vh;
+      // width: 100%;
+
+
       .arrow {
         position: absolute;
         left: 50%;
@@ -358,6 +363,7 @@ $arrow-color: #000;
           border-bottom: 0;
         }
       }
+
       .reason-box {
         position: absolute;
         width: 65%;
@@ -365,6 +371,7 @@ $arrow-color: #000;
         left: 40%;
         transition: 0.5s;
       }
+
     }
   }
 
