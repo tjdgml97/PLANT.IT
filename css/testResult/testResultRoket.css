@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sen&display=swap");
 @font-face {
   font-family: "CWDangamAsac-Bold";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/CWDangamAsac-Bold.woff") format("woff");
@@ -42,10 +43,6 @@ div {
   line-height: 2.2rem;
 }
 
-h1 {
-  font-family: "Montserrat";
-}
-
 section {
   font-family: "Montserrat";
 }
@@ -68,14 +65,17 @@ section {
     display: none;
   }
 }
+body {
+  background-color: green;
+  margin: 30px;
+}
+
 .testResult {
+  background-color: white;
   display: flex;
-  height: 100vh;
 }
 .testResult .card_image {
-  background-color: rgba(255, 122, 102, 0.499);
   width: 33%;
-  height: 100%;
   background-size: 27%;
   background-position-y: 50%;
   text-align: center;
@@ -85,7 +85,6 @@ section {
   animation: dance_jump 3s ease-out infinite;
   right: 0;
   position: absolute;
-  width: 400px;
   left: 4%;
   top: 25%;
   z-index: 2;
@@ -133,10 +132,28 @@ section {
   margin: 30px 30px 0 30px;
   color: green;
 }
-.testResult .instruct .text h1 {
+.testResult .instruct .text .name {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.testResult .instruct .text .name div {
   font-size: 40px;
-  margin-bottom: 20px;
-  font-family: "Montserrat" "sans-serif";
+  transform-origin: bottom;
+  animation: jump 3s cubic-bezier(0.53, 0.03, 0.6, 0.99) infinite;
+  left: 22%;
+}
+@keyframes jump {
+  0% {
+    transform: translate(0, -10%);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, -10%);
+  }
 }
 .testResult .instruct .text button {
   font-size: 0.9rem;
@@ -158,13 +175,34 @@ section {
 }
 .testResult .instruct .tree_all {
   margin: 0 30px;
-  height: 400px;
   position: relative;
 }
 .testResult .instruct .tree_all .tree_text {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.testResult .instruct .tree_all .tree_text .typewriter {
+  font-size: clamp(1rem, 1.8vw, 3rem);
+  font-weight: bold;
+  width: 21.5ch;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 4px solid #212121;
+  animation: cursor 1s step-start infinite, text 3s steps(18) alternate infinite;
+}
+@keyframes cursor {
+  0%, 100% {
+    border-color: #212121;
+  }
+}
+@keyframes text {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 15ch;
+  }
 }
 .testResult .instruct .tree_all .tree_text h2 {
   margin-top: 30px;
@@ -187,26 +225,23 @@ section {
 .testResult .instruct .tree_all .tree_text .more-btn:hover {
   cursor: pointer;
   transition: 1s;
-  border: 1px solid rgba(255, 122, 102, 0.499);
+  border: 1px solid rgba(255, 194, 102, 0.582);
   color: rgb(242, 114, 85);
-  background-color: rgba(255, 122, 102, 0.499);
+  background-color: rgba(255, 194, 102, 0.582);
 }
 .testResult .instruct .tree_all .swiper {
+  margin-bottom: 5px;
   margin-top: 30px;
-  position: absolute;
-  width: 95%;
-  height: 70%;
+  height: 230px;
   text-align: center;
   left: 50%;
   transform: translateX(-50%);
   justify-content: center;
 }
 .testResult .instruct .tree_all .swiper .swiper-slide {
-  width: 90%;
-  margin-bottom: 10px;
+  height: 225px;
   position: relative;
   overflow: hidden;
-  height: 80%;
   padding: 10px;
   border: 1px solid green;
   border-radius: 20px;
@@ -220,6 +255,7 @@ section {
   opacity: 0.7;
   background-color: black;
   width: 110%;
+  height: 100%;
 }
 .testResult .instruct .tree_all .swiper .swiper-slide img:hover {
   opacity: 1;

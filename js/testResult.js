@@ -27,3 +27,14 @@ function controlAutoPlay(){
   }
   console.log(swiperTree.autoplay);
 }
+
+window.onload = function () {
+  document.querySelector(".name").classList.add("spaced");
+
+  const steps = document.querySelectorAll(".advice");
+  var count = 0;
+  setInterval(() => {
+    steps[count].style.display = "block";
+    steps[count].style.opacity = "1.0";
+  }, 3000);
+};
