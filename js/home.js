@@ -26,6 +26,7 @@ liEl.forEach(function (el) {
 
 window.onload = function () {
   hiddenEl.classList.add("start");
+  localStorage.clear();
 };
 
 // header
@@ -46,21 +47,17 @@ const airPlant = document.querySelector(".box2");
 const petPlant = document.querySelector(".box3");
 const interiorPlant = document.querySelector(".box4");
 
-function largePlantLocal(event) {
-  event.preventDefault();
-  localStorage.setItem("largeBtn", "large");
+function largePlantLocal() {
+  localStorage.setItem("bigBtn", "big");
 }
-function airPlantLocal(event) {
-  event.preventDefault();
+function airPlantLocal() {
   localStorage.setItem("airBtn", "air");
 }
-function petPlantLocal(event) {
-  event.preventDefault();
+function petPlantLocal() {
   localStorage.setItem("petBtn", "pet");
 }
-function interiorPlantLocal(event) {
-  event.preventDefault();
-  localStorage.setItem("interiorBtn", "interior");
+function interiorPlantLocal() {
+  localStorage.setItem("decoBtn", "deco");
 }
 
 largePlant.addEventListener("click", largePlantLocal);

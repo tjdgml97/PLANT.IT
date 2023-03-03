@@ -174,7 +174,12 @@ const saveBtnName1 = localStorage.getItem("easyBtn");
 const saveBtnName2 = localStorage.getItem("hardBtn");
 const saveBtnName3 = localStorage.getItem("shortBtn");
 const saveBtnName4 = localStorage.getItem("longBtn");
+const saveBtnName5 = localStorage.getItem("bigBtn");
+const saveBtnName6 = localStorage.getItem("airBtn");
+const saveBtnName7 = localStorage.getItem("petBtn");
+const saveBtnName8 = localStorage.getItem("decoBtn");
 const saveBtnArr = [saveBtnName1, saveBtnName2, saveBtnName3, saveBtnName4];
+const saveBtncate = [saveBtnName5, saveBtnName6, saveBtnName7, saveBtnName8];
 
 if (saveBtnArr[0] === "easy") {
   if (saveBtnArr[2] === "short") {
@@ -218,6 +223,34 @@ if (saveBtnArr[1] === "hard") {
       hardBtn.classList.add("clicked");
       longBtn.classList.add("clicked");
     }
+  }
+}
+if (saveBtncate[0] === "big") {
+  if (bigBtn.classList.contains("clicked")) {
+    bigBtn.classList.remove("clicked");
+  } else {
+    bigBtn.classList.add("clicked");
+  }
+}
+if (saveBtncate[1] === "air") {
+  if (airBtn.classList.contains("clicked")) {
+    airBtn.classList.remove("clicked");
+  } else {
+    airBtn.classList.add("clicked");
+  }
+}
+if (saveBtncate[2] === "pet") {
+  if (petBtn.classList.contains("clicked")) {
+    petBtn.classList.remove("clicked");
+  } else {
+    petBtn.classList.add("clicked");
+  }
+}
+if (saveBtncate[3] === "deco") {
+  if (decoBtn.classList.contains("clicked")) {
+    decoBtn.classList.remove("clicked");
+  } else {
+    decoBtn.classList.add("clicked");
   }
 }
 
