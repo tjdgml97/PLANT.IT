@@ -1,10 +1,10 @@
 const swiperTree = new Swiper(".tree_all .swiper",{
   direction:"horizontal",
   slidesPerView:3,
-  spaceBetween:20,
+  spaceBetween:30,
   centeredSlides:true,
   loop:true,
-  speed: 5000,
+  speed: 750,
   freeMode :true,
   // freeModeMomentum : false,
   // autoplay:{
@@ -28,13 +28,13 @@ function controlAutoPlay(){
   console.log(swiperTree.autoplay);
 }
 
-window.onload = function () {
-  document.querySelector(".name").classList.add("spaced");
+// window.onload = function () {
+//   document.querySelector(".name").classList.add("spaced");
 
-  const steps = document.querySelectorAll(".advice");
-  var count = 0;
-  setInterval(() => {
-    steps[count].style.display = "block";
-    steps[count].style.opacity = "1.0";
-  }, 3000);
-};
+//   const steps = document.querySelectorAll(".advice");
+//   var count = 0;
+//   setInterval(() => {
+//     steps[count].style.display = "block";
+//     steps[count].style.opacity = "1.0";
+//   }, 3000);
+// };
