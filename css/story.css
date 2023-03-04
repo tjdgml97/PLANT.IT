@@ -508,6 +508,33 @@ footer .inner .footer-text-box p:first-child {
   left: 40%;
   transition: 0.5s;
 }
+.section--merit .inner .inner .donut {
+  width: 60%;
+  height: 50%;
+  margin: 0 auto;
+  border-radius: 50%;
+  position: relative;
+  text-align: center;
+  transition: background 0.3s ease-in-out;
+  background: conic-gradient(#3f8bc9 0% 72%, #f2f2f2 72% 100%);
+}
+.section--merit .inner .inner .donut:before {
+  color: #fff;
+  width: 70%;
+  padding: calc(35% - 0.64vw) 0;
+  background: #264057;
+  border-radius: 50%;
+  position: absolute;
+  left: 15%;
+  top: 15%;
+  display: block;
+  content: attr(data-percent) "%";
+  transform: skew(-0.03deg);
+  margin: auto;
+  font-size: 1.1vw;
+  font-size: 2vw;
+  padding: calc(35% - 1.3vw) 0;
+}
 .section--reason .inner {
   height: 100vh;
 }

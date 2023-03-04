@@ -68,30 +68,42 @@ function moveto1() {
     reason.classList.remove("hide");
   }
 }
+
+//도넛모양 차트 만들기
+const donut = document.querySelector(".donut");
+const totalMinwon = donut.dataset.percent;
+donut.style.background = `conic-gradient(#3F8BC9 0% ${totalMinwon}%, #F2F2F2 ${totalMinwon}% 100%)`;
+let t4 = 0;
+const donutAnimation = setInterval(() => {
+  donut.dataset.percent = t4;
+  donut.style.background = `conic-gradient(#4F98FF 0 ${t4}%, #DEDEDE ${t4}% 100% )`;
+  t4++ >= totalMinwon && clearInterval(donutAnimation);
+}, 10);
+
 function moveto2() {
-  if (merit2.classList.contains("move2")) {
-    merit2.classList.remove("move2");
+  if (merit2.classList.contains("move1")) {
+    merit2.classList.remove("move1");
     merit1.classList.remove("hide");
     merit3.classList.remove("hide");
     merit4.classList.remove("hide");
-    reason.classList.add("hide");
+    donut.classList.add("hide");
   } else {
-    merit2.classList.add("move2");
+    merit2.classList.add("move1");
     merit1.classList.add("hide");
     merit3.classList.add("hide");
     merit4.classList.add("hide");
-    reason.classList.remove("hide");
+    donut.classList.remove("hide");
   }
 }
 function moveto3() {
-  if (merit3.classList.contains("move3")) {
-    merit3.classList.remove("move3");
+  if (merit3.classList.contains("move1")) {
+    merit3.classList.remove("move1");
     merit2.classList.remove("hide");
     merit1.classList.remove("hide");
     merit4.classList.remove("hide");
     reason.classList.add("hide");
   } else {
-    merit3.classList.add("move3");
+    merit3.classList.add("move1");
     merit2.classList.add("hide");
     merit1.classList.add("hide");
     merit4.classList.add("hide");
@@ -99,14 +111,14 @@ function moveto3() {
   }
 }
 function moveto4() {
-  if (merit4.classList.contains("move4")) {
-    merit4.classList.remove("move4");
+  if (merit4.classList.contains("move1")) {
+    merit4.classList.remove("move1");
     merit2.classList.remove("hide");
     merit3.classList.remove("hide");
     merit1.classList.remove("hide");
     reason.classList.add("hide");
   } else {
-    merit4.classList.add("move4");
+    merit4.classList.add("move1");
     merit2.classList.add("hide");
     merit3.classList.add("hide");
     merit1.classList.add("hide");
