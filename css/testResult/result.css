@@ -40,7 +40,6 @@ a {
   display: block;
 }
 .pcVersion section:first-child {
-  background-color: #3ea548;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -84,9 +83,8 @@ a {
 .pcVersion section:last-child .resultInner .path-box {
   margin-bottom: 10px;
   cursor: pointer;
-  color: #3ea548;
 }
-.pcVersion section:last-child .resultInner .path-box span {
+.pcVersion section:last-child .resultInner .path-box a span {
   margin-right: 10px;
   font-size: 2rem;
 }
@@ -96,7 +94,6 @@ a {
 }
 .pcVersion section:last-child .resultInner .name .typewriter {
   font-family: "CWDangamAsac-Bold";
-  color: #3ea548;
 }
 .pcVersion section:last-child .resultInner .tag {
   display: flex;
@@ -106,8 +103,6 @@ a {
   font-family: "Gothic A1";
   font-weight: 800;
   font-size: 1rem;
-  color: #3ea548;
-  border: 2px solid #3ea548;
   border-radius: 20px;
   padding: 5px 10px;
   margin-right: 7px;
@@ -129,9 +124,6 @@ a {
 }
 .pcVersion section:last-child .resultInner .recomend .textBox p {
   font-size: 1.5rem;
-}
-.pcVersion section:last-child .resultInner .recomend .textBox a {
-  color: #3ea548;
 }
 .pcVersion section:last-child .resultInner .recomend .tree_all {
   position: relative;
@@ -180,7 +172,6 @@ a {
   }
   .pcVersion section:last-child .resultInner .name .typewriter {
     font-family: "CWDangamAsac-Bold";
-    color: #3ea548;
     white-space: nowrap;
     overflow: hidden;
     border-right: 4px solid #212121;

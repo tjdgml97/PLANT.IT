@@ -9,7 +9,6 @@ $light-gray: #999;
   display: block;
   section {
     &:first-child {
-      background-color: $main-green;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -55,10 +54,12 @@ $light-gray: #999;
         .path-box {
           margin-bottom: 10px;
           cursor: pointer;
-          color: $main-green;
-          span {
-            margin-right: 10px;
-            font-size: 2rem;
+
+          a {
+            span {
+              margin-right: 10px;
+              font-size: 2rem;
+            }
           }
         }
         .name {
@@ -66,7 +67,8 @@ $light-gray: #999;
           margin-bottom: 40px;
           .typewriter {
             font-family: "CWDangamAsac-Bold";
-            color: $main-green;
+            @include mainColor($newColor);
+            color: $newColor;
           }
         }
         .tag {
@@ -76,8 +78,7 @@ $light-gray: #999;
             font-family: "Gothic A1";
             font-weight: 800;
             font-size: 1rem;
-            color: $main-green;
-            border: 2px solid $main-green;
+            border: 2px solid;
             border-radius: 20px;
             padding: 5px 10px;
             margin-right: 7px;
@@ -100,9 +101,6 @@ $light-gray: #999;
             margin: 40px 0;
             p {
               font-size: 1.5rem;
-            }
-            a {
-              color: $main-green;
             }
           }
           .tree_all {
@@ -169,7 +167,6 @@ $light-gray: #999;
           .name {
             .typewriter {
               font-family: "CWDangamAsac-Bold";
-              color: $main-green;
               white-space: nowrap;
               overflow: hidden;
               border-right: 4px solid #212121;
