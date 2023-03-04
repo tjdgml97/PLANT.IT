@@ -153,9 +153,14 @@ body{
       // background-color: rgb(2, 2, 63);;
 
       .text{
-        margin: 30px 30px 0 30px;
+        margin: 10px 30px 0 30px;
         // height: 50%;
         color:green;
+        .path-box{
+          display: flex;
+          justify-content: flex-end;
+
+        }
 
 
 
@@ -170,11 +175,13 @@ body{
           font-size: 20px;
           // transition: 2s all;
           text-align: center;
-          margin-top: 40px;
-          margin-bottom: 40px;
+          // margin-top: 40px;
+          margin-bottom: 25px;
 
           div{
             font-size: 40px;
+            font-family: "CWDangamAsac-Bold";
+
             transform-origin: bottom;
             animation: jump 3s cubic-bezier(0.53, 0.03, 0.6, 0.99) infinite;
             left: 22%;
@@ -198,19 +205,23 @@ body{
         //   letter-spacing: 3px;
         //   transform: scale(1.8);
         // }
-
-        button {
-          font-size: 0.9rem;
-          // font-weight: 700;
-          color: white;
-          background-color: $main-color;
-          border-radius: 20px;
-          border: 2px solid  $main-color;
-          padding: 3px 10px;
+        .btn-box{
+          display: flex;
+          justify-content: center;
+          button {
+            font-size: 0.9rem;
+            // font-weight: 700;
+            color: white;
+            background-color: $main-color;
+            border-radius: 20px;
+            border: 2px solid  $main-color;
+            padding: 3px 10px;
+            margin: 0 10px;
+          }
         }
 
         p{
-          margin-top: 50px;
+          margin-top: 35px;
           font-size: 20px;
           font-family: "Montserrat" "sans-serif";
         }
@@ -237,19 +248,25 @@ body{
           justify-content: space-between;
 
           .typewriter {
+            font-family: "CWDangamAsac-Bold";
+            margin-top: 20px;
+            color: $main-color;
             font-size: clamp(1rem, 1.8vw, 3rem);
             font-weight: bold;
-            width: 21.5ch;
+            width: 14.5ch;
             white-space: nowrap;
             overflow: hidden;
             border-right: 4px solid #212121;
             animation: cursor 1s step-start infinite, 
-              text 3s steps(18) alternate infinite;
+              text 3s steps(20) normal none;
           }
           
           @keyframes cursor {
-            0%, 100% { 
+            0% { 
               border-color: #212121; 
+            }
+            100%{
+              border-color:white;
             }
           }
           
@@ -258,15 +275,16 @@ body{
               width: 0; 
             }
             100% { 
-              width:15ch; 
+              width:14ch; 
             }
           }
 
 
 
         h2{
-          margin-top: 30px;
-          color: $main-color;
+          // font-family: "CWDangamAsac-Bold";
+          // margin-top: 30px;
+          // color: $main-color;
           // margin: 100px;
         }
 
@@ -315,6 +333,8 @@ body{
           transform: translateX(-50%);
           justify-content: center;
           // top: 0px;
+
+          
       
           .swiper-slide{
             height: 225px;
@@ -370,25 +390,30 @@ body{
 
 .swiper-button-prev,
 .swiper-button-next{
-  position: absolute;
-  top:  190px;
-  cursor: pointer;
-  width: 55px;
-  height: 55px;
-  border : 2px solid #333;
-  color: #333;
-  border-radius: 50%;
-  z-index: 1;
+  
+  &::after, &::before {
+    color: black;
+  } 
+  // position: absolute;
+  // top:  190px;
+  // cursor: pointer;
+  // width: 55px;
+  // height: 55px;
+  // border : 2px solid #333;
+  // color: #333;
+  // border-radius: 50%;
+  // z-index: 99;
 }
 
 .swiper-button-prev{
-  left: 50%;
-  transform: translateX(-500px);
+  // background-color: yellow;
+  // left: 50%;
+  // transform: translateX(-500px);
 }
 
 .swiper-button-next{
-  right: 50%;
-  transform: translateX(500px);
+  // right: 50%;
+  // transform: translateX(500px);
 }
 
 

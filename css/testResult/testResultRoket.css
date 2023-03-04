@@ -129,17 +129,21 @@ body {
   width: 67%;
 }
 .testResult .instruct .text {
-  margin: 30px 30px 0 30px;
+  margin: 10px 30px 0 30px;
   color: green;
+}
+.testResult .instruct .text .path-box {
+  display: flex;
+  justify-content: flex-end;
 }
 .testResult .instruct .text .name {
   font-size: 20px;
   text-align: center;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 .testResult .instruct .text .name div {
   font-size: 40px;
+  font-family: "CWDangamAsac-Bold";
   transform-origin: bottom;
   animation: jump 3s cubic-bezier(0.53, 0.03, 0.6, 0.99) infinite;
   left: 22%;
@@ -155,16 +159,21 @@ body {
     transform: translate(0, -10%);
   }
 }
-.testResult .instruct .text button {
+.testResult .instruct .text .btn-box {
+  display: flex;
+  justify-content: center;
+}
+.testResult .instruct .text .btn-box button {
   font-size: 0.9rem;
   color: white;
   background-color: #3ea548;
   border-radius: 20px;
   border: 2px solid #3ea548;
   padding: 3px 10px;
+  margin: 0 10px;
 }
 .testResult .instruct .text p {
-  margin-top: 50px;
+  margin-top: 35px;
   font-size: 20px;
   font-family: "Montserrat" "sans-serif";
 }
@@ -183,17 +192,23 @@ body {
   justify-content: space-between;
 }
 .testResult .instruct .tree_all .tree_text .typewriter {
+  font-family: "CWDangamAsac-Bold";
+  margin-top: 20px;
+  color: #3ea548;
   font-size: clamp(1rem, 1.8vw, 3rem);
   font-weight: bold;
-  width: 21.5ch;
+  width: 14.5ch;
   white-space: nowrap;
   overflow: hidden;
   border-right: 4px solid #212121;
-  animation: cursor 1s step-start infinite, text 3s steps(18) alternate infinite;
+  animation: cursor 1s step-start infinite, text 3s steps(20) normal none;
 }
 @keyframes cursor {
-  0%, 100% {
+  0% {
     border-color: #212121;
+  }
+  100% {
+    border-color: white;
   }
 }
 @keyframes text {
@@ -201,12 +216,8 @@ body {
     width: 0;
   }
   100% {
-    width: 15ch;
+    width: 14ch;
   }
-}
-.testResult .instruct .tree_all .tree_text h2 {
-  margin-top: 30px;
-  color: #3ea548;
 }
 .testResult .instruct .tree_all .tree_text .more-btn {
   margin-top: 30px;
@@ -267,27 +278,10 @@ body {
   opacity: 1;
 }
 
-.swiper-button-prev,
-.swiper-button-next {
-  position: absolute;
-  top: 190px;
-  cursor: pointer;
-  width: 55px;
-  height: 55px;
-  border: 2px solid #333;
-  color: #333;
-  border-radius: 50%;
-  z-index: 1;
-}
-
-.swiper-button-prev {
-  left: 50%;
-  transform: translateX(-500px);
-}
-
-.swiper-button-next {
-  right: 50%;
-  transform: translateX(500px);
+.swiper-button-prev::after, .swiper-button-prev::before,
+.swiper-button-next::after,
+.swiper-button-next::before {
+  color: black;
 }
 
 .swiper-button-prev::after,
