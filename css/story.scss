@@ -59,7 +59,7 @@ $arrow-color: #000;
 }
 .section {
   position: relative;
-
+  overflow: hidden;
   &--slogan {
     // test 중
     align-items: center;

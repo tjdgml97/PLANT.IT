@@ -217,6 +217,7 @@ footer .inner .footer-text-box p:first-child {
 
 .section {
   position: relative;
+  overflow: hidden;
 }
 .section--slogan {
   align-items: center;
