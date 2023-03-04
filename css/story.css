@@ -103,17 +103,7 @@ header .inner .menu-bar .menu-icon {
 }
 
 /* Mobile */
-@media screen and (max-width: 767px) {
-  header .inner .menu-bar .menu-bar-menu li a {
-    color: #fff;
-  }
-}
 /* Tablet */
-@media screen and (min-width: 768px) {
-  header .inner .menu-bar .menu-bar-menu li a {
-    color: #fff;
-  }
-}
 /* PC */
 @media screen and (min-width: 1280px) {
   header .inner .menu-bar .menu-bar-menu {
@@ -227,6 +217,7 @@ footer .inner .footer-text-box p:first-child {
 
 .section {
   position: relative;
+  overflow: hidden;
 }
 .section--slogan {
   align-items: center;
@@ -235,30 +226,34 @@ footer .inner .footer-text-box p:first-child {
   flex-basis: content;
   flex-direction: column;
   padding: 2rem;
+  height: calc(100vh - 120px);
 }
 .section--slogan .inner {
-  height: calc(100vh - 120px);
+  height: inherit;
+}
+.section--slogan .inner .sloganBox {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
   text-align: center;
+}
+.section--slogan .inner .sloganBox .sloganTitle {
   justify-content: center;
-}
-.section--slogan .inner .sloganTitle {
-  display: inline-block;
   font-family: "CWDangamAsac-Bold";
-  font-size: 4rem;
-  letter-spacing: -0.05em;
-  line-height: 1;
-  margin: 0.5em 0;
-  text-align: center;
-  text-transform: uppercase;
+  font-size: 6rem;
+  letter-spacing: 0em;
+  line-height: 1.2;
   transform: rotate(-7deg);
+  transform-origin: center, center;
 }
-.section--slogan .inner .sloganTitle span {
+.section--slogan .inner .sloganBox .sloganTitle span {
   box-sizing: border-box;
   display: inline-block;
   margin: -0.1em auto;
   width: auto;
 }
-.section--slogan .inner .sloganTitle span::before {
+.section--slogan .inner .sloganBox .sloganTitle span::before {
   animation-name: title;
   animation-duration: 3s;
   animation-iteration-count: infinite;
@@ -271,15 +266,39 @@ footer .inner .footer-text-box p:first-child {
   position: absolute;
   z-index: 1;
 }
-.section--slogan .inner .sloganTitle span:last-child::before {
-  animation-delay: 0.25s;
+@keyframes title {
+  0% {
+    opacity: 0;
+    transform: translateY(-0.2em);
+    -webkit-clip-path: polygon(0 70%, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 70%, 100% 0, 100% 100%, 0 100%);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0.1em);
+    -webkit-clip-path: polygon(0 70%, 100% 0, 100% 30%, 0 100%);
+    clip-path: polygon(0 70%, 100% 0, 100% 30%, 0 100%);
+  }
 }
-.section--slogan .inner .sloganContent {
-  color: #fff;
+.section--slogan .inner .sloganBox .sloganTitle span:last-child::before {
+  animation-delay: 0.25s;
 }
 .section--slogan .inner .arrow {
   position: absolute;
   left: 50%;
+  transform: translateX(-50%);
   animation: scroll_bottom 1s ease-in infinite;
 }
 @keyframes scroll_bottom {
@@ -299,11 +318,55 @@ footer .inner .footer-text-box p:first-child {
 }
 .section--logo {
   color: #fff;
+  background-image: url("../image/stroy_bg.jpg");
+  background-attachment: fixed;
+  height: 100vh;
 }
 .section--logo .inner {
-  height: 100vh;
-  width: 100%;
-  background-color: #054004;
+  height: inherit;
+}
+.section--logo .inner .contentBox {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+}
+.section--logo .inner .contentBox .logoBox {
+  display: flex;
+  align-items: end;
+}
+.section--logo .inner .contentBox .logoBox img {
+  width: 60vw;
+}
+.section--logo .inner .contentBox .logoBox span {
+  white-space: nowrap;
+  font-size: 3vw;
+  font-weight: 600;
+  margin-left: 15px;
+  margin-bottom: 30px;
+}
+.section--logo .inner .contentBox .logoContentBox {
+  margin-top: 40px;
+  margin-left: 5vw;
+  text-align: center;
+}
+.section--logo .inner .contentBox .logoContentBox p:first-child {
+  line-height: 1;
+  color: #3ea548;
+  font-family: "Montserrat";
+  font-size: 6vw;
+  white-space: nowrap;
+}
+.section--logo .inner .contentBox .logoContentBox p:first-child span {
+  font-size: 1vw;
+  font-family: "Gothic A1";
+  color: #fff;
+}
+.section--logo .inner .contentBox .logoContentBox p:last-child {
+  margin-top: 15px;
+  font-family: "Gothic A1";
+  line-height: 1.5;
+  font-size: 3vw;
 }
 .section--logo .inner .arrow {
   position: absolute;
@@ -321,9 +384,9 @@ footer .inner .footer-text-box p:first-child {
 }
 .section--merit .inner .merit-img-box {
   position: relative;
-  width: 100%;
   height: 60vh;
   display: flex;
+  justify-content: space-between;
   flex-grow: 1;
   align-items: center;
   cursor: pointer;
@@ -335,71 +398,94 @@ footer .inner .footer-text-box p:first-child {
   font-size: 16px;
   font-weight: 500;
 }
-.section--merit .inner .merit-img-box .merit--1 {
-  width: 25%;
-  margin: 0 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+.section--merit .inner .merit-img-box div[class^=merit--] {
+  width: 24%;
   border-radius: 10px;
   transition: 0.5s;
 }
-.section--merit .inner .merit-img-box .merit--1:hover {
+.section--merit .inner .merit-img-box div[class^=merit--]:hover {
   transform: scale(1.05);
 }
-.section--merit .inner .merit-img-box .merit--1 .img-box {
+.section--merit .inner .merit-img-box div[class^=merit--] .img-box {
+  width: 280px;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+.section--merit .inner .merit-img-box div[class^=merit--] .img-box img {
+  width: 100%;
+}
+.section--merit .inner .merit-img-box div[class^=merit--] .img-box:hover {
+  border: 2px solid #3ea548;
+}
+.section--merit .inner .merit-img-box div[class^=merit--] .img-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  mix-blend-mode: multiply;
+  background: linear-gradient(180deg, rgba(52, 152, 56, 0), rgba(52, 152, 56, 0), rgba(52, 152, 56, 0.7));
 }
-.section--merit .inner .merit-img-box .merit--1 .img-box img {
-  width: 280px;
-  height: 400px;
-}
-.section--merit .inner .merit-img-box .merit--1 .reason-box {
-  width: 60%;
-  height: 100%;
+.section--merit .inner .merit-img-box div[class^=merit--] .img-box p {
+  z-index: 1;
   position: absolute;
-  left: 45%;
-  border: 2px solid black;
-  border-radius: 10px;
+  bottom: 7%;
+  left: 7%;
+  color: #fff;
 }
-.section--merit .inner .merit-img-box .merit--2 {
-  width: 25%;
-  margin: 0 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
+.section--merit .inner .inner {
+  height: 100vh;
+}
+.section--merit .inner .inner .arrow {
+  position: absolute;
+  left: 50%;
+}
+.section--merit .inner .inner .arrow .arrow-bottom::before {
+  border: 4px solid #000;
+  border-right: 0;
+  border-bottom: 0;
+}
+.section--merit .inner .inner .reason-box {
+  position: absolute;
+  width: 65%;
+  height: 60%;
+  left: 40%;
   transition: 0.5s;
 }
-.section--merit .inner .merit-img-box .merit--2:hover {
+.section--merit .inner .inner .reason-box:hover {
   transform: scale(1.05);
 }
-.section--merit .inner .merit-img-box .merit--2 .img-box img {
+.section--merit .inner .inner .reason-box .img-box img {
   width: 280px;
   height: 400px;
 }
-.section--merit .inner .merit-img-box .merit--3 {
+.section--merit .inner .inner .merit--3 {
   width: 25%;
   margin: 0 10px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   transition: 0.5s;
 }
-.section--merit .inner .merit-img-box .merit--3:hover {
+.section--merit .inner .inner .merit--3:hover {
   transform: scale(1.05);
 }
-.section--merit .inner .merit-img-box .merit--3 .img-box img {
+.section--merit .inner .inner .merit--3 .img-box img {
   width: 280px;
   height: 400px;
 }
-.section--merit .inner .merit-img-box .merit--4 {
+.section--merit .inner .inner .merit--4 {
   width: 25%;
   margin: 0 10px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   transition: 0.5s;
 }
-.section--merit .inner .merit-img-box .merit--4:hover {
+.section--merit .inner .inner .merit--4:hover {
   transform: scale(1.05);
 }
-.section--merit .inner .merit-img-box .merit--4 .img-box img {
+.section--merit .inner .inner .merit--4 .img-box img {
   width: 280px;
   height: 400px;
 }
@@ -434,85 +520,104 @@ footer .inner .footer-text-box p:first-child {
   border-right: 0;
   border-bottom: 0;
 }
-.section--mine .inner {
+.section--reason--reason .inner {
   height: 100vh;
 }
-.section--mine .inner .arrow {
+.section--reason--reason .inner .arrow {
   position: absolute;
   left: 50%;
 }
-.section--mine .inner .arrow .arrow-bottom::before {
+.section--reason--reason .inner .arrow .arrow-bottom::before {
   border: 4px solid #000;
   border-right: 0;
   border-bottom: 0;
 }
-.section--interview .inner {
+.section--reason--mine .inner {
   height: 100vh;
 }
-.section--interview .inner .arrow {
+.section--reason--mine .inner .arrow {
   position: absolute;
   left: 50%;
 }
-.section--interview .inner .arrow .arrow-bottom::before {
+.section--reason--mine .inner .arrow .arrow-bottom::before {
   border: 4px solid #000;
   border-right: 0;
   border-bottom: 0;
 }
-.section--campaign .inner {
+.section--reason--interview .inner {
+  height: 100vh;
+}
+.section--reason--interview .inner .arrow {
+  position: absolute;
+  left: 50%;
+}
+.section--reason--interview .inner .arrow .arrow-bottom::before {
+  border: 4px solid #000;
+  border-right: 0;
+  border-bottom: 0;
+}
+.section--reason--campaign .inner {
   height: 100vh;
 }
 
 /* Mobile */
 /* Tablet */
 @media screen and (min-width: 768px) {
-  .section--slogan .inner .sloganTitle {
+  .section--slogan .inner .sloganBox .sloganTitle {
     top: 15vh;
     left: 13vw;
   }
-  .section--slogan .inner .sloganContent {
-    position: absolute;
-    display: block;
-    top: 45vh;
-    left: 17vw;
+  .section--slogan .inner .sloganBox .sloganTitle span {
+    white-space: nowrap;
   }
 }
 /* PC */
 @media screen and (min-width: 1280px) {
-  .section--slogan .inner .sloganTitle {
+  .section--slogan .inner {
+    left: 0;
+  }
+  .section--slogan .inner .sloganBox .sloganTitle {
     top: 15vh;
     left: 25vw;
     font-size: 6rem;
   }
-  .section--slogan .inner .sloganContent {
-    position: absolute;
-    display: block;
-    top: 50vh;
-    left: 32vw;
+  .section--slogan .inner .sloganBox .sloganContent {
+    color: #fff;
+    margin-top: 40px;
+    font-size: 18px;
   }
-}
-@keyframes title {
-  0% {
-    opacity: 0;
-    transform: translateY(-0.2em);
-    -webkit-clip-path: polygon(0 70%, 100% 0, 100% 100%, 0 100%);
-    clip-path: polygon(0 70%, 100% 0, 100% 100%, 0 100%);
+  .section--logo .inner .contentBox {
+    left: 0;
+    transform: translate(0, -40%);
   }
-  20% {
-    opacity: 1;
-    transform: translateY(0);
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  .section--logo .inner .contentBox .logoBox {
+    display: flex;
+    align-items: end;
   }
-  80% {
-    opacity: 1;
-    transform: translateY(0);
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  .section--logo .inner .contentBox .logoBox img {
+    width: 35vw;
   }
-  100% {
-    opacity: 0;
-    transform: translateY(0.1em);
-    -webkit-clip-path: polygon(0 70%, 100% 0, 100% 30%, 0 100%);
-    clip-path: polygon(0 70%, 100% 0, 100% 30%, 0 100%);
+  .section--logo .inner .contentBox .logoContentBox {
+    margin-top: 40px;
+    margin-left: 5vw;
+    text-align: left;
+  }
+  .section--logo .inner .contentBox .logoContentBox p:first-child {
+    line-height: 1;
+    color: #3ea548;
+    font-family: "Montserrat";
+    font-size: 3vw;
+    white-space: nowrap;
+  }
+  .section--logo .inner .contentBox .logoContentBox p:first-child span {
+    font-size: 1vw;
+    font-family: "Gothic A1";
+    color: #fff;
+  }
+  .section--logo .inner .contentBox .logoContentBox p:last-child {
+    margin-top: 15px;
+    font-family: "Gothic A1";
+    line-height: 1.5;
+    font-size: 1.2vw;
   }
 }/*# sourceMappingURL=story.css.map */

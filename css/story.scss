@@ -8,9 +8,6 @@ $arrow-color: #000;
 // font-family: 'Gothic A1', sans-serif;
 // font-family: "CWDangamAsac-Bold";
 
-// 모바일 화면 기준으로 작성! PC, 태블릿은 @media screen 에서
-
-// 화살표 버튼 여기서 처리 가능?
 .arrow {
   position: absolute;
   bottom: 7%;
@@ -62,7 +59,7 @@ $arrow-color: #000;
 }
 .section {
   position: relative;
-
+  overflow: hidden;
   &--slogan {
     // test 중
     align-items: center;
@@ -71,67 +68,89 @@ $arrow-color: #000;
     flex-basis: content;
     flex-direction: column;
     padding: 2rem;
+    height: calc(100vh - 120px);
 
     .inner {
-      height: calc(100vh - 120px);
-      text-align: center;
-      justify-content: center;
-
-      .sloganTitle {
-        display: inline-block;
-        font-family: "CWDangamAsac-Bold";
-        // font-size: 4em;
-        font-size: 4rem;
-        // letter-spacing: -0.05em;
-        letter-spacing: -0.05em;
-        // line-height: 0.75;
-        line-height: 1;
-        margin: 0.5em 0;
+      height: inherit;
+      .sloganBox {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -40%);
         text-align: center;
-        text-transform: uppercase;
-        transform: rotate(-7deg);
+        .sloganTitle {
+          justify-content: center;
+          font-family: "CWDangamAsac-Bold";
+          font-size: 6rem;
+          letter-spacing: 0em;
+          line-height: 1.2;
+          // margin: 0.5em 0;
+          // text-transform: uppercase;
+          transform: rotate(-7deg);
+          transform-origin: center, center;
 
-        span {
-          // background-color: $light-gray;
-          // background-color: #166032;
-          box-sizing: border-box;
-          // color: $light-gray;
-          // color: #166032;
-          display: inline-block;
-          // padding: 0.25em 0.5em;
-          margin: -0.1em auto;
-          width: auto;
-          // width: 700px;
+          span {
+            box-sizing: border-box;
+
+            display: inline-block;
+            margin: -0.1em auto;
+            width: auto;
+          }
+
+          span::before {
+            animation-name: title;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+            box-sizing: border-box;
+            content: attr(data-text);
+            display: inline;
+            color: #fff;
+            display: block;
+            position: absolute;
+            z-index: 1;
+
+            @keyframes title {
+              0% {
+                opacity: 0;
+                transform: translateY(-0.2em);
+                -webkit-clip-path: polygon(0 70%, 100% 0, 100% 100%, 0 100%);
+                clip-path: polygon(0 70%, 100% 0, 100% 100%, 0 100%);
+              }
+
+              20% {
+                opacity: 1;
+                transform: translateY(0);
+                -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+              }
+
+              80% {
+                opacity: 1;
+                transform: translateY(0);
+                -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+              }
+
+              100% {
+                opacity: 0;
+                transform: translateY(0.1em);
+                -webkit-clip-path: polygon(0 70%, 100% 0, 100% 30%, 0 100%);
+                clip-path: polygon(0 70%, 100% 0, 100% 30%, 0 100%);
+              }
+            }
+          }
+
+          span:last-child::before {
+            animation-delay: 0.25s;
+          }
         }
-
-        span::before {
-          animation-name: title;
-          animation-duration: 3s;
-          animation-iteration-count: infinite;
-          animation-timing-function: ease;
-          box-sizing: border-box;
-          content: attr(data-text);
-          display: inline;
-          color: #fff;
-          display: block;
-          position: absolute;
-          z-index: 1;
-        }
-
-        span:last-child::before {
-          animation-delay: 0.25s;
-        }
-      }
-
-      .sloganContent {
-        color: #fff;
       }
 
       .arrow {
         position: absolute;
         left: 50%;
-        // transform: translate(-50%, 420%);
-
+        transform: translateX(-50%);
         // 모션
         animation: scroll_bottom 1s ease-in infinite;
         @keyframes scroll_bottom {
@@ -154,71 +173,57 @@ $arrow-color: #000;
     }
   }
 
-  // 이전 코드
-  // &--slogan {
-  //   .inner {
-  //     height: calc(100vh - 120px);
-  //     width: 100%;
-  //     background-color: #000;
-  //     text-align: center;
-
-  //     .sloganTitle {
-  //       position: absolute;
-  //       top: 10vh;
-  //       left: 1vw;
-
-  //       color: #fff;
-  //       font-family: "CWDangamAsac-Bold";
-  //       font-size: 5rem;
-
-  //       span:first-child {
-  //         color: $main-orange;
-  //       }
-  //       span:last-child {
-  //         color: $main-green;
-  //       }
-  //     }
-
-  //     .sloganContent {
-  //       display: none;
-  //       color: #fff;
-  //       font-family: "Montserrat";
-  //       font-size: 2rem;
-  //     }
-
-  //     .arrow {
-  //       position: absolute;
-  //       left: 50%;
-  //       // transform: translate(-50%, 420%);
-
-  //       // 모션
-  //       animation: scroll_bottom 1s ease-in infinite;
-  //       @keyframes scroll_bottom {
-  //         from {
-  //           bottom: 7%;
-  //           opacity: 1;
-  //         }
-  //         to {
-  //           opacity: 0;
-  //           bottom: 5%;
-  //         }
-  //       }
-
-  //       .arrow-bottom::before {
-  //         border: 4px solid #fff;
-  //         border-right: 0;
-  //         border-bottom: 0;
-  //       }
-  //     }
-  //   }
-  // }
-
   &--logo {
     color: #fff; // 임시
+    background-image: url("../image/stroy_bg.jpg");
+    background-attachment: fixed;
+    height: 100vh;
     .inner {
-      height: 100vh;
-      width: 100%;
-      background-color: #054004;
+      height: inherit;
+      .contentBox {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+        .logoBox {
+          display: flex;
+          align-items: end;
+          img {
+            width: 60vw;
+          }
+          span {
+            white-space: nowrap;
+            font-size: 3vw;
+            font-weight: 600;
+            margin-left: 15px;
+            margin-bottom: 30px;
+          }
+        }
+        .logoContentBox {
+          margin-top: 40px;
+          margin-left: 5vw;
+          text-align: center;
+          p:first-child {
+            line-height: 1;
+            color: $main-green;
+            font-family: "Montserrat";
+            font-size: 6vw;
+            white-space: nowrap;
+            span {
+              font-size: 1vw;
+              font-family: "Gothic A1";
+              color: #fff;
+            }
+          }
+
+          p:last-child {
+            margin-top: 15px;
+            font-family: "Gothic A1";
+            line-height: 1.5;
+            font-size: 3vw;
+          }
+        }
+      }
 
       .arrow {
         position: absolute;
@@ -234,27 +239,19 @@ $arrow-color: #000;
   }
 
   &--merit {
-    // background-image: url();
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // background-position: center;
     .inner {
-      // position: relative;
       height: 100vh;
-      // width: 100%;
       display: flex;
       align-items: center;
 
       .merit-img-box {
         position: relative;
-        width: 100%;
         height: 60vh;
         display: flex;
-        // justify-content: space-between;
+        justify-content: space-between;
         flex-grow: 1;
         align-items: center;
         cursor: pointer;
-        // border: 2px solid black;
         text-align: center;
         transition: 0.5s;
         p {
@@ -262,40 +259,71 @@ $arrow-color: #000;
           font-size: 16px;
           font-weight: 500;
         }
-
-        .merit--1 {
-          width: 25%;
-          margin: 0 10px;
-          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        div[class^="merit--"] {
+          width: 24%;
           border-radius: 10px;
           transition: 0.5s;
-
           &:hover {
             transform: scale(1.05);
           }
 
           .img-box {
-            width: 100%;
-            height: 100%;
+            width: 280px;
+            height: 400px;
+            overflow: hidden;
+            position: relative;
             img {
-              width: 280px;
-              height: 400px;
+              width: 100%;
+            }
+            &:hover {
+              border: 2px solid $main-green;
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              mix-blend-mode: multiply;
+              background: linear-gradient(
+                180deg,
+                rgba(52, 152, 56, 0),
+                rgba(52, 152, 56, 0),
+                rgba(52, 152, 56, 0.7)
+              );
+            }
+            p {
+              z-index: 1;
+              position: absolute;
+              bottom: 7%;
+              left: 7%;
+              color: #fff;
             }
           }
-          .reason-box {
-            width: 60%;
-            height: 100%;
-            position: absolute;
-            left: 45%;
-            border: 2px solid black;
-            border-radius: 10px;
+        }
+      }
+
+      .inner {
+        height: 100vh;
+        // width: 100%;
+
+        .arrow {
+          position: absolute;
+          left: 50%;
+
+          .arrow-bottom::before {
+            border: 4px solid $arrow-color;
+            border-right: 0;
+            border-bottom: 0;
           }
         }
-        .merit--2 {
-          width: 25%;
-          margin: 0 10px;
-          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-          border-radius: 10px;
+
+        .reason-box {
+          position: absolute;
+          width: 65%;
+          height: 60%;
+          left: 40%;
           transition: 0.5s;
 
           &:hover {
@@ -389,70 +417,95 @@ $arrow-color: #000;
         }
       }
     }
-  }
 
-  &--mine {
-    .inner {
-      height: 100vh;
-      // width: 100%;
+    &--reason {
+      .inner {
+        height: 100vh;
+        // width: 100%;
 
-      .arrow {
-        position: absolute;
-        left: 50%;
+        .arrow {
+          position: absolute;
+          left: 50%;
 
-        .arrow-bottom::before {
-          border: 4px solid $arrow-color;
-          border-right: 0;
-          border-bottom: 0;
+          .arrow-bottom::before {
+            border: 4px solid $arrow-color;
+            border-right: 0;
+            border-bottom: 0;
+          }
         }
       }
     }
-  }
 
-  &--interview {
-    .inner {
-      height: 100vh;
-      // width: 100%;
+    &--mine {
+      .inner {
+        height: 100vh;
+        // width: 100%;
 
-      .arrow {
-        position: absolute;
-        left: 50%;
+        .arrow {
+          position: absolute;
+          left: 50%;
 
-        .arrow-bottom::before {
-          border: 4px solid $arrow-color;
-          border-right: 0;
-          border-bottom: 0;
+          .arrow-bottom::before {
+            border: 4px solid $arrow-color;
+            border-right: 0;
+            border-bottom: 0;
+          }
         }
       }
     }
-  }
 
-  &--campaign {
-    .inner {
-      height: 100vh;
-      // width: 100%;
+    &--interview {
+      .inner {
+        height: 100vh;
+        // width: 100%;
+
+        .arrow {
+          position: absolute;
+          left: 50%;
+
+          .arrow-bottom::before {
+            border: 4px solid $arrow-color;
+            border-right: 0;
+            border-bottom: 0;
+          }
+        }
+      }
+    }
+
+    &--campaign {
+      .inner {
+        height: 100vh;
+        // width: 100%;
+      }
     }
   }
 }
 
 /* Mobile */
 @media screen and (max-width: 767px) {
+  // .section {
+  //   &--logo {
+  //     .inner {
+  //       .contentBox {
+  //       }
+  //     }
+  //   }
+  // }
 }
 
 /* Tablet */
 @media screen and (min-width: 768px) {
   .section--slogan {
     .inner {
-      .sloganTitle {
-        top: 15vh;
-        left: 13vw;
-        // color: red;
-      }
-      .sloganContent {
-        position: absolute;
-        display: block;
-        top: 45vh;
-        left: 17vw;
+      .sloganBox {
+        .sloganTitle {
+          top: 15vh;
+          left: 13vw;
+          // color: red;
+          span {
+            white-space: nowrap;
+          }
+        }
       }
     }
   }
@@ -460,50 +513,64 @@ $arrow-color: #000;
 
 /* PC */
 @media screen and (min-width: 1280px) {
-  .section--slogan {
-    .inner {
-      .sloganTitle {
-        top: 15vh;
-        left: 25vw;
-        font-size: 6rem;
-        // color: blue;
-      }
-      .sloganContent {
-        position: absolute;
-        display: block;
-        top: 50vh;
-        left: 32vw;
+  .section {
+    &--slogan {
+      .inner {
+        left: 0;
+
+        .sloganBox {
+          .sloganTitle {
+            top: 15vh;
+            left: 25vw;
+            font-size: 6rem;
+            // color: blue;
+          }
+          .sloganContent {
+            color: #fff;
+            margin-top: 40px;
+            font-size: 18px;
+          }
+        }
       }
     }
-  }
-}
+    &--logo {
+      .inner {
+        .contentBox {
+          left: 0;
+          transform: translate(0, -40%);
+          .logoBox {
+            display: flex;
+            align-items: end;
+            img {
+              width: 35vw;
+            }
+          }
+          .logoContentBox {
+            margin-top: 40px;
+            margin-left: 5vw;
+            text-align: left;
+            p:first-child {
+              line-height: 1;
+              color: $main-green;
+              font-family: "Montserrat";
+              font-size: 3vw;
+              white-space: nowrap;
+              span {
+                font-size: 1vw;
+                font-family: "Gothic A1";
+                color: #fff;
+              }
+            }
 
-@keyframes title {
-  0% {
-    opacity: 0;
-    transform: translateY(-0.2em);
-    -webkit-clip-path: polygon(0 70%, 100% 0, 100% 100%, 0 100%);
-    clip-path: polygon(0 70%, 100% 0, 100% 100%, 0 100%);
-  }
-
-  20% {
-    opacity: 1;
-    transform: translateY(0);
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-
-  80% {
-    opacity: 1;
-    transform: translateY(0);
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-
-  100% {
-    opacity: 0;
-    transform: translateY(0.1em);
-    -webkit-clip-path: polygon(0 70%, 100% 0, 100% 30%, 0 100%);
-    clip-path: polygon(0 70%, 100% 0, 100% 30%, 0 100%);
+            p:last-child {
+              margin-top: 15px;
+              font-family: "Gothic A1";
+              line-height: 1.5;
+              font-size: 1.2vw;
+            }
+          }
+        }
+      }
+    }
   }
 }

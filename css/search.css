@@ -104,17 +104,7 @@ header .inner .menu-bar .menu-icon {
 }
 
 /* Mobile */
-@media screen and (max-width: 767px) {
-  header .inner .menu-bar .menu-bar-menu li a {
-    color: #fff;
-  }
-}
 /* Tablet */
-@media screen and (min-width: 768px) {
-  header .inner .menu-bar .menu-bar-menu li a {
-    color: #fff;
-  }
-}
 /* PC */
 @media screen and (min-width: 1280px) {
   header .inner .menu-bar .menu-bar-menu {
@@ -186,7 +176,7 @@ header .inner .logo a img {
   width: 60px;
 }
 header .inner .menu-bar .menu-bar-menu li:hover ::before {
-  background-color: #3ea548;
+  background-color: #fff;
 }
 header .inner .menu-bar .menu-bar-menu li a {
   color: #fff;
@@ -217,7 +207,7 @@ header .inner .menu-bar .menu-icon {
   background-color: #fff;
   border-radius: 20px;
   border: 2px solid #3ea548;
-  padding: 5px 20px;
+  padding: 5px 16px;
   line-height: 1.2;
   cursor: pointer;
 }
@@ -268,11 +258,9 @@ header .inner .menu-bar .menu-icon {
 .selectSection .inner .resultSection .results .plant {
   width: 49%;
   margin-bottom: 5vh;
-  overflow: hidden;
 }
 .selectSection .inner .resultSection .results .plant .image {
   position: relative;
-  border: 1px solid #3ea548;
   overflow: hidden;
 }
 .selectSection .inner .resultSection .results .plant .image:hover {
