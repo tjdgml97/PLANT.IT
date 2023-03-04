@@ -6,7 +6,9 @@ $light-gray: #999;
 @mixin header_font($font-color) {
   color: $font-color;
 }
-
+@mixin header_underline($line-color) {
+  background-color: $line-color;
+}
 // NAVIGATION
 header {
   width: 100%;
@@ -79,36 +81,10 @@ header {
 }
 /* Mobile */
 @media screen and (max-width: 767px) {
-  header {
-    .inner {
-      .menu-bar {
-        .menu-bar-menu {
-          li {
-            a {
-              color: #fff;
-            }
-          }
-        }
-      }
-    }
-  }
 }
 
 /* Tablet */
 @media screen and (min-width: 768px) {
-  header {
-    .inner {
-      .menu-bar {
-        .menu-bar-menu {
-          li {
-            a {
-              color: #fff;
-            }
-          }
-        }
-      }
-    }
-  }
 }
 
 /* PC */

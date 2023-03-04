@@ -32,7 +32,7 @@ header {
       .menu-bar-menu {
         li {
           &:hover ::before {
-            background-color: $main-green;
+            @include header_underline(#fff);
           }
 
           a {
@@ -77,7 +77,7 @@ header {
           background-color: #fff;
           border-radius: 20px;
           border: 2px solid $main-green;
-          padding: 5px 20px;
+          padding: 5px 16px;
           line-height: 1.2;
           cursor: pointer;
         }
@@ -141,12 +141,9 @@ header {
         .plant {
           width: 49%;
           margin-bottom: 5vh;
-          overflow: hidden;
           .image {
             position: relative;
-            border: 1px solid $main-green;
             overflow: hidden;
-
             &:hover {
               border: 1px solid $main-green;
               img {
@@ -161,7 +158,6 @@ header {
                 height: 100%;
                 z-index: 2;
                 mix-blend-mode: multiply;
-
                 background: linear-gradient(
                   180deg,
                   rgba(52, 152, 56, 0),
@@ -282,7 +278,7 @@ footer {
         .menu-bar-menu {
           li {
             &:hover ::before {
-              background-color: $main-green;
+              @include header_underline($main-green);
             }
 
             a {

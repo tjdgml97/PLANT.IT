@@ -10,6 +10,28 @@ titleSectBtn.addEventListener("click", function () {
 recomendSectBtn.addEventListener("click", function () {
   window.scrollTo({ top: testSect.offsetTop, behavior: "smooth" });
 });
+// let lastScrollY = 0;
+// document.addEventListener(
+//   "wheel",
+//   function (e) {
+//     e.preventDefault();
+//     console.log("titleSect", e.deltaY, e.wheelDeltaY);
+//     if (e.deltaY < 0) {
+//       window.scrollTo({ top: recomendSect.offsetTop, behavior: "smooth" });
+//     } else {
+//       // window.scrollTo({ top: testSect.offsetTop, behavior: "smooth" });
+//     }
+//   },
+//   { passive: false }
+// );
+
+// document.addEventListener("wheel", function (e) {
+//   event.preventDefault();
+//   if (e.deltaY > 0) {
+//     window.scrollTo({ top: testSect.offsetTop, behavior: "smooth" });
+//   }
+//   // window.scrollTo({ top: testSect.offsetTop, behavior: "smooth" });
+// });
 
 // mouseover 시 요소 사라짐
 const liEl = document.querySelectorAll(".hidden-text > li");
