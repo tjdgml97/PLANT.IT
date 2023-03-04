@@ -50,7 +50,7 @@ const merit1 = document.querySelector(".merit--1");
 const merit2 = document.querySelector(".merit--2");
 const merit3 = document.querySelector(".merit--3");
 const merit4 = document.querySelector(".merit--4");
-const img1 = merit1.querySelector("img-box");
+const img1 = merit1.querySelector(".img-box");
 const reason = document.querySelector(".reason-box");
 
 function moveto1() {
@@ -71,14 +71,6 @@ function moveto1() {
 
 //도넛모양 차트 만들기
 const donut = document.querySelector(".donut");
-const totalMinwon = donut.dataset.percent;
-donut.style.background = `conic-gradient(#3F8BC9 0% ${totalMinwon}%, #F2F2F2 ${totalMinwon}% 100%)`;
-let t4 = 0;
-const donutAnimation = setInterval(() => {
-  donut.dataset.percent = t4;
-  donut.style.background = `conic-gradient(#4F98FF 0 ${t4}%, #DEDEDE ${t4}% 100% )`;
-  t4++ >= totalMinwon && clearInterval(donutAnimation);
-}, 10);
 
 function moveto2() {
   if (merit2.classList.contains("move1")) {
@@ -107,6 +99,14 @@ function moveto3() {
     merit2.classList.add("hide");
     merit1.classList.add("hide");
     merit4.classList.add("hide");
+    const totalMinwon = donut.dataset.percent;
+    donut.style.background = `conic-gradient(#3F8BC9 0% ${totalMinwon}%, #F2F2F2 ${totalMinwon}% 100%)`;
+    let t4 = 0;
+    const donutAnimation = setInterval(() => {
+      donut.dataset.percent = t4;
+      donut.style.background = `conic-gradient(#4F98FF 0 ${t4}%, #DEDEDE ${t4}% 100% )`;
+      t4++ >= totalMinwon && clearInterval(donutAnimation);
+    }, 10);
     reason.classList.remove("hide");
   }
 }
