@@ -1,0 +1,202 @@
+@import "../reset";
+
+// COLOR
+$main-green: #3ea548;
+$main-orange: #ff6652;
+$light-gray: #999;
+
+.pcVersion {
+  display: block;
+  section {
+    &:first-child {
+      background-color: $main-green;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 50px 0;
+      .character {
+        img {
+          width: 90%;
+          transform-origin: center bottom;
+          animation: dance_jump 3s ease-out infinite;
+          @keyframes dance_jump {
+            0% {
+              transform: none;
+            }
+            15% {
+              transform: rotate(-3deg);
+            }
+            30% {
+              transform: rotate(3deg);
+            }
+            45% {
+              transform: rotate(-3deg);
+            }
+            60% {
+              transform: translate3d(0, -5%, 0);
+            }
+            75% {
+              transform: translate3d(0, 1%, 0);
+            }
+            85% {
+              transform: translate3d(0, -3%, 0);
+            }
+            100% {
+              transform: none;
+            }
+          }
+        }
+      }
+    }
+    &:last-child {
+      .resultInner {
+        padding: 50px 70px;
+        margin: auto;
+        .path-box {
+          margin-bottom: 10px;
+          cursor: pointer;
+          color: $main-green;
+          span {
+            margin-right: 10px;
+            font-size: 2rem;
+          }
+        }
+        .name {
+          font-size: 60px;
+          margin-bottom: 40px;
+          .typewriter {
+            font-family: "CWDangamAsac-Bold";
+            color: $main-green;
+          }
+        }
+        .tag {
+          display: flex;
+          justify-content: flex-start;
+          li {
+            font-family: "Gothic A1";
+            font-weight: 800;
+            font-size: 1rem;
+            color: $main-green;
+            border: 2px solid $main-green;
+            border-radius: 20px;
+            padding: 5px 10px;
+            margin-right: 7px;
+            white-space: nowrap;
+          }
+        }
+        > p {
+          font-size: 1.2rem;
+          margin-top: 30px;
+          line-height: 1.6;
+        }
+        .recomend {
+          .textBox {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            font-weight: 800;
+            font-family: "Montserrat";
+            color: #000;
+            margin: 40px 0;
+            p {
+              font-size: 1.5rem;
+            }
+            a {
+              color: $main-green;
+            }
+          }
+          .tree_all {
+            position: relative;
+            width: inherit;
+            .swiper-slide {
+              overflow: hidden;
+              img {
+                width: 100%;
+                transform: scale(1.1);
+              }
+              &:hover {
+                border: 1px solid $main-green;
+                &::before {
+                  content: "";
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  z-index: 2;
+                  mix-blend-mode: multiply;
+                  background: linear-gradient(
+                    180deg,
+                    rgba(52, 152, 56, 0),
+                    rgba(52, 152, 56, 0.2),
+                    rgba(52, 152, 56, 0.7)
+                  );
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* Mobile */
+@media screen and (max-width: 767px) {
+}
+/* Tablet */
+@media screen and (min-width: 768px) {
+}
+/* PC */
+@media screen and (min-width: 1280px) {
+  .pcVersion {
+    display: flex;
+    section {
+      height: 100%;
+      &:first-child {
+        width: 35%;
+        height: 100%;
+        position: fixed;
+
+        .character {
+          img {
+          }
+        }
+      }
+      &:last-child {
+        width: 65%;
+        margin-left: 35%;
+        .resultInner {
+          .name {
+            .typewriter {
+              font-family: "CWDangamAsac-Bold";
+              color: $main-green;
+              white-space: nowrap;
+              overflow: hidden;
+              border-right: 4px solid #212121;
+              animation: cursor 1s step-start infinite,
+                text 3s steps(20) normal none;
+
+              @keyframes cursor {
+                0% {
+                  border-color: #212121;
+                }
+                100% {
+                  border-color: white;
+                }
+              }
+
+              @keyframes text {
+                0% {
+                  width: 0;
+                }
+                100% {
+                  width: 12ch;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

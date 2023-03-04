@@ -1,40 +1,24 @@
-const swiperTree = new Swiper(".tree_all .swiper",{
-  direction:"horizontal",
-  slidesPerView:3,
-  spaceBetween:30,
-  centeredSlides:true,
-  loop:true,
-  speed: 750,
-  freeMode :true,
-  // freeModeMomentum : false,
-  // autoplay:{
-  //   delay:1,
-  //   disableOnInteraction:false,
-  // },
-  navigation: {
-    prevEl: ".tree_all .swiper-button-prev",
-    nextEl: ".tree_all .swiper-button-next",
-  }
-}
-)
+const swiperTree = new Swiper(".tree_all .swiper", {
+  direction: "horizontal",
+  slidesPerView: 3,
+  spaceBetween: 10,
+  centeredSlides: true,
+  loop: true,
+  autoplay: {
+    delay: 1500,
+    // disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".promotion .swiper-pagination",
+    type: "bullets",
+  },
+});
 
-
-function controlAutoPlay(){
-  if(swiperTree.autoplay.running === false) {
+function controlAutoPlay() {
+  if (swiperTree.autoplay.running === false) {
     swiperTree.autoplay.start();
   } else {
     swiperTree.autoplay.stop();
   }
   console.log(swiperTree.autoplay);
 }
-
-// window.onload = function () {
-//   document.querySelector(".name").classList.add("spaced");
-
-//   const steps = document.querySelectorAll(".advice");
-//   var count = 0;
-//   setInterval(() => {
-//     steps[count].style.display = "block";
-//     steps[count].style.opacity = "1.0";
-//   }, 3000);
-// };

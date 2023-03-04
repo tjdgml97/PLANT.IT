@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200;300;400;500;600;700&display=swap");
+@font-face {
+  font-family: "CWDangamAsac-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/CWDangamAsac-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.inner {
+  width: 90%;
+  margin: auto;
+  position: relative;
+}
+
+/* Mobile */
+/* Tablet */
+/* PC */
+@media screen and (min-width: 1280px) {
+  .inner {
+    width: 1200px;
+  }
+}
+.pcVersion {
+  display: block;
+}
+.pcVersion section:first-child {
+  background-color: #3ea548;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+}
+.pcVersion section:first-child .character img {
+  width: 90%;
+  transform-origin: center bottom;
+  animation: dance_jump 3s ease-out infinite;
+}
+@keyframes dance_jump {
+  0% {
+    transform: none;
+  }
+  15% {
+    transform: rotate(-3deg);
+  }
+  30% {
+    transform: rotate(3deg);
+  }
+  45% {
+    transform: rotate(-3deg);
+  }
+  60% {
+    transform: translate3d(0, -5%, 0);
+  }
+  75% {
+    transform: translate3d(0, 1%, 0);
+  }
+  85% {
+    transform: translate3d(0, -3%, 0);
+  }
+  100% {
+    transform: none;
+  }
+}
+.pcVersion section:last-child .resultInner {
+  padding: 50px 70px;
+  margin: auto;
+}
+.pcVersion section:last-child .resultInner .path-box {
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: #3ea548;
+}
+.pcVersion section:last-child .resultInner .path-box span {
+  margin-right: 10px;
+  font-size: 2rem;
+}
+.pcVersion section:last-child .resultInner .name {
+  font-size: 60px;
+  margin-bottom: 40px;
+}
+.pcVersion section:last-child .resultInner .name .typewriter {
+  font-family: "CWDangamAsac-Bold";
+  color: #3ea548;
+}
+.pcVersion section:last-child .resultInner .tag {
+  display: flex;
+  justify-content: flex-start;
+}
+.pcVersion section:last-child .resultInner .tag li {
+  font-family: "Gothic A1";
+  font-weight: 800;
+  font-size: 1rem;
+  color: #3ea548;
+  border: 2px solid #3ea548;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin-right: 7px;
+  white-space: nowrap;
+}
+.pcVersion section:last-child .resultInner > p {
+  font-size: 1.2rem;
+  margin-top: 30px;
+  line-height: 1.6;
+}
+.pcVersion section:last-child .resultInner .recomend .textBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-weight: 800;
+  font-family: "Montserrat";
+  color: #000;
+  margin: 40px 0;
+}
+.pcVersion section:last-child .resultInner .recomend .textBox p {
+  font-size: 1.5rem;
+}
+.pcVersion section:last-child .resultInner .recomend .textBox a {
+  color: #3ea548;
+}
+.pcVersion section:last-child .resultInner .recomend .tree_all {
+  position: relative;
+  width: inherit;
+}
+.pcVersion section:last-child .resultInner .recomend .tree_all .swiper-slide {
+  overflow: hidden;
+}
+.pcVersion section:last-child .resultInner .recomend .tree_all .swiper-slide img {
+  width: 100%;
+  transform: scale(1.1);
+}
+.pcVersion section:last-child .resultInner .recomend .tree_all .swiper-slide:hover {
+  border: 1px solid #3ea548;
+}
+.pcVersion section:last-child .resultInner .recomend .tree_all .swiper-slide:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  mix-blend-mode: multiply;
+  background: linear-gradient(180deg, rgba(52, 152, 56, 0), rgba(52, 152, 56, 0.2), rgba(52, 152, 56, 0.7));
+}
+
+/* Mobile */
+/* Tablet */
+/* PC */
+@media screen and (min-width: 1280px) {
+  .pcVersion {
+    display: flex;
+  }
+  .pcVersion section {
+    height: 100%;
+  }
+  .pcVersion section:first-child {
+    width: 35%;
+    height: 100%;
+    position: fixed;
+  }
+  .pcVersion section:last-child {
+    width: 65%;
+    margin-left: 35%;
+  }
+  .pcVersion section:last-child .resultInner .name .typewriter {
+    font-family: "CWDangamAsac-Bold";
+    color: #3ea548;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid #212121;
+    animation: cursor 1s step-start infinite, text 3s steps(20) normal none;
+  }
+  @keyframes cursor {
+    0% {
+      border-color: #212121;
+    }
+    100% {
+      border-color: white;
+    }
+  }
+  @keyframes text {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 12ch;
+    }
+  }
+}/*# sourceMappingURL=result.css.map */
