@@ -43,7 +43,6 @@ $arrow-color: #000;
   }
 }
 
-
 .hide {
   display: none;
   transition: all 0.5s;
@@ -348,30 +347,29 @@ $arrow-color: #000;
         }
       }
 
-    .inner {
-      height: 100vh;
-      // width: 100%;
+      .inner {
+        height: 100vh;
+        // width: 100%;
 
+        .arrow {
+          position: absolute;
+          left: 50%;
 
-      .arrow {
-        position: absolute;
-        left: 50%;
+          .arrow-bottom::before {
+            border: 4px solid $arrow-color;
+            border-right: 0;
+            border-bottom: 0;
+          }
+        }
 
-        .arrow-bottom::before {
-          border: 4px solid $arrow-color;
-          border-right: 0;
-          border-bottom: 0;
+        .reason-box {
+          position: absolute;
+          width: 65%;
+          height: 60%;
+          left: 40%;
+          transition: 0.5s;
         }
       }
-
-      .reason-box {
-        position: absolute;
-        width: 65%;
-        height: 60%;
-        left: 40%;
-        transition: 0.5s;
-      }
-
     }
   }
 
