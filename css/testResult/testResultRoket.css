@@ -76,9 +76,6 @@ body {
 }
 .testResult .card_image {
   width: 33%;
-  background-size: 27%;
-  background-position-y: 50%;
-  text-align: center;
 }
 .testResult .card_image img {
   transform-origin: bottom;
@@ -116,14 +113,6 @@ body {
     transform: none;
   }
 }
-.testResult .card_image p {
-  position: absolute;
-  bottom: 10px;
-  margin: 30px;
-  font-size: 30px;
-  font-weight: 700;
-  color: white;
-}
 .testResult .instruct {
   font-family: "Montserrat";
   width: 67%;
@@ -137,67 +126,15 @@ body {
   justify-content: flex-end;
 }
 .testResult .instruct .text .name {
-  font-size: 20px;
-  text-align: center;
+  font-size: 50px;
   margin-bottom: 25px;
 }
-.testResult .instruct .text .name div {
-  font-size: 40px;
+.testResult .instruct .text .name .typewriter {
+  margin-left: 50%;
   font-family: "CWDangamAsac-Bold";
-  transform-origin: bottom;
-  animation: jump 3s cubic-bezier(0.53, 0.03, 0.6, 0.99) infinite;
-  left: 22%;
-}
-@keyframes jump {
-  0% {
-    transform: translate(0, -10%);
-  }
-  50% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(0, -10%);
-  }
-}
-.testResult .instruct .text .btn-box {
-  display: flex;
-  justify-content: center;
-}
-.testResult .instruct .text .btn-box button {
-  font-size: 0.9rem;
-  color: white;
-  background-color: #3ea548;
-  border-radius: 20px;
-  border: 2px solid #3ea548;
-  padding: 3px 10px;
-  margin: 0 10px;
-}
-.testResult .instruct .text p {
-  margin-top: 35px;
-  font-size: 20px;
-  font-family: "Montserrat" "sans-serif";
-}
-.testResult .instruct .text h3 {
   color: #3ea548;
-  margin-top: 20px;
-  font-family: "Montserrat";
-}
-.testResult .instruct .tree_all {
-  margin: 0 30px;
-  position: relative;
-}
-.testResult .instruct .tree_all .tree_text {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.testResult .instruct .tree_all .tree_text .typewriter {
-  font-family: "CWDangamAsac-Bold";
-  margin-top: 20px;
-  color: #3ea548;
-  font-size: clamp(1rem, 1.8vw, 3rem);
+  font-size: 45px;
   font-weight: bold;
-  width: 14.5ch;
   white-space: nowrap;
   overflow: hidden;
   border-right: 4px solid #212121;
@@ -216,8 +153,50 @@ body {
     width: 0;
   }
   100% {
-    width: 14ch;
+    width: 12ch;
   }
+}
+.testResult .instruct .text .btn-box {
+  display: flex;
+  justify-content: flex-start;
+}
+.testResult .instruct .text .btn-box button {
+  font-family: "Gothic A1";
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: white;
+  background-color: #3ea548;
+  border-radius: 20px;
+  border: 2px solid #3ea548;
+  padding: 3px 10px;
+  margin: 0 4px;
+}
+.testResult .instruct .text p {
+  font-family: "Gothic A1";
+  font-weight: 500;
+  margin-top: 45px;
+  font-size: 20px;
+  font-family: "Montserrat" "sans-serif";
+}
+.testResult .instruct .text h3 {
+  color: #3ea548;
+  margin-top: 20px;
+  font-family: "Montserrat";
+}
+.testResult .instruct .tree_all {
+  margin: 0 30px;
+  position: relative;
+}
+.testResult .instruct .tree_all .tree_text {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.testResult .instruct .tree_all .tree_text h2 {
+  font-family: "CWDangamAsac-Bold";
+  color: #3ea548;
+  font-size: 30px;
 }
 .testResult .instruct .tree_all .tree_text .more-btn {
   margin-top: 30px;
@@ -241,8 +220,8 @@ body {
   background-color: rgba(255, 194, 102, 0.582);
 }
 .testResult .instruct .tree_all .swiper {
-  margin-bottom: 5px;
-  margin-top: 30px;
+  margin-bottom: 50px;
+  margin-top: 50px;
   height: 230px;
   text-align: center;
   left: 50%;

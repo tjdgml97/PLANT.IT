@@ -14,22 +14,6 @@ $font-first : "Montserrat";
 $imagePath : "지구" ;
 
 @import url("https://fonts.googleapis.com/css2?family=Sen&display=swap");
-// * {
-//   margin: 0;
-//   padding: 0;
-//   box-sizing: border-box;
-//   font-family: "Sen", sans-serif;
-// }
-// body {
-//   background-color: #1abc9c;
-//   color: #fff;
-//   min-height: 100vh;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-//   padding: 18px;
-// }
 
 div {
   font-family: $font-first;
@@ -80,21 +64,11 @@ body{
   background-color: white;
   // background-color: $card-color;
     display: flex;
-    // position: relative;
-    // height: 100vh;
 
     //left - card 이미지 
     .card_image{
-      // background-color: $card-color;
+      // text-align: center;
       width: 33%;
-      // height: 100%;
-      // background-image: url("../../image/rocket.svg");
-      background-size:27%;
-      background-position-y: 50%;
-      text-align: center;
-      // background-repeat: no-repeat;
-      // background-attachment: fixed;
-
       img{
         transform-origin: bottom;
         animation: dance_jump 3s ease-out infinite;
@@ -132,25 +106,13 @@ body{
           }
         }
       }
-
-
-      p{
-        position: absolute;
-        bottom: 10px;
-        margin: 30px;
-        font-size: 30px;
-        font-weight:700;
-        color: white;
-      }
     }
 
     //오른쪽 설명 섹션
     .instruct{
-      // background-color: black;
       font-family: $font-first;
       width: 67%;
-      // height: 100%;
-      // background-color: rgb(2, 2, 63);;
+
 
       .text{
         margin: 10px 30px 0 30px;
@@ -159,101 +121,22 @@ body{
         .path-box{
           display: flex;
           justify-content: flex-end;
+          .span{
 
+          }
         }
-
-
-
-        // h1{
-        //   font-size: 40px;
-        //   // margin-top: 50px;
-        //   margin-bottom: 20px;
-        //   font-family: "Montserrat" "sans-serif";
-
-        // }
         .name{
-          font-size: 20px;
-          // transition: 2s all;
-          text-align: center;
-          // margin-top: 40px;
+          font-size: 50px;
           margin-bottom: 25px;
 
-          div{
-            font-size: 40px;
-            font-family: "CWDangamAsac-Bold";
-
-            transform-origin: bottom;
-            animation: jump 3s cubic-bezier(0.53, 0.03, 0.6, 0.99) infinite;
-            left: 22%;
-            @keyframes jump {
-              0% {
-                transform: translate(0, -10%);
-              }
-              50% {
-                transform: translate(0, 0);
-              }
-              100% {
-                transform: translate(0, -10%);
-              }
-            }
-          }
-          
-        }
-
-        // .spaced {
-        //   font-size: 50px;
-        //   letter-spacing: 3px;
-        //   transform: scale(1.8);
-        // }
-        .btn-box{
-          display: flex;
-          justify-content: center;
-          button {
-            font-size: 0.9rem;
-            // font-weight: 700;
-            color: white;
-            background-color: $main-color;
-            border-radius: 20px;
-            border: 2px solid  $main-color;
-            padding: 3px 10px;
-            margin: 0 10px;
-          }
-        }
-
-        p{
-          margin-top: 35px;
-          font-size: 20px;
-          font-family: "Montserrat" "sans-serif";
-        }
-
-        h3{
-          color: #3ea548;
-          margin-top: 20px;
-          font-family: "Montserrat";
-        }
-      }
-
-      .tree_all {
-        // background-color: green;
-        margin: 0 30px;
-        // height: 400px;
-        position : relative;
-        // transition: height 0.4s;
-        
-        .tree_text {
-          // background-color: yellow;
-          
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-
           .typewriter {
+            margin-left: 50%;
+            // left: -70%;
             font-family: "CWDangamAsac-Bold";
-            margin-top: 20px;
             color: $main-color;
-            font-size: clamp(1rem, 1.8vw, 3rem);
+            font-size: 45px;
             font-weight: bold;
-            width: 14.5ch;
+            // width: 7ch;
             white-space: nowrap;
             overflow: hidden;
             border-right: 4px solid #212121;
@@ -275,18 +158,63 @@ body{
               width: 0; 
             }
             100% { 
-              width:14ch; 
+              width:12ch; 
             }
           }
-
-
-
-        h2{
-          // font-family: "CWDangamAsac-Bold";
-          // margin-top: 30px;
-          // color: $main-color;
-          // margin: 100px;
         }
+
+        .btn-box{
+          
+          display: flex;
+          justify-content: flex-start;
+          button {
+            font-family: "Gothic A1";
+            font-weight: 600;
+            font-size: 0.9rem;
+            // font-weight: 700;
+            color: white;
+            background-color: $main-color;
+            border-radius: 20px;
+            border: 2px solid  $main-color;
+            padding: 3px 10px;
+            margin: 0 4px;
+          }
+        }
+
+        p{
+          font-family: "Gothic A1";
+          font-weight: 500;
+          margin-top: 45px;
+          font-size: 20px;
+          font-family: "Montserrat" "sans-serif";
+        }
+
+        h3{
+          color: #3ea548;
+          margin-top: 20px;
+          font-family: "Montserrat";
+        }
+      }
+
+      .tree_all {
+        // background-color: green;
+        margin: 0 30px;
+        // height: 400px;
+        position : relative;
+        // transition: height 0.4s;
+        
+        .tree_text {
+          // background-color: yellow;
+          margin-top: 40px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          h2{
+            font-family: "CWDangamAsac-Bold";
+            color: $main-color;
+            font-size: 30px;
+          }
 
         .more-btn{
           // bottom: 0;
@@ -320,21 +248,14 @@ body{
 
         
         .swiper{
-          margin-bottom: 5px;
+          margin-bottom: 50px;
           // background-color: blue;
-          margin-top:30px;
-          
-          // background-color: $main-color;
-          // position: absolute;
-          // width: 95%;
+          margin-top:50px;
           height: 230px;
           text-align: center;
           left: 50%;
           transform: translateX(-50%);
           justify-content: center;
-          // top: 0px;
-
-          
       
           .swiper-slide{
             height: 225px;
@@ -342,20 +263,15 @@ body{
             // margin-bottom: 10px;
             position: relative;
             overflow: hidden;
-            // width: 50px;
-            // height: 100000px;
             padding: 10px;
             // height:300px;
             border: 1px solid green;
-            // margin: 30px;
-            // background-color:white;
             border-radius: 20px;
 
             top: 5px;
             // background-color: red;
             opacity:1;
             transform: 0.2;
-            // height: 100%;
           
             img{         
               overflow: hidden;     
@@ -421,25 +337,3 @@ body{
 .swiper-button-next::after{
   font-size: 24px;
 }
-
-
-// footer {
-//   height: 150px;
-//   background-color: #3ea548;
-//   display: flex;
-//   align-items: center;
-//   .inner {
-//     display: flex;
-//     justify-content: flex-start;
-//     .footer-text-box {
-//       p:first-child {
-//         margin-bottom: 10px;
-//         font-size: 18px;
-//         font-weight: 600;
-//       }
-//       margin-left: 150px;
-//       color: #fff;
-//       line-height: 1.5;
-//     }
-//   }
-// }
