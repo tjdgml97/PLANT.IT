@@ -13,7 +13,6 @@ menuIcon.addEventListener("click", function () {
 // 클래스명: easy/hard, air/pet/big/deco, short/long
 
 // *** 식물 데이터
-// 이케아에서 "적당히 주기" -> short / 정확한 정보 찾아보기!
 // 이미지 파일 한글명 영어로 바꿀 예정
 const plantsStr = [
   "스파팁휠룸, SPATHIPHYLLUM, easy, short, air",
@@ -27,7 +26,6 @@ const plantsStr = [
   "헤테로파낙스 시넨시스, HETEROPANAX CHINENSIS, hard, short, big",
   "사미오쿨카스, ZAMIOCULCAS, easy, long, deco",
   "칵타세아에, CACTACEAE, easy, long, deco",
-
   "페페로미아, PEPEROMIA, easy, short, deco",
   "칼란쇼에, KALANCHOE, hard, long, deco",
   "휘아신투스, HYACINTHUS, hard, short, deco",
@@ -70,7 +68,9 @@ for (let i = 0; i < arr.length; i++) {
     )
   );
 }
-console.log(plants);
+
+console.log("식물별 객체 데이터", plants);
+
 // 1. div.plant 에 데이터 일괄 처리
 const divArr = document.querySelectorAll(".plant"); // html의 div 요소
 
@@ -86,7 +86,6 @@ for (let i = 0; i < plants.length; i++) {
   // div 의 이미지
   // 이미지 파일명을 영어로 수정 시, ${plants[i].engName} 으로 바꾸기
   const img = divArr[i].querySelector("img");
-
   img.setAttribute("src", `./image/${plants[i].korName}.jpg`);
 
   // 클래스명 추가 - easy/hard, short/long, air, pet, big, deco
@@ -103,30 +102,57 @@ for (let i = 0; i < plants.length; i++) {
   }
 }
 
-console.log(divArr); ////////////////////////////////////////////////////////////// 여기까지 Ok
+console.log("식물별 div", divArr);
 
 // 2. 버튼 click 에 따라 클래스명(clicked) 부여
-// 버튼 hover, click 되면 디자인 바뀌게
+// 버튼 hover, click 되면 버튼 디자인 바뀌게
+// 각 버튼마다 해당되는 식물의 속성값 저장
+
+// 체크된 속성값 배열
+// easy, hard, short, long, air, pet, big, deco 순
+let selected = ["", "", "", "", "", "", "", ""];
+let selectedStr = ""; // 체크된 것만 문자열로 (클래스명 판단 기준)
+
+// 검색된 식물들
+let result = document.querySelectorAll(".plant");
 
 // 검색된 식물 갯수
 const plantsLength = document.querySelector(".arrLength");
 plantsLength.textContent = divArr.length;
 
-// reset 버튼
+// // 2-1) reset 버튼
 const resetBtn = document.querySelector(".reset");
 
 resetBtn.addEventListener("click", function () {
+  // 모든 버튼의 clicked 클래스명 삭제
   const clickedBtnAll = document.querySelectorAll(".clicked");
 
   clickedBtnAll.forEach(function (el) {
     el.classList.remove("clicked");
-    // el.setAttribute("display", "block"); ///////////////////////////////////// test 중 //////
   });
 
-  // localStorage 지우기 기능 추가할 것!
+  // 모든 식물 다 보이게
+  divArr.forEach(function (el) {
+    el.style.display = `block`;
+  });
+
+  // 선택된 속성값 reset
+  selected = selected.map((item) => {
+    return (item = "");
+  });
+
+  // 모든 div.plant 다시 받아오기
+  result = document.querySelectorAll(".plant");
+
+  // 식물 갯수 reset
+  plantsLength.textContent = result.length;
+
+  // localStorage 지우기
+  window.localStorage.clear();
 });
 
-// 중복 가능한 설정값 - .air, .pet, .big, .deco
+// // 2-2) 중복 가능한 설정값 - .air, .pet, .big, .deco
+// 선택된 속성값을 selected 에 반영
 const airBtn = document.querySelector(".air");
 const petBtn = document.querySelector(".pet");
 const bigBtn = document.querySelector(".big");
@@ -136,34 +162,45 @@ airBtn.addEventListener("click", function () {
   if (airBtn.classList.contains("clicked")) {
     // 이미 클릭된 상태이면, 클릭 해제(clicked 삭제)
     airBtn.classList.remove("clicked");
+    selected[4] = "";
   } else {
     // 클릭되지 않은 상태이면, 클릭(clicked 추가)
     airBtn.classList.add("clicked");
-  }
-});
-petBtn.addEventListener("click", function () {
-  if (petBtn.classList.contains("clicked")) {
-    petBtn.classList.remove("clicked");
-  } else {
-    petBtn.classList.add("clicked");
-  }
-});
-bigBtn.addEventListener("click", function () {
-  if (bigBtn.classList.contains("clicked")) {
-    bigBtn.classList.remove("clicked");
-  } else {
-    bigBtn.classList.add("clicked");
-  }
-});
-decoBtn.addEventListener("click", function () {
-  if (decoBtn.classList.contains("clicked")) {
-    decoBtn.classList.remove("clicked");
-  } else {
-    decoBtn.classList.add("clicked");
+    selected[4] = "air";
   }
 });
 
-// 중복 불가한 설정값 - .easy/.hard, .short/.long
+petBtn.addEventListener("click", function () {
+  if (petBtn.classList.contains("clicked")) {
+    petBtn.classList.remove("clicked");
+    selected[5] = "";
+  } else {
+    petBtn.classList.add("clicked");
+    selected[5] = "pet";
+  }
+});
+
+bigBtn.addEventListener("click", function () {
+  if (bigBtn.classList.contains("clicked")) {
+    bigBtn.classList.remove("clicked");
+    selected[6] = "";
+  } else {
+    bigBtn.classList.add("clicked");
+    selected[6] = "big";
+  }
+});
+
+decoBtn.addEventListener("click", function () {
+  if (decoBtn.classList.contains("clicked")) {
+    decoBtn.classList.remove("clicked");
+    selected[7] = "";
+  } else {
+    decoBtn.classList.add("clicked");
+    selected[7] = "deco";
+  }
+});
+
+// // 2-3) 중복 불가한 설정값 - .easy/.hard, .short/.long
 const easyBtn = document.querySelector(".easy");
 const hardBtn = document.querySelector(".hard");
 const shortBtn = document.querySelector(".short");
@@ -254,79 +291,91 @@ if (saveBtncate[3] === "deco") {
   }
 }
 
+// 선택된 속성값을 selected 에 반영
 easyBtn.addEventListener("click", function () {
   // 반대되는 설정값은 무조건 삭제
   hardBtn.classList.remove("clicked");
+  selected[1] = ""; // 반대되는 속성값은 selected 에서 없앰
 
   if (easyBtn.classList.contains("clicked")) {
     easyBtn.classList.remove("clicked");
+    selected[0] = "";
   } else {
     easyBtn.classList.add("clicked");
+    selected[0] = "easy";
   }
 });
 hardBtn.addEventListener("click", function () {
   easyBtn.classList.remove("clicked");
+  selected[0] = "";
 
   if (hardBtn.classList.contains("clicked")) {
     hardBtn.classList.remove("clicked");
+    selected[1] = "";
   } else {
     hardBtn.classList.add("clicked");
+    selected[1] = "hard";
   }
 });
 
 shortBtn.addEventListener("click", function () {
   longBtn.classList.remove("clicked");
+  selected[3] = "";
 
   if (shortBtn.classList.contains("clicked")) {
     shortBtn.classList.remove("clicked");
+    selected[2] = "";
   } else {
     shortBtn.classList.add("clicked");
+    selected[2] = "short";
   }
 });
 longBtn.addEventListener("click", function () {
   shortBtn.classList.remove("clicked");
+  selected[2] = "";
 
   if (longBtn.classList.contains("clicked")) {
     longBtn.classList.remove("clicked");
+    selected[3] = "";
   } else {
     longBtn.classList.add("clicked");
+    selected[3] = "long";
   }
 });
 
-// 3. 결과 출력
-const resultArr = [];
+// 3. 검색 결과
+// 화면 전체에서 클릭이 발생할 때마다 처리
+window.addEventListener("click", function (e) {
+  // 클릭된 요소가 button 일 때만
+  if (e.target.tagName === "BUTTON") {
+    // 전체 식물 안 보이게
+    divArr.forEach(function (el) {
+      el.style.display = `none`;
+    });
 
-// // clicked 가 없는 것을 안 보이게
-// divArr.forEach(function (divEl) {
-//   if (!divEl.classList.contains("clicked")) {
-//     divEl.setAttribute("display", "none");
-//   } else {
-//     divEl.setAttribute("display", "block");
-//   }
-// });
+    // 선택된 속성값들 문자열로 만들기
+    selectedStr = ".plant";
 
-// const t = document.querySelector(".plant");
-// t.setAttribute("display", "none");
+    for (let trait of selected) {
+      if (trait !== "") {
+        selectedStr += "." + trait;
+      }
+    }
 
-// 3. 임시 - 선택된 태그에 따라 결과 배열 생성
-// console.log(divArr);
+    // 검색결과 식물 보이게
+    result = this.document.querySelectorAll(selectedStr);
 
-// for문
-// const resultArr = [];
-// for (let el of divArr) {
-//   if (el.classList.contains("easy") && el.classList.contains("air")) {
-//     resultArr.push(el);
-//   }
-// }
+    result.forEach(function (el) {
+      el.style.display = `block`;
+    });
 
-// filter 함수
-// const resultArr = [...divArr].filter((item) => {
-//   return item.classList.contains("easy");
-// });
+    // 결과 갯수 업데이트
+    plantsLength.textContent = result.length;
 
-// console.log(resultArr);
-// console.log(resultArr.children);
-// console.log(resultArr.length); // 결과 갯수
+    console.log("-- 최종 속성값 문자열로 -------", selectedStr);
+    console.log("결과 식물들", result);
+  }
+});
 
 // SWIPER PROMOTION
 const swiperPromotion = new Swiper(".categoryImgs .swiper", {
