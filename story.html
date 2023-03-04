@@ -49,17 +49,16 @@
     </asid> -->
 
     <!-- SECTION -->
-    <section class="section--slogan">
+    <section class="section section--slogan">
       <!-- 반응형 하는 중 -->
       <div class="inner">
-        <p class="sloganTitle">
-          <span data-text="Let's Plant it">Let's Plant it</span><br />
-          <span data-text="Save Planet">Save Planet</span>
-          <!-- 이전 코드 -->
-          <!-- Let's <span>Plant it</span>!<br />
-          Save <span>Planet</span>! -->
-        </p>
-        <p class="sloganContent">Plant 하면, 우리의 Planet이 살아난다!</p>
+        <div class="sloganBox">
+          <p class="sloganTitle">
+            <span data-text="Let's Plant it">Let's Plant it</span><br />
+            <span data-text="Save Planet">Save Planet</span>
+          </p>
+          <p class="sloganContent">Plant하면, 우리의 Planet이 살아난다!</p>
+        </div>
 
         <!-- 화살표 버튼 -->
         <div id="sloganSectBtn" class="arrow">
@@ -68,18 +67,20 @@
       </div>
     </section>
 
-    <section class="section--logo">
+    <section class="section section--logo">
       <div class="inner">
-        <img src="./image/logo.svg" alt="" />
-        <p class="logoContent">
-          <!-- 사전 느낌 -->
-          Plant.it [플랜-팃]<br />[동] 그것을 심다 (plant it)<br />[명] 행성
-          (planet)
-        </p>
-        <p>
-          1) 식물 심기로 우리의 녹색 행성, 지구를 살리자!<br />2) 식물 심기로
-          나만의 녹색 세계(공간)을 만들자!
-        </p>
+        <div class="contentBox">
+          <div class="logoBox">
+            <img src="./image/logo.svg" alt="" /><span>: 플랜-팃</span>
+          </div>
+          <div class="logoContentBox">
+            <p>plant it <span>그것을 심다</span> + planet <span>행성</span></p>
+            <p>
+              식물 심기로 나만의 녹색 세계(공간)을 만들고, <br />우리의 녹색
+              행성(:지구)를 살리자!
+            </p>
+          </div>
+        </div>
 
         <!-- 화살표 버튼 -->
         <div id="logoSectBtn" class="arrow">
@@ -88,7 +89,7 @@
       </div>
     </section>
 
-    <section class="section--merit">
+    <section class="section section--merit">
       <div class="inner">
         <div class="merit-img-box">
           <div class="merit--1">
@@ -105,7 +106,7 @@
           </div>
           <div class="merit--3">
             <div class="img-box">
-              <img src="./image/lowco2_3.jpeg" alt="저탄소" />
+              <img src="./image/lowco2_1.jpeg" alt="저탄소" />
               <p>탄소중립효과</p>
             </div>
           </div>
@@ -120,8 +121,17 @@
           <div class="chart1"></div>
           <div class="chart2"></div>
           <div class="chart3"></div>
+          <div class="chart4"></div>
+          <div class="chart5"></div>
+          <div class="chart6"></div>
         </div>
-        <div class="donut" data-percent="85.4"></div>
+        <div class="donut hide" data-percent="61.8"></div>
+        <div class="donut1 hide" data-percent="53.9"></div>
+        <div class="progress-box hide">
+          <div class="progress-bar">
+            <div class="progress"></div>
+          </div>
+        </div>
 
         <!-- 화살표 버튼 -->
         <div id="meritSectBtn" class="arrow">
@@ -130,7 +140,7 @@
       </div>
     </section>
 
-    <section class="section--reason">
+    <section class="section section--reason">
       <div class="inner">
         근거들
 

@@ -326,25 +326,46 @@ $arrow-color: #000;
           height: 70%;
           background-color: orange;
           bottom: 0;
-          left: 45%;
+          left: 30%;
         }
         .chart3 {
           width: 5%;
           height: 85%;
           background-color: tomato;
           bottom: 0;
-          left: 72%;
+          left: 40%;
+        }
+        .chart4 {
+          width: 5%;
+          height: 40%;
+          background-color: red;
+          bottom: 0;
+          left: 50%;
+        }
+        .chart5 {
+          width: 5%;
+          height: 40%;
+          background-color: red;
+          bottom: 0;
+          left: 60%;
+        }
+        .chart6 {
+          width: 5%;
+          height: 40%;
+          background-color: red;
+          bottom: 0;
+          left: 70%;
         }
       }
       .donut {
-        width: 40%;
-        height: 50%;
-        margin: 0 auto;
+        width: 25%;
+        height: 33%;
+        margin: 0 10px;
         border-radius: 50%;
         position: relative;
         text-align: center;
         transition: background 0.3s ease-in-out;
-        background: conic-gradient(#3f8bc9 0% 72%, #f2f2f2 72% 100%);
+        background: conic-gradient(#0bac3b 0% 72%, #f2f2f2 72% 100%);
 
         &:before {
           color: #fff;
@@ -362,6 +383,72 @@ $arrow-color: #000;
           font-size: 1.1vw;
           font-size: 2vw;
           padding: calc(35% - 1.3vw) 0;
+        }
+        &::after {
+          content: "식물에게 생기는 애정";
+          position: absolute;
+          font-size: 20px;
+          font-weight: 700;
+          color: black;
+          left: 17%;
+          top: 0;
+        }
+      }
+      .donut1 {
+        width: 25%;
+        height: 33%;
+        margin: 0 10px;
+        border-radius: 50%;
+        position: relative;
+        text-align: center;
+        transition: background 0.3s ease-in-out;
+        background: conic-gradient(#0bac3b 0% 72%, #f2f2f2 72% 100%);
+
+        &:before {
+          color: #fff;
+          width: 70%;
+          padding: calc(35% - 0.64vw) 0;
+          background: #264057;
+          border-radius: 50%;
+          position: absolute;
+          left: 15%;
+          top: 15%;
+          display: block;
+          content: attr(data-percent) "%";
+          transform: skew(-0.03deg);
+          margin: auto;
+          font-size: 1.1vw;
+          font-size: 2vw;
+          padding: calc(35% - 1.3vw) 0;
+        }
+      }
+
+      .progress-box {
+        position: relative;
+        width: 50%;
+        height: 150px;
+        background-color: #3a4b71;
+        border-radius: 10px;
+        .progress-bar {
+          position: absolute;
+          left: 50%;
+          top: 60%;
+          transform: translate(-50%);
+          width: 80%;
+          height: 30px;
+          // background-color: #dedede;
+          background-color: white;
+          font-weight: 600;
+          font-size: 0.8rem;
+
+          .progress {
+            width: 100%; // 나타내고자 하는 퍼센트 값을 넣으면 됩니다.
+            height: 30px;
+            padding: 0;
+            text-align: center;
+            background-color: #4f98ff;
+            color: #111;
+          }
         }
       }
 
