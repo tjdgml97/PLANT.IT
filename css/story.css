@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200;300;400;500;600;700&display=swap");
 @font-face {
@@ -435,78 +436,155 @@ footer .inner .footer-text-box p:first-child {
   left: 7%;
   color: #fff;
 }
-.section--merit .inner .inner {
-  height: 100vh;
+.section--merit .inner .reason-box {
+  position: relative;
+  width: 65%;
+  height: 40%;
+  transition: 0.5s;
+  border-bottom: 1px solid black;
 }
-.section--merit .inner .inner .arrow {
+.section--merit .inner .reason-box > div {
+  position: absolute;
+}
+.section--merit .inner .reason-box .chart1 {
+  width: 5%;
+  height: 40%;
+  background-color: red;
+  bottom: 0;
+  left: 20%;
+}
+.section--merit .inner .reason-box .chart2 {
+  width: 5%;
+  height: 70%;
+  background-color: orange;
+  bottom: 0;
+  left: 30%;
+}
+.section--merit .inner .reason-box .chart3 {
+  width: 5%;
+  height: 85%;
+  background-color: tomato;
+  bottom: 0;
+  left: 40%;
+}
+.section--merit .inner .reason-box .chart4 {
+  width: 5%;
+  height: 40%;
+  background-color: red;
+  bottom: 0;
+  left: 50%;
+}
+.section--merit .inner .reason-box .chart5 {
+  width: 5%;
+  height: 40%;
+  background-color: red;
+  bottom: 0;
+  left: 60%;
+}
+.section--merit .inner .reason-box .chart6 {
+  width: 5%;
+  height: 40%;
+  background-color: red;
+  bottom: 0;
+  left: 70%;
+}
+.section--merit .inner .donut {
+  width: 25%;
+  height: 33%;
+  margin: 0 10px;
+  border-radius: 50%;
+  position: relative;
+  text-align: center;
+  transition: background 0.3s ease-in-out;
+  background: conic-gradient(#0bac3b 0% 72%, #f2f2f2 72% 100%);
+}
+.section--merit .inner .donut:before {
+  color: #fff;
+  width: 70%;
+  padding: calc(35% - 0.64vw) 0;
+  background: #264057;
+  border-radius: 50%;
+  position: absolute;
+  left: 15%;
+  top: 15%;
+  display: block;
+  content: attr(data-percent) "%";
+  transform: skew(-0.03deg);
+  margin: auto;
+  font-size: 1.1vw;
+  font-size: 2vw;
+  padding: calc(35% - 1.3vw) 0;
+}
+.section--merit .inner .donut::after {
+  content: "식물에게 생기는 애정";
+  position: absolute;
+  font-size: 20px;
+  font-weight: 700;
+  color: black;
+  left: 17%;
+  top: 0;
+}
+.section--merit .inner .donut1 {
+  width: 25%;
+  height: 33%;
+  margin: 0 10px;
+  border-radius: 50%;
+  position: relative;
+  text-align: center;
+  transition: background 0.3s ease-in-out;
+  background: conic-gradient(#0bac3b 0% 72%, #f2f2f2 72% 100%);
+}
+.section--merit .inner .donut1:before {
+  color: #fff;
+  width: 70%;
+  padding: calc(35% - 0.64vw) 0;
+  background: #264057;
+  border-radius: 50%;
+  position: absolute;
+  left: 15%;
+  top: 15%;
+  display: block;
+  content: attr(data-percent) "%";
+  transform: skew(-0.03deg);
+  margin: auto;
+  font-size: 1.1vw;
+  font-size: 2vw;
+  padding: calc(35% - 1.3vw) 0;
+}
+.section--merit .inner .progress-box {
+  position: relative;
+  width: 50%;
+  height: 150px;
+  background-color: #3a4b71;
+  border-radius: 10px;
+}
+.section--merit .inner .progress-box .progress-bar {
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%);
+  width: 80%;
+  height: 30px;
+  background-color: white;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+.section--merit .inner .progress-box .progress-bar .progress {
+  width: 100%;
+  height: 30px;
+  padding: 0;
+  text-align: center;
+  background-color: #4f98ff;
+  color: #111;
+}
+.section--merit .inner .arrow {
   position: absolute;
   left: 50%;
 }
-.section--merit .inner .inner .arrow .arrow-bottom::before {
+.section--merit .inner .arrow .arrow-bottom::before {
   border: 4px solid #000;
   border-right: 0;
   border-bottom: 0;
-}
-.section--merit .inner .inner .reason-box {
-  position: absolute;
-  width: 65%;
-  height: 60%;
-  left: 40%;
-  transition: 0.5s;
-}
-.section--merit .inner .inner .reason-box:hover {
-  transform: scale(1.05);
-}
-.section--merit .inner .inner .reason-box .img-box img {
-  width: 280px;
-  height: 400px;
-}
-.section--merit .inner .inner .merit--3 {
-  width: 25%;
-  margin: 0 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
-  transition: 0.5s;
-}
-.section--merit .inner .inner .merit--3:hover {
-  transform: scale(1.05);
-}
-.section--merit .inner .inner .merit--3 .img-box img {
-  width: 280px;
-  height: 400px;
-}
-.section--merit .inner .inner .merit--4 {
-  width: 25%;
-  margin: 0 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
-  transition: 0.5s;
-}
-.section--merit .inner .inner .merit--4:hover {
-  transform: scale(1.05);
-}
-.section--merit .inner .inner .merit--4 .img-box img {
-  width: 280px;
-  height: 400px;
-}
-.section--merit .inner .inner {
-  height: 100vh;
-}
-.section--merit .inner .inner .arrow {
-  position: absolute;
-  left: 50%;
-}
-.section--merit .inner .inner .arrow .arrow-bottom::before {
-  border: 4px solid #000;
-  border-right: 0;
-  border-bottom: 0;
-}
-.section--merit .inner .inner .reason-box {
-  position: absolute;
-  width: 65%;
-  height: 60%;
-  left: 40%;
-  transition: 0.5s;
 }
 .section--reason .inner {
   height: 100vh;
@@ -520,43 +598,31 @@ footer .inner .footer-text-box p:first-child {
   border-right: 0;
   border-bottom: 0;
 }
-.section--reason--reason .inner {
+.section--mine .inner {
   height: 100vh;
 }
-.section--reason--reason .inner .arrow {
+.section--mine .inner .arrow {
   position: absolute;
   left: 50%;
 }
-.section--reason--reason .inner .arrow .arrow-bottom::before {
+.section--mine .inner .arrow .arrow-bottom::before {
   border: 4px solid #000;
   border-right: 0;
   border-bottom: 0;
 }
-.section--reason--mine .inner {
+.section--interview .inner {
   height: 100vh;
 }
-.section--reason--mine .inner .arrow {
+.section--interview .inner .arrow {
   position: absolute;
   left: 50%;
 }
-.section--reason--mine .inner .arrow .arrow-bottom::before {
+.section--interview .inner .arrow .arrow-bottom::before {
   border: 4px solid #000;
   border-right: 0;
   border-bottom: 0;
 }
-.section--reason--interview .inner {
-  height: 100vh;
-}
-.section--reason--interview .inner .arrow {
-  position: absolute;
-  left: 50%;
-}
-.section--reason--interview .inner .arrow .arrow-bottom::before {
-  border: 4px solid #000;
-  border-right: 0;
-  border-bottom: 0;
-}
-.section--reason--campaign .inner {
+.section--campaign .inner {
   height: 100vh;
 }
 

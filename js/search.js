@@ -42,7 +42,7 @@ const arr = []; // 배열을 원소로 가진 배열
 for (let i = 0; i < plantsStr.length; i++) {
   arr.push(plantsStr[i].split(", "));
 }
-
+console.log(arr);
 // // 0-2) 객체 생성을 위한 생성자 함수
 function Plant(kor, eng, easy, short, types) {
   this.korName = kor;
