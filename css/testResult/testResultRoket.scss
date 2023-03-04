@@ -4,14 +4,13 @@
 //font
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
 
-
 // color
-$main-color :  #3ea548;
-$card-color : rgba(255, 194, 102, 0.582);
-$button-hover-color:  rgb(242, 114, 85);
-$button-color : rgb(255, 238, 0);
-$font-first : "Montserrat";
-$imagePath : "지구" ;
+$main-color: #3ea548;
+$card-color: rgba(255, 194, 102, 0.582);
+$button-hover-color: rgb(242, 114, 85);
+$button-color: rgb(255, 238, 0);
+$font-first: "Montserrat";
+$imagePath: "지구";
 
 @import url("https://fonts.googleapis.com/css2?family=Sen&display=swap");
 
@@ -20,15 +19,13 @@ div {
   line-height: 2.2rem;
 }
 
-
-// h1{ 
+// h1{
 //   font-family: $font-first;
 
 // }
-section{
-    font-family: $font-first;
+section {
+  font-family: $font-first;
 }
-
 
 /* Mobile */
 @media screen and (max-width: 767px) {
@@ -55,7 +52,7 @@ section{
   }
 }
 
-body{
+body {
   background-color: green;
   margin: 30px;
 }
@@ -63,160 +60,157 @@ body{
 .testResult {
   background-color: white;
   // background-color: $card-color;
-    display: flex;
+  display: flex;
 
-    //left - card 이미지 
-    .card_image{
-      // text-align: center;
-      width: 33%;
-      img{
-        transform-origin: bottom;
-        animation: dance_jump 3s ease-out infinite;
-        right: 0;
-        position: absolute;
-        // width: 400px;
-        left: 4%;
-        top:25%;
-        z-index: 2;
-        transform-origin: center bottom;
-        @keyframes dance_jump {
-          0% {
-            transform: none;
-          }
-          15% {
-            transform: rotate(-3deg);
-          }
-          30% {
-            transform: rotate(3deg);
-          }
-          45% {
-            transform: rotate(-3deg);
-          }
-          60% {
-            transform: translate3d(0, -5%, 0);
-          }
-          75% {
-            transform: translate3d(0, 1%, 0);
-          }
-          85% {
-            transform: translate3d(0, -3%, 0);
-          }
-          100% {
-            transform: none;
-          }
+  //left - card 이미지
+  .card_image {
+    // text-align: center;
+    width: 33%;
+    img {
+      transform-origin: bottom;
+      animation: dance_jump 3s ease-out infinite;
+      right: 0;
+      position: absolute;
+      // width: 400px;
+      left: 4%;
+      top: 25%;
+      z-index: 2;
+      transform-origin: center bottom;
+      @keyframes dance_jump {
+        0% {
+          transform: none;
+        }
+        15% {
+          transform: rotate(-3deg);
+        }
+        30% {
+          transform: rotate(3deg);
+        }
+        45% {
+          transform: rotate(-3deg);
+        }
+        60% {
+          transform: translate3d(0, -5%, 0);
+        }
+        75% {
+          transform: translate3d(0, 1%, 0);
+        }
+        85% {
+          transform: translate3d(0, -3%, 0);
+        }
+        100% {
+          transform: none;
         }
       }
     }
+  }
 
-    //오른쪽 설명 섹션
-    .instruct{
-      font-family: $font-first;
-      width: 67%;
+  //오른쪽 설명 섹션
+  .instruct {
+    font-family: $font-first;
+    width: 67%;
 
-
-      .text{
-        margin: 10px 30px 0 30px;
-        // height: 50%;
-        color:green;
-        .path-box{
-          display: flex;
-          justify-content: flex-end;
-          .span{
-
-          }
+    .text {
+      margin: 10px 30px 0 30px;
+      // height: 50%;
+      color: green;
+      .path-box {
+        display: flex;
+        justify-content: flex-end;
+        .span {
         }
-        .name{
-          font-size: 50px;
-          margin-bottom: 25px;
+      }
+      .name {
+        font-size: 50px;
+        margin-bottom: 25px;
 
-          .typewriter {
-            margin-left: 50%;
-            // left: -70%;
-            font-family: "CWDangamAsac-Bold";
-            color: $main-color;
-            font-size: 45px;
-            font-weight: bold;
-            // width: 7ch;
-            white-space: nowrap;
-            overflow: hidden;
-            border-right: 4px solid #212121;
-            animation: cursor 1s step-start infinite, 
-              text 3s steps(20) normal none;
+        .typewriter {
+          margin-left: 50%;
+          // left: -70%;
+          font-family: "CWDangamAsac-Bold";
+          color: $main-color;
+          font-size: 45px;
+          font-weight: bold;
+          // width: 7ch;
+          white-space: nowrap;
+          overflow: hidden;
+          border-right: 4px solid #212121;
+          animation: cursor 1s step-start infinite,
+            text 3s steps(20) normal none;
+        }
+
+        @keyframes cursor {
+          0% {
+            border-color: #212121;
           }
-          
-          @keyframes cursor {
-            0% { 
-              border-color: #212121; 
-            }
-            100%{
-              border-color:white;
-            }
-          }
-          
-          @keyframes text {
-            0% { 
-              width: 0; 
-            }
-            100% { 
-              width:12ch; 
-            }
+          100% {
+            border-color: white;
           }
         }
 
-        .btn-box{
-          
-          display: flex;
-          justify-content: flex-start;
-          button {
-            font-family: "Gothic A1";
-            font-weight: 600;
-            font-size: 0.9rem;
-            // font-weight: 700;
-            color: white;
-            background-color: $main-color;
-            border-radius: 20px;
-            border: 2px solid  $main-color;
-            padding: 3px 10px;
-            margin: 0 4px;
+        @keyframes text {
+          0% {
+            width: 0;
           }
-        }
-
-        p{
-          font-family: "Gothic A1";
-          font-weight: 500;
-          margin-top: 45px;
-          font-size: 20px;
-          font-family: "Montserrat" "sans-serif";
-        }
-
-        h3{
-          color: #3ea548;
-          margin-top: 20px;
-          font-family: "Montserrat";
+          100% {
+            width: 12ch;
+          }
         }
       }
 
-      .tree_all {
-        // background-color: green;
-        margin: 0 30px;
-        // height: 400px;
-        position : relative;
-        // transition: height 0.4s;
-        
-        .tree_text {
-          // background-color: yellow;
-          margin-top: 40px;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
+      .btn-box {
+        display: flex;
+        justify-content: flex-start;
+        button {
+          font-family: "Gothic A1";
+          font-weight: 600;
+          font-size: 0.9rem;
+          // font-weight: 700;
+          color: white;
+          background-color: $main-color;
+          border-radius: 20px;
+          border: 2px solid $main-color;
+          padding: 3px 10px;
+          margin: 0 4px;
+        }
+      }
 
-          h2{
-            font-family: "CWDangamAsac-Bold";
-            color: $main-color;
-            font-size: 30px;
-          }
+      p {
+        font-family: "Gothic A1";
+        font-weight: 500;
+        margin-top: 45px;
+        font-size: 20px;
+        font-family: "Montserrat" "sans-serif";
+      }
 
-        .more-btn{
+      h3 {
+        color: #3ea548;
+        margin-top: 20px;
+        font-family: "Montserrat";
+      }
+    }
+
+    .tree_all {
+      // background-color: green;
+      margin: 0 30px;
+      // height: 400px;
+      position: relative;
+      // transition: height 0.4s;
+
+      .tree_text {
+        // background-color: yellow;
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        h2 {
+          font-family: "CWDangamAsac-Bold";
+          color: $main-color;
+          font-size: 30px;
+        }
+
+        .more-btn {
           // bottom: 0;
           margin-top: 30px;
           position: absolute;
@@ -226,90 +220,79 @@ body{
           z-index: 99;
           background-color: white;
           color: $button-hover-color;
-      
+
           font-size: 0.9rem;
           font-weight: 700;
           border-radius: 20px;
           padding: 5px 20px;
-          border: 1px solid $button-hover-color; 
+          border: 1px solid $button-hover-color;
         }
-        .more-btn:hover{
+        .more-btn:hover {
           cursor: pointer;
           transition: 1s;
           border: 1px solid $card-color;
           color: $button-hover-color;
           background-color: $card-color;
         }
+      }
 
-          
-        }
+      .swiper {
+        margin-bottom: 50px;
+        // background-color: blue;
+        margin-top: 50px;
+        height: 230px;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+        justify-content: center;
 
+        .swiper-slide {
+          height: 225px;
+          // width: 90%;
+          // margin-bottom: 10px;
+          position: relative;
+          overflow: hidden;
+          padding: 10px;
+          // height:300px;
+          border: 1px solid green;
+          border-radius: 20px;
 
+          top: 5px;
+          // background-color: red;
+          opacity: 1;
+          transform: 0.2;
 
-        
-        .swiper{
-          margin-bottom: 50px;
-          // background-color: blue;
-          margin-top:50px;
-          height: 230px;
-          text-align: center;
-          left: 50%;
-          transform: translateX(-50%);
-          justify-content: center;
-      
-          .swiper-slide{
-            height: 225px;
-            // width: 90%;
-            // margin-bottom: 10px;
-            position: relative;
+          img {
             overflow: hidden;
-            padding: 10px;
-            // height:300px;
-            border: 1px solid green;
-            border-radius: 20px;
-
-            top: 5px;
-            // background-color: red;
-            opacity:1;
-            transform: 0.2;
-          
-            img{         
-              overflow: hidden;     
-              transform: scale(1.15);
-              opacity: 0.7;
-              // border: 2px solid $main-color;
-              background-color: black;
-              // box-shadow: 5px 5px 10px rgba(205, 205, 205, 0.852);
-              width: 110%;
-              height:100%;
-              ;
-            }
-            img:hover{
-              opacity: 1;
-              transform: scale(1.2);
-              transition: 0.7s;
-            }
-
+            transform: scale(1.15);
+            opacity: 0.7;
+            // border: 2px solid $main-color;
+            background-color: black;
+            // box-shadow: 5px 5px 10px rgba(205, 205, 205, 0.852);
+            width: 110%;
+            height: 100%;
+          }
+          img:hover {
+            opacity: 1;
+            transform: scale(1.2);
+            transition: 0.7s;
           }
         }
-       }
+      }
     }
+  }
 }
 
-
-
-
-
-.swiper-slide-active{
+.swiper-slide-active {
   opacity: 1;
 }
 
 .swiper-button-prev,
-.swiper-button-next{
-  
-  &::after, &::before {
+.swiper-button-next {
+  &::after,
+  &::before {
     color: black;
-  } 
+  }
   // position: absolute;
   // top:  190px;
   // cursor: pointer;
@@ -321,19 +304,18 @@ body{
   // z-index: 99;
 }
 
-.swiper-button-prev{
+.swiper-button-prev {
   // background-color: yellow;
   // left: 50%;
   // transform: translateX(-500px);
 }
 
-.swiper-button-next{
+.swiper-button-next {
   // right: 50%;
   // transform: translateX(500px);
 }
 
-
 .swiper-button-prev::after,
-.swiper-button-next::after{
+.swiper-button-next::after {
   font-size: 24px;
 }
