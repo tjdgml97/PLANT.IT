@@ -48,15 +48,7 @@ $arrow-color: #000;
 .move1 {
   transform: translate(0, 0) scale(1.15);
 }
-.move2 {
-  transform: translate(0, 0) scale(1.15);
-}
-.move3 {
-  transform: translate(0, 0) scale(1.15);
-}
-.move4 {
-  transform: translate(0, 0) scale(1.15);
-}
+
 .section {
   position: relative;
   overflow: hidden;
@@ -304,63 +296,11 @@ $arrow-color: #000;
         }
       }
 
-      .reason-box {
-        position: relative;
-        width: 65%;
-        height: 40%;
-        transition: 0.5s;
-        border-bottom: 1px solid black;
-
-        > div {
-          position: absolute;
-        }
-        .chart1 {
-          width: 5%;
-          height: 40%;
-          background-color: red;
-          bottom: 0;
-          left: 20%;
-        }
-        .chart2 {
-          width: 5%;
-          height: 70%;
-          background-color: orange;
-          bottom: 0;
-          left: 30%;
-        }
-        .chart3 {
-          width: 5%;
-          height: 85%;
-          background-color: tomato;
-          bottom: 0;
-          left: 40%;
-        }
-        .chart4 {
-          width: 5%;
-          height: 40%;
-          background-color: red;
-          bottom: 0;
-          left: 50%;
-        }
-        .chart5 {
-          width: 5%;
-          height: 40%;
-          background-color: red;
-          bottom: 0;
-          left: 60%;
-        }
-        .chart6 {
-          width: 5%;
-          height: 40%;
-          background-color: red;
-          bottom: 0;
-          left: 70%;
-        }
-      }
+      // 마음안정 파트 근거
       .donut {
         width: 25%;
         height: 33%;
-        margin: 0 10px;
+        margin: 0 20px;
         border-radius: 50%;
         position: relative;
         text-align: center;
@@ -385,13 +325,14 @@ $arrow-color: #000;
           padding: calc(35% - 1.3vw) 0;
         }
         &::after {
-          content: "식물에게 생기는 애정";
+          content: "1인 가구가 증가하면서 반려식물을 키우는 사람들이 증가할 것이다.";
+          font-family: "Montserrat";
           position: absolute;
-          font-size: 20px;
+          font-size: 18px;
           font-weight: 700;
-          color: black;
-          left: 17%;
-          top: 0;
+          color: rgb(15, 99, 9);
+          left: 3%;
+          bottom: -30%;
         }
       }
       .donut1 {
@@ -421,54 +362,350 @@ $arrow-color: #000;
           font-size: 2vw;
           padding: calc(35% - 1.3vw) 0;
         }
+        &::after {
+          content: "식물에게도 반려동물만큼의 애정이 생길 수 있다.";
+          font-family: "Montserrat";
+          position: absolute;
+          font-size: 18px;
+          font-weight: 700;
+          color: rgb(15, 99, 9);
+          left: 3%;
+          bottom: -30%;
+        }
       }
 
+      //미세먼지 제거 파트 근거
       .progress-box {
         position: relative;
         width: 50%;
-        height: 150px;
-        background-color: #3a4b71;
+        height: 400px;
+        background-color: white;
         border-radius: 10px;
-        .progress-bar {
-          position: absolute;
-          left: 50%;
-          top: 60%;
-          transform: translate(-50%);
-          width: 80%;
-          height: 30px;
-          // background-color: #dedede;
-          background-color: white;
-          font-weight: 600;
-          font-size: 0.8rem;
 
-          .progress {
-            width: 100%; // 나타내고자 하는 퍼센트 값을 넣으면 됩니다.
+        .progress-box1 {
+          margin-bottom: 20px;
+          span {
+            font-size: 16px;
+            font-weight: 900;
+            color: #000;
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: "Montserrat";
+          }
+          .progress-bar1 {
+            position: absolute;
+            left: 50%;
+            top: 20%;
+            transform: translate(-50%);
+            width: 80%;
             height: 30px;
-            padding: 0;
-            text-align: center;
-            background-color: #4f98ff;
-            color: #111;
+            // background-color: #dedede;
+            background-color: white;
+            font-weight: 600;
+            font-size: 0.8rem;
+
+            .progress1 {
+              width: 100%; // 나타내고자 하는 퍼센트 값을 넣으면 됩니다.
+              height: 30px;
+              padding: 0;
+              text-align: center;
+              background-color: red;
+              color: #111;
+
+              &::after {
+                content: "70.3%";
+                font-family: "Montserrat";
+                font-size: 16px;
+                font-weight: 900;
+                color: #000;
+                position: absolute;
+                right: 0;
+              }
+            }
+          }
+        }
+        .gradening {
+          .progress-box2 {
+            span {
+              font-size: 16px;
+              font-weight: 900;
+              color: #000;
+              position: absolute;
+              top: 40%;
+              left: 50%;
+              transform: translateX(-50%);
+              font-family: "Montserrat";
+            }
+            .progress-bar2 {
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%);
+              width: 80%;
+              height: 30px;
+              // background-color: #dedede;
+              background-color: white;
+              font-weight: 600;
+              font-size: 0.8rem;
+
+              .progress2 {
+                width: 100%; // 나타내고자 하는 퍼센트 값을 넣으면 됩니다.
+                height: 30px;
+                padding: 0;
+                text-align: center;
+                background-color: green;
+                color: #111;
+
+                &::after {
+                  content: "58.3%";
+                  font-family: "Montserrat";
+                  font-size: 16px;
+                  font-weight: 900;
+                  color: #000;
+                  position: absolute;
+                  right: 0;
+                }
+              }
+            }
+          }
+          .progress-box3 {
+            span {
+              font-size: 16px;
+              font-weight: 900;
+              color: #000;
+              position: absolute;
+              top: 70%;
+              left: 50%;
+              transform: translateX(-50%);
+              font-family: "Montserrat";
+            }
+            .progress-bar3 {
+              position: absolute;
+              left: 50%;
+              top: 80%;
+              transform: translate(-50%);
+              width: 80%;
+              height: 30px;
+              // background-color: #dedede;
+              background-color: white;
+              font-weight: 600;
+              font-size: 0.8rem;
+
+              .progress3 {
+                width: 100%; // 나타내고자 하는 퍼센트 값을 넣으면 됩니다.
+                height: 30px;
+                padding: 0;
+                text-align: center;
+                background-color: #5ecaeb;
+                color: #111;
+
+                &::after {
+                  content: "38.4%";
+                  font-family: "Montserrat";
+                  font-size: 16px;
+                  font-weight: 900;
+                  color: #000;
+                  position: absolute;
+                  right: 0;
+                }
+              }
+            }
           }
         }
       }
 
-      .arrow {
-        position: absolute;
-        left: 50%;
+      // 인테리어 파트 근거
+      .progress-box-int {
+        position: relative;
+        width: 50%;
+        height: 400px;
+        background-color: white;
+        border-radius: 10px;
+        > span {
+          font-size: 24px;
+          font-weight: 700;
+          font-family: "Montserrat";
+        }
 
-        .arrow-bottom::before {
-          border: 4px solid $arrow-color;
-          border-right: 0;
-          border-bottom: 0;
+        .progress-box-int1 {
+          .progress-bar-int1 {
+            position: absolute;
+            left: 50%;
+            top: 20%;
+            transform: translate(-50%);
+            width: 80%;
+            height: 30px;
+            // background-color: #dedede;
+            background-color: white;
+            font-weight: 600;
+            font-size: 0.8rem;
+            &::before {
+              content: "20대";
+              font-family: "Montserrat";
+              font-size: 16px;
+              font-weight: 900;
+              color: #000;
+              position: absolute;
+              left: -12%;
+            }
+
+            .progress-int1 {
+              width: 100%; // 나타내고자 하는 퍼센트 값을 넣으면 됩니다.
+              height: 30px;
+              padding: 0;
+              text-align: center;
+              background-color: green;
+              color: #111;
+
+              &::after {
+                content: "70%";
+                font-family: "Montserrat";
+                font-size: 16px;
+                font-weight: 900;
+                color: #000;
+                position: absolute;
+                right: 10%;
+              }
+            }
+          }
+        }
+        .progress-box-int2 {
+          .progress-bar-int2 {
+            position: absolute;
+            left: 50%;
+            top: 40%;
+            transform: translate(-50%);
+            width: 80%;
+            height: 30px;
+            // background-color: #dedede;
+            background-color: white;
+            font-weight: 600;
+            font-size: 0.8rem;
+            &::before {
+              content: "30대";
+              font-family: "Montserrat";
+              font-size: 16px;
+              font-weight: 900;
+              color: #000;
+              position: absolute;
+              left: -12%;
+            }
+
+            .progress-int2 {
+              width: 100%; // 나타내고자 하는 퍼센트 값을 넣으면 됩니다.
+              height: 30px;
+              padding: 0;
+              text-align: center;
+              background-color: green;
+              color: #111;
+
+              &::after {
+                content: "60%";
+                font-family: "Montserrat";
+                font-size: 16px;
+                font-weight: 900;
+                color: #000;
+                position: absolute;
+                right: 10%;
+              }
+            }
+          }
+        }
+        .progress-box-int3 {
+          .progress-bar-int3 {
+            position: absolute;
+            left: 50%;
+            top: 60%;
+            transform: translate(-50%);
+            width: 80%;
+            height: 30px;
+            // background-color: #dedede;
+            background-color: white;
+            font-weight: 600;
+            font-size: 0.8rem;
+            &::before {
+              content: "40대";
+              font-family: "Montserrat";
+              font-size: 16px;
+              font-weight: 900;
+              color: #000;
+              position: absolute;
+              left: -12%;
+            }
+
+            .progress-int3 {
+              width: 100%; // 나타내고자 하는 퍼센트 값을 넣으면 됩니다.
+              height: 30px;
+              padding: 0;
+              text-align: center;
+              background-color: green;
+              color: #111;
+
+              &::after {
+                content: "75%";
+                font-family: "Montserrat";
+                font-size: 16px;
+                font-weight: 900;
+                color: #000;
+                position: absolute;
+                right: 10%;
+              }
+            }
+          }
+        }
+        .progress-box-int4 {
+          .progress-bar-int4 {
+            position: absolute;
+            left: 50%;
+            top: 80%;
+            transform: translate(-50%);
+            width: 80%;
+            height: 30px;
+            // background-color: #dedede;
+            background-color: white;
+            font-weight: 600;
+            font-size: 0.8rem;
+            &::before {
+              content: "50대";
+              font-family: "Montserrat";
+              font-size: 16px;
+              font-weight: 900;
+              color: #000;
+              position: absolute;
+              left: -12%;
+            }
+
+            .progress-int4 {
+              width: 100%; // 나타내고자 하는 퍼센트 값을 넣으면 됩니다.
+              height: 30px;
+              padding: 0;
+              text-align: center;
+              background-color: green;
+              color: #111;
+
+              &::after {
+                content: "77%";
+                font-family: "Montserrat";
+                font-size: 16px;
+                font-weight: 900;
+                color: #000;
+                position: absolute;
+                right: 10%;
+              }
+            }
+          }
         }
       }
-    }
-  }
-
-  &--reason {
-    .inner {
-      height: 100vh;
-      // width: 100%;
+      .lowco2middle {
+        position: absolute;
+        left: 40%;
+        > img {
+          width: 100%;
+          height: 100%;
+        }
+      }
 
       .arrow {
         position: absolute;

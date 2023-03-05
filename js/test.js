@@ -124,10 +124,10 @@ const hardQuestion = document.querySelector(
   ".question1 > .answer-box > .second-answer"
 );
 const shortQuestion = document.querySelector(
-  ".question3 > .answer-box > .first-answer"
+  ".question3 > .answer-box > .second-answer"
 );
 const longQuestion = document.querySelector(
-  ".question3 > .answer-box > .second-answer"
+  ".question3 > .answer-box > .first-answer"
 );
 const saveBtnArr = ["easyBtn", "hardBtn", "shortBtn", "longBtn"];
 const saveBtnName = localStorage.getItem(saveBtnArr);
@@ -229,9 +229,9 @@ function btnShort() {
 
   if (localStorage.getItem("shortBtn")) {
     if (localStorage.getItem("easyBtn")) {
-      testBtna.href = `./search.html`;
+      testBtna.href = `./result.html`;
     } else if (localStorage.getItem("hardBtn")) {
-      testBtna.href = `./search.html`;
+      testBtna.href = `./result.html`;
     }
   }
   if (shortQuestion.classList.contains("click")) {
@@ -253,9 +253,9 @@ function btnLong() {
   shortQuestion.classList.remove("click");
   if (localStorage.getItem("longBtn")) {
     if (localStorage.getItem("easyBtn")) {
-      testBtna.href = `./search.html`;
+      testBtna.href = `./result.html`;
     } else if (localStorage.getItem("hardBtn")) {
-      testBtna.href = `./search.html`;
+      testBtna.href = `./result.html`;
     }
   }
   if (longQuestion.classList.contains("click")) {
