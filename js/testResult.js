@@ -63,7 +63,7 @@ const resultArr = [
     svg: "satellite",
     color: "#8fd623",
     type: ["long", "hard"],
-    recomend: ["칼란쇼에", "칼란쇼에", "칼란쇼에", "칼란쇼에"],
+    recomend: ["칼란쇼에", "t안투리움", "t클루시아", "t칼란쇼에"],
   },
   {
     title: "난 이미 초록세상, 지구",
