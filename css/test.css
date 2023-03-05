@@ -806,8 +806,8 @@ header {
     opacity: 1;
   }
   .test .inner .category .promotion .swiper .swiper-wrapper .swiper-slide img {
-    width: 400px;
-    height: 400px;
+    width: 360px;
+    height: 360px;
   }
   .test .inner .question-mainbox .question-box {
     display: flex;
@@ -835,9 +835,6 @@ header {
   }
   .test .inner .question-mainbox .question1 {
     height: 230px;
-  }
-  .test .inner .btn-box {
-    display: block;
   }
 }
 /* PC */
