@@ -58,18 +58,19 @@ const resultArr = [
   {
     title: "인공위성",
     tag: ["#자유로운", "#능력자", "#물_주기가_긴"],
-    content: "satellite",
+    content:
+      "인공위선 유형은 가드닝에 자신 있지만 바쁜 일상과 집에서 생활하는 시간이 많지 않은 유형입니다.  </br> 이러한 인공위성 유형을 위해 물주는 기간이 넉넉한 식물을 추천해드립니다.  </br> 아래의 추천식물을 확인해보세요",
     svg: "satellite",
     color: "#8fd623",
     type: ["long", "hard"],
     recomend: ["칼란쇼에", "칼란쇼에", "칼란쇼에", "칼란쇼에"],
   },
   {
-    title: "난 이미 초록세상 지구",
+    title: "난 이미 초록세상, 지구",
     tag: ["#완벽주의", "#능력자", "#물_주기가_짧은"],
     content: "earth",
     svg: "earth",
-    color: "#ff3149",
+    color: "#9abde8",
     type: ["short", "hard"],
     recomend: [
       "아레카 야자",
