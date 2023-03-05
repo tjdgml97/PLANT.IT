@@ -133,6 +133,7 @@ const saveBtnArr = ["easyBtn", "hardBtn", "shortBtn", "longBtn"];
 const saveBtnName = localStorage.getItem(saveBtnArr);
 function btnEasy() {
   if (saveBtnName !== "easyBtn") {
+    localStorage.setItem("storExist", "storExist");
     localStorage.setItem("easyBtn", "easy");
     localStorage.removeItem("hardBtn", "hard");
     console.log("!!!!");
@@ -149,6 +150,7 @@ function btnEasy() {
 
 function btnHard() {
   if (saveBtnName !== "hardBtn") {
+    localStorage.setItem("storExist", "storExist");
     localStorage.setItem("hardBtn", "hard");
     localStorage.removeItem("easyBtn", "easy");
     console.log("!!!!");
@@ -221,6 +223,7 @@ const footer = document.querySelector("footer");
 
 function btnShort() {
   if (saveBtnName !== "shortBtn") {
+    localStorage.setItem("storExist", "storExist");
     localStorage.setItem("shortBtn", "short");
     localStorage.removeItem("longBtn", "long");
   }
@@ -245,6 +248,7 @@ function btnShort() {
 
 function btnLong() {
   if (saveBtnName !== "longBtn") {
+    localStorage.setItem("storExist", "storExist");
     localStorage.setItem("longBtn", "long");
     localStorage.removeItem("shortBtn", "short");
     console.log("!!!!");

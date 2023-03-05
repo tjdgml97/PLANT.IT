@@ -121,8 +121,8 @@ content.innerHTML = `<p>${param.content}</p>`;
 
 const img = document.querySelectorAll(".swiper-slide img");
 img.forEach(function (e) {
-  for (let i = 0; i < 4; i++) {
-    img[i].setAttribute("src", `./image/${param.recomend[i]}.jpg`);
+  for (let i = 0; i < img.length; i++) {
+    img[i].setAttribute("src", `./image/${param.recomend[i % 4]}.jpg`);
   }
 });
 

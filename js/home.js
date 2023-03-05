@@ -71,15 +71,19 @@ const interiorPlant = document.querySelector(".box4");
 
 function largePlantLocal() {
   localStorage.setItem("bigBtn", "big");
+  localStorage.setItem("storExist", "storExist");
 }
 function airPlantLocal() {
   localStorage.setItem("airBtn", "air");
+  localStorage.setItem("storExist", "storExist");
 }
 function petPlantLocal() {
   localStorage.setItem("petBtn", "pet");
+  localStorage.setItem("storExist", "storExist");
 }
 function interiorPlantLocal() {
   localStorage.setItem("decoBtn", "deco");
+  localStorage.setItem("storExist", "storExist");
 }
 
 largePlant.addEventListener("click", largePlantLocal);

@@ -268,40 +268,49 @@ const storEasy = window.localStorage.getItem("easyBtn");
 const storHard = window.localStorage.getItem("hardBtn");
 const storShort = window.localStorage.getItem("shortBtn");
 const storLong = window.localStorage.getItem("longBtn");
+const storExist = window.localStorage.getItem("storExist");
 
 // 로컬스토리지 값이 Null 이 아니라면 true 로 취급
-if (storAir) {
+if (storAir && storExist) {
   airBtn.classList.add("clicked");
   selected[4] = "air";
+  window.localStorage.removeItem("storExist");
 }
-if (storPet) {
+if (storPet && storExist) {
   petBtn.classList.add("clicked");
   selected[5] = "pet";
+  window.localStorage.removeItem("storExist");
 }
-if (storBig) {
+if (storBig && storExist) {
   bigBtn.classList.add("clicked");
   selected[6] = "big";
+  window.localStorage.removeItem("storExist");
 }
-if (storDeco) {
+if (storDeco && storExist) {
   decoBtn.classList.add("clicked");
   selected[7] = "deco";
+  window.localStorage.removeItem("storExist");
 }
 
-if (storEasy) {
+if (storEasy && storExist) {
   easyBtn.classList.add("clicked");
   selected[0] = "easy";
+  window.localStorage.removeItem("storExist");
 }
-if (storHard) {
+if (storHard && storExist) {
   hardBtn.classList.add("clicked");
   selected[1] = "hard";
+  window.localStorage.removeItem("storExist");
 }
-if (storShort) {
+if (storShort && storExist) {
   shortBtn.classList.add("clicked");
   selected[2] = "short";
+  window.localStorage.removeItem("storExist");
 }
-if (storLong) {
+if (storLong && storExist) {
   longBtn.classList.add("clicked");
   selected[3] = "long";
+  window.localStorage.removeItem("storExist");
 }
 
 // 웹페이지 처음 로드 시
