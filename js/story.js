@@ -31,7 +31,7 @@ logoSectBtn.addEventListener("click", function () {
   window.scrollTo({ top: meritSect.offsetTop, behavior: "smooth" });
 });
 meritSectBtn.addEventListener("click", function () {
-  window.scrollTo({ top: reasonSect.offsetTop, behavior: "smooth" });
+  window.scrollTo({ top: mineSect.offsetTop, behavior: "smooth" });
 });
 mineSectBtn.addEventListener("click", function () {
   window.scrollTo({ top: interviewSect.offsetTop, behavior: "smooth" });
