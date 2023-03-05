@@ -234,6 +234,9 @@ header .inner .menu-bar .menu-icon {
   color: #3ea548;
   line-height: 1.5;
 }
+.selectSection .inner .resultSection {
+  margin-bottom: 100px;
+}
 .selectSection .inner .resultSection h3 {
   font-family: "Montserrat";
   font-size: 1.8rem;

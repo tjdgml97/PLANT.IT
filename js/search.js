@@ -42,7 +42,8 @@ const arr = []; // 배열을 원소로 가진 배열
 for (let i = 0; i < plantsStr.length; i++) {
   arr.push(plantsStr[i].split(", "));
 }
-console.log(arr);
+console.log("식물별 str 데이터", arr);
+
 // // 0-2) 객체 생성을 위한 생성자 함수
 function Plant(kor, eng, easy, short, types) {
   this.korName = kor;
@@ -102,7 +103,7 @@ for (let i = 0; i < plants.length; i++) {
   }
 }
 
-console.log("식물별 div", divArr);
+console.log("* 식물별 div", divArr);
 
 // 2. 버튼 click 에 따라 클래스명(clicked) 부여
 // 버튼 hover, click 되면 버튼 디자인 바뀌게
@@ -206,91 +207,6 @@ const hardBtn = document.querySelector(".hard");
 const shortBtn = document.querySelector(".short");
 const longBtn = document.querySelector(".long");
 
-//받아온 localStorage value
-const saveBtnName1 = localStorage.getItem("easyBtn");
-const saveBtnName2 = localStorage.getItem("hardBtn");
-const saveBtnName3 = localStorage.getItem("shortBtn");
-const saveBtnName4 = localStorage.getItem("longBtn");
-const saveBtnName5 = localStorage.getItem("bigBtn");
-const saveBtnName6 = localStorage.getItem("airBtn");
-const saveBtnName7 = localStorage.getItem("petBtn");
-const saveBtnName8 = localStorage.getItem("decoBtn");
-const saveBtnArr = [saveBtnName1, saveBtnName2, saveBtnName3, saveBtnName4];
-const saveBtncate = [saveBtnName5, saveBtnName6, saveBtnName7, saveBtnName8];
-
-if (saveBtnArr[0] === "easy") {
-  if (saveBtnArr[2] === "short") {
-    if (easyBtn.classList.contains("clicked")) {
-      easyBtn.classList.remove("clicked");
-      shortBtn.classList.remove("clicked");
-    } else {
-      easyBtn.classList.add("clicked");
-      shortBtn.classList.add("clicked");
-    }
-  }
-}
-if (saveBtnArr[0] === "easy") {
-  if (saveBtnArr[3] === "long") {
-    if (easyBtn.classList.contains("clicked")) {
-      easyBtn.classList.remove("clicked");
-      longBtn.classList.remove("clicked");
-    } else {
-      easyBtn.classList.add("clicked");
-      longBtn.classList.add("clicked");
-    }
-  }
-}
-if (saveBtnArr[1] === "hard") {
-  if (saveBtnArr[2] === "short") {
-    if (hardBtn.classList.contains("clicked")) {
-      hardBtn.classList.remove("clicked");
-      shortBtn.classList.remove("clicked");
-    } else {
-      hardBtn.classList.add("clicked");
-      shortBtn.classList.add("clicked");
-    }
-  }
-}
-if (saveBtnArr[1] === "hard") {
-  if (saveBtnArr[3] === "long") {
-    if (hardBtn.classList.contains("clicked")) {
-      hardBtn.classList.remove("clicked");
-      longBtn.classList.remove("clicked");
-    } else {
-      hardBtn.classList.add("clicked");
-      longBtn.classList.add("clicked");
-    }
-  }
-}
-if (saveBtncate[0] === "big") {
-  if (bigBtn.classList.contains("clicked")) {
-    bigBtn.classList.remove("clicked");
-  } else {
-    bigBtn.classList.add("clicked");
-  }
-}
-if (saveBtncate[1] === "air") {
-  if (airBtn.classList.contains("clicked")) {
-    airBtn.classList.remove("clicked");
-  } else {
-    airBtn.classList.add("clicked");
-  }
-}
-if (saveBtncate[2] === "pet") {
-  if (petBtn.classList.contains("clicked")) {
-    petBtn.classList.remove("clicked");
-  } else {
-    petBtn.classList.add("clicked");
-  }
-}
-if (saveBtncate[3] === "deco") {
-  if (decoBtn.classList.contains("clicked")) {
-    decoBtn.classList.remove("clicked");
-  } else {
-    decoBtn.classList.add("clicked");
-  }
-}
-
 // 선택된 속성값을 selected 에 반영
 easyBtn.addEventListener("click", function () {
   // 반대되는 설정값은 무조건 삭제
@@ -343,11 +259,89 @@ longBtn.addEventListener("click", function () {
   }
 });
 
+// * 로컬 스토리지 값 받아와 검색 결과 초기화
+const storAir = window.localStorage.getItem("airBtn");
+const storPet = window.localStorage.getItem("petBtn");
+const storBig = window.localStorage.getItem("bigBtn");
+const storDeco = window.localStorage.getItem("decoBtn");
+const storEasy = window.localStorage.getItem("easyBtn");
+const storHard = window.localStorage.getItem("hardBtn");
+const storShort = window.localStorage.getItem("shortBtn");
+const storLong = window.localStorage.getItem("longBtn");
+
+// 로컬스토리지 값이 Null 이 아니라면 true 로 취급
+if (storAir) {
+  airBtn.classList.add("clicked");
+  selected[4] = "air";
+}
+if (storPet) {
+  petBtn.classList.add("clicked");
+  selected[5] = "pet";
+}
+if (storBig) {
+  bigBtn.classList.add("clicked");
+  selected[6] = "big";
+}
+if (storDeco) {
+  decoBtn.classList.add("clicked");
+  selected[7] = "deco";
+}
+
+if (storEasy) {
+  easyBtn.classList.add("clicked");
+  selected[0] = "easy";
+}
+if (storHard) {
+  hardBtn.classList.add("clicked");
+  selected[1] = "hard";
+}
+if (storShort) {
+  shortBtn.classList.add("clicked");
+  selected[2] = "short";
+}
+if (storLong) {
+  longBtn.classList.add("clicked");
+  selected[3] = "long";
+}
+
+// 웹페이지 처음 로드 시
+window.addEventListener("load", function (e) {
+  // 전체 식물 안 보이게
+  divArr.forEach(function (el) {
+    el.style.display = `none`;
+  });
+
+  // 선택된 속성들 문자열로 만들기
+  selectedStr = ".plant";
+
+  for (let trait of selected) {
+    if (trait !== "") {
+      selectedStr += "." + trait;
+    }
+  }
+
+  // 검색 결과 보이게
+  result = this.document.querySelectorAll(selectedStr);
+
+  result.forEach(function (el) {
+    el.style.display = `block`;
+  });
+
+  // 결과 갯수 업데이트
+  plantsLength.textContent = result.length;
+
+  console.log("-- 로컬 값 문자열로 -------", selectedStr);
+  console.log("결과 식물들", result);
+});
+
 // 3. 검색 결과
 // 화면 전체에서 클릭이 발생할 때마다 처리
 window.addEventListener("click", function (e) {
   // 클릭된 요소가 button 일 때만
   if (e.target.tagName === "BUTTON") {
+    // 로컬스토리지 받아온 후 클릭이 발생하면 로컬스토리지 지우기
+    window.localStorage.clear();
+
     // 전체 식물 안 보이게
     divArr.forEach(function (el) {
       el.style.display = `none`;
