@@ -14,14 +14,14 @@ menuIcon.addEventListener("click", function () {
 const sloganSectBtn = document.querySelector("#sloganSectBtn");
 const logoSectBtn = document.querySelector("#logoSectBtn");
 const meritSectBtn = document.querySelector("#meritSectBtn");
-const mineSectBtn = document.querySelector("#mineSectBtn");
-const interviewSectBtn = document.querySelector("#interviewSectBtn");
+// const mineSectBtn = document.querySelector("#mineSectBtn");
 
 const sloganSect = document.querySelector(".section--slogan");
 const logoSect = document.querySelector(".section--logo");
 const meritSect = document.querySelector(".section--merit");
-const mineSect = document.querySelector(".section--mine");
-const interviewSect = document.querySelector(".section--interview");
+// const mineSect = document.querySelector(".section--mine");
+const interviewSect = document.querySelector(".section--campaign");
+
 const campaignSect = document.querySelector(".section--campaign");
 
 sloganSectBtn.addEventListener("click", function () {
@@ -31,14 +31,14 @@ logoSectBtn.addEventListener("click", function () {
   window.scrollTo({ top: meritSect.offsetTop, behavior: "smooth" });
 });
 meritSectBtn.addEventListener("click", function () {
-  window.scrollTo({ top: mineSect.offsetTop, behavior: "smooth" });
-});
-mineSectBtn.addEventListener("click", function () {
-  window.scrollTo({ top: interviewSect.offsetTop, behavior: "smooth" });
-});
-interviewSectBtn.addEventListener("click", function () {
   window.scrollTo({ top: campaignSect.offsetTop, behavior: "smooth" });
 });
+// mineSectBtn.addEventListener("click", function () {
+//   window.scrollTo({ top: campaignSect.offsetTop, behavior: "smooth" });
+// });
+// interviewSectBtn.addEventListener("click", function () {
+//   window.scrollTo({ top: campaignSect.offsetTop, behavior: "smooth" });
+// });
 
 // merit 색션 이미지 움직임
 const merit1 = document.querySelector(".merit--1");
@@ -64,6 +64,7 @@ function moveto1() {
     merit2.classList.add("hide");
     merit3.classList.add("hide");
     merit4.classList.add("hide");
+    console.log("nico");
     const totalMinwon2017 = 70.2;
     let t1 = 0;
     bar1.style.width = 0;
