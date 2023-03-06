@@ -5,7 +5,6 @@
 ## :bulb: 소개
   
 ## 팀 구성
-| ![](assets/logo/logo-new-splash.png) | ![](assets/logo/logo-new-splash.png) | ![](https://github.com/YuSoeun.png) | ![](https://github.com/tjdgml97.png) | ![](https://github.com/chanhk-im.png) |
 | :------------------------------------: | :------------------------------------: | :------------------------------------: | :------------------------------------: | :------------------------------------: |
 |                          |                        |                           |                          |                          |
 |                          |                        |                           |                          |                          |.  
